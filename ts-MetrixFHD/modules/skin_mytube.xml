@@ -1,0 +1,162 @@
+<skin>
+    <!-- MyTubePlayer -->
+    <screen name="MyTubeHistoryScreen" position="120,315" size="1200,570" title="MyTubeHistoryScreen..." zPosition="6" backgroundColor="metrixBackground">
+        <widget source="historylist" render="Listbox" position="15,15" zPosition="7" size="1020,540" scrollbarMode="showOnDemand" transparent="1">
+            <convert type="TemplatedMultiContent">
+                {"template": [
+                MultiContentEntryText(pos = (15, 0), size = (990, 45), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+                ],
+                "fonts": [gFont("SetrixHD", 33),gFont("SetrixHD", 27)],
+                "itemHeight": 45
+                }
+            </convert>
+        </widget>
+    </screen>
+    <screen name="MyTubePlayer" position="0,0" size="1920,1080" title="MyTube Player" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_movieplayer" />
+        <widget source="session.CurrentService" render="Label" position="224,857" size="1338,84" font="SetrixHD; 60" valign="top" noWrap="1" backgroundColor="metrixBackground" transparent="1">
+            <convert type="ServiceName">Name</convert>
+        </widget>
+        <widget source="session.CurrentService" render="Label" position="5,857" size="206,84" font="SetrixHD; 60" halign="right" valign="top" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent2">
+            <convert type="ServicePosition">Length</convert>
+        </widget>
+        <ePixmap position="59,908" zPosition="2" size="330,168" pixmap="ts-MetrixFHD/icons/youtube_logo.png" transparent="1" alphatest="blend" />
+        <widget source="session.CurrentService" render="Label" position="330,984" size="150,42" font="SetrixHD;36" halign="right" valign="center" backgroundColor="metrixBackground" shadowColor="metrixBackground" shadowOffset="-1,-1" transparent="1">
+            <convert type="ServicePosition">Position</convert>
+        </widget>
+        <widget source="session.CurrentService" render="PositionGauge" progress_pointer="ts-MetrixFHD/SkinDesign/pointer.png:12,2" position="497,996" size="1200,21" transparent="1">
+            <convert type="ServicePosition">Gauge</convert>
+        </widget>
+        <widget source="session.CurrentService" render="Progress" position="497,1004" size="1200,5" backgroundColor="metrixForeground" borderWidth="0" transparent="1">
+            <convert type="ServicePosition">Position</convert>
+        </widget>
+        <eLabel name="slider_line" position="494,1005" size="1200,2" backgroundColor="metrixAccent1" foregroundColor="metrixAccent1" zPosition="-1" />
+    </screen>
+    <screen name="MyTubePlayerMainScreen" position="0,0" size="1920,1080" title="MyTubePlayerMainScreen..." flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <eLabel text="MyTubePlayer" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="config" position="120,180" size="1200,42" zPosition="3" scrollbarMode="showNever" transparent="1" />
+        <widget source="feedlist" render="Listbox" position="120,255" size="1200,632" scrollbarMode="showOnDemand" transparent="1">
+            <convert type="TemplatedMultiContent">
+                {"templates":
+                {"default": (158,[
+                MultiContentEntryPixmapAlphaBlend(pos = (15,23),size = (150,113),png = 4),# index 4 is the thumbnail
+                MultiContentEntryText(pos = (180,15),size = (825,45),font=0,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 1),# index 1 is the Title
+                MultiContentEntryText(pos = (180,60),size = (435,45),font=1,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 5),# index 5 is the Published Date
+                MultiContentEntryText(pos = (180,105),size = (435,45),font=1,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 6),# index 6 is the Views Count
+                MultiContentEntryText(pos = (615,60),size = (383,45),font=1,flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP,text = 7),# index 7 is the duration
+                MultiContentEntryText(pos = (615,105),size = (383,45),font=1,flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP| RT_WRAP,text = 8),# index 8 is the ratingcount
+                ]),
+                "state": (158,[
+                MultiContentEntryText(pos = (15,15),size = (983,45),font=2,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 0),# index 0 is the name
+                MultiContentEntryText(pos = (15,60),size = (983,75),font=3,flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP,text = 1),# index 2 is the description
+                ])
+                },
+                "fonts": [gFont("SetrixHD",33),gFont("SetrixHD",27),gFont("SetrixHD",39),gFont("SetrixHD",30)],
+                "itemHeight": 158
+                }
+            </convert>
+        </widget>
+        <widget name="thumbnail" position="0,0" size="150,113" alphatest="blend" /> # fake entry for dynamic thumbnail resizing,currently there is no other way doing this.
+        <widget name="HelpWindow" position="203,750" size="1,1" zPosition="10" transparent="1" alphatest="blend" />
+        <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <eLabel position="474,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <eLabel position="814,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <eLabel position="1144,945" zPosition="-1" size="10,60" backgroundColor="grey" transparent="0" />
+        <widget name="ButtonBlue" position="1108,945" zPosition="14" size="46,60" pixmap="ts-MetrixFHD/buttons/blue.png" alphatest="blend" transparent="1" />
+        <widget name="key_red" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_green" position="494,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_yellow" position="834,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <eLabel text="Virtual KeyBoard" position="1164,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <ePixmap name="key_menu" position="1688,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+        <ePixmap name="key_info" position="1556,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+        <ePixmap name="key_text" position="1424,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_text.png" alphatest="blend" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/youtube.png" transparent="1" alphatest="blend" />
+        <widget name="VKeyIcon" pixmap="ts-MetrixFHD/icons/key_text.png" position="1424,945" size="122,60" zPosition="10" alphatest="blend" />
+    </screen>
+    <screen name="MyTubeSettingsScreen" position="0,0" size="1920,1080" title="MyTubeSettingsScreen" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget name="title" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="config" position="120,170" size="1100,720" itemHeight="40" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+        <!--ePixmap position="1050,460" size="100,40" zPosition="4" pixmap="~/plugin.png" alphatest="blend" transparent="1" /> -->
+        <panel name="kc-nrg" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/youtube.png" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="MyTubeSuggestionsListScreen" position="120,315" size="1200,570" title="MyTubeSuggestionsListScreen..." zPosition="6" backgroundColor="metrixBackground">
+        <widget source="suggestionslist" render="Listbox" position="15,15" zPosition="7" size="1020,400" scrollbarMode="showOnDemand" transparent="1">
+            <convert type="TemplatedMultiContent">
+                {"template": [
+                MultiContentEntryText(pos = (15, 0), size = (690, 40), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER , text = 0), # index 0 is the name
+                MultiContentEntryText(pos = (735, 0), size = (270, 40), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 1), # index 1 are the rtesults
+                ],
+                "fonts": [gFont("SetrixHD", 32),gFont("SetrixHD", 27)],
+                "itemHeight": 40
+                }
+            </convert>
+        </widget>
+    </screen>
+    <screen name="MyTubeTasksScreen" position="0,0" size="1920,1080" title="MyTubeTasksScreen" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget name="title" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="tasklist" render="Listbox" position="120,180" size="1200,720" zPosition="3" scrollbarMode="showOnDemand" transparent="1">
+            <convert type="TemplatedMultiContent">
+                {"template": [
+                MultiContentEntryText(pos = (15, 5), size = (375, 36), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
+                MultiContentEntryText(pos = (405, 5), size = (270, 36), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
+                MultiContentEntryProgress(pos = (690, 5), size = (150, 36), percent = -3), # index 3 should be progress
+                MultiContentEntryText(pos = (855, 5), size = (135, 36), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
+                ],
+                "fonts": [gFont("SetrixHD", 32),gFont("SetrixHD", 27)],
+                "itemHeight": 45
+                }
+            </convert>
+        </widget>
+        <ePixmap position="1575,690" size="150,60" zPosition="4" pixmap="~/plugin.png" alphatest="blend" transparent="1" />
+        <panel name="kc-nr" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/youtube.png" transparent="1" alphatest="blend" />
+    </screen>
+    
+    
+    <screen name="MyTubeVideoHelpScreen" position="0,0" size="1920,1080" title="MyTubePlayerHelpScreen..." flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget name="title" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="detailtext" position="120,180" size="1200,750" font="SetrixHD;36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <!--ePixmap position="1575,690" size="150,60" zPosition="4" pixmap="~/plugin.png" alphatest="blend" transparent="1" /> -->
+        <panel name="kc-nr" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/youtube.png" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="MyTubeVideoInfoScreen" position="0,0" size="1920,1080" title="MyTubePlayerMainScreen..." flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget name="title" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="infolist" render="Listbox" position="120,173" size="1200,195" zPosition="6" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
+            <convert type="TemplatedMultiContent">
+                {"templates":
+                {"default": (195,[
+                MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (270, 195), png = 0), # index 0 is the thumbnail
+                MultiContentEntryPixmapAlphaBlend(pos = (270, 0), size = (270, 195), png = 1), # index 0 is the thumbnail
+                MultiContentEntryPixmapAlphaBlend(pos = (540, 0), size = (270, 195), png = 2), # index 0 is the thumbnail
+                MultiContentEntryPixmapAlphaBlend(pos = (810, 0), size = (270, 195), png = 3), # index 0 is the thumbnail
+                ]),
+                "state": (195,[
+                MultiContentEntryText(pos = (0, 53), size = (1110, 98), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER| RT_WRAP, text = 0), # index 0 is the name
+                ])
+                },
+                "fonts": [gFont("SetrixHD", 30),gFont("SetrixHD", 21),gFont("SetrixHD", 42)],
+                "itemHeight": 195
+                }
+            </convert>
+        </widget>
+        <widget name="author" position="120,383" size="450,45" zPosition="10" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="duration" position="120,428" size="450,45" zPosition="10" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="published" position="120,473" size="450,45" zPosition="10" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="views" position="120,518" size="450,45" zPosition="10" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        
+        <widget name="tags" position="120,562" size="1035,75" zPosition="10" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="starsbg" position="975,390" size="150,30" pixmap="~/starsbar_empty.png" zPosition="5" transparent="1" alphatest="blend" />
+        <widget name="stars" position="975,390" size="150,30" pixmap="~/starsbar_filled.png" zPosition="6" transparent="1" />
+        <widget name="detailtext" position="120,650" size="1200,255" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="thumbnail" position="0,0" size="270,195" alphatest="blend" /> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
+        <panel name="kc-nr" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/youtube.png" transparent="1" alphatest="blend" />
+    </screen>
+</skin>

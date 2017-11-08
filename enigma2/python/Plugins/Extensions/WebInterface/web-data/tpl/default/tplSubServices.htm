@@ -1,0 +1,21 @@
+
+<!-- tplSubServices -->
+								{for s in subservices}
+									<table style="width: 586px;">
+										<tr>
+											<td style="width: 576px;">
+												<div class="sListSName">
+													<a href="#" id="${s.servicereference}" onclick="{ zap(this.id); }" class="sListSLink" title="${strings.zap_to_channel} ${s.servicename}">
+														${s.servicename}
+													</a>
+												</div>
+											</td>
+											<td>
+												<a target="_blank" onclick="return parentPin( '${s.servicereference}' );" href="/web/stream.m3u?ref=${s.servicereference}">
+													<i class="fa fa-border fa-tv" title="${strings.stream_channel} ${s.servicename}"></i>
+												</a>
+											</td>
+										</tr>
+									</table>
+								{/for}
+<!-- /tplSubServices -->

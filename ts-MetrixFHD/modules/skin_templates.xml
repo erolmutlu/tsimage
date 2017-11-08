@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+  <!--
+	################             ts-MetrixFHD v.1.0-r27.0          ###############
+	#                                                                            #
+	# colombo555	Version 1.0-r27.0  TSimage 5.0                   31-03-2017  #
+	#                                                                            #
+	# colombo555	Version 1.0-r0 TSimage 4.0 1st release           06-06-2015  #
+	#                                                                            #
+	##############################################################################
+-->
+    <!-- ts-MetrixFHD v1.0-r27.0 by iMaxxx mod colombo555 for TSimage_5.0 -->
+    <!-- recommended to use only with XPicons (transparent light) -->
+    <!-- You can modify and redistribute it as long as you keep this License and the original author for the skin and all of your modifications -->
+    
+	<!-- ***** KEY COLORS NAME ***** -->
+    
+    <!-- Panel nrgyb -->
+    <screenpanel name="rgyb">
+        <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+    </screenpanel>
+    
+    <!-- Panel kc-nr -->
+    <screenpanel name="kc-nr">
+        <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <widget name="key_red" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="left"  transparent="1" />
+    </screenpanel>
+    
+    <!-- Panel kc-nrg -->
+    <screenpanel name="kc-nrg">
+        <panel name="kc-nr" />
+        <eLabel position="574,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <widget name="key_green" position="595,945" size="260,60" zPosition="1" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="left"  transparent="1" />
+    </screenpanel>
+    
+    <!-- Panel kc-nry -->
+    <screenpanel name="kc-nry">
+        <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <widget name="key_red" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_yellow" position="974,945" size="380,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+    
+    <!-- Panel kc-nryb -->
+    <screenpanel name="kc-nryb">
+        <panel name="kc-nry" />
+        <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+        <widget name="key_blue" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+    
+    <!-- Panel kc-nrgy -->
+    <screenpanel name="kc-nrgy">
+        <panel name="kc-nry" />
+        <widget name="key_green" position="564,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+    
+    <!-- Panel kc-nrgb -->
+    <screenpanel name="kc-nrgb">
+        <panel name="rgyb" />
+        <widget name="key_red" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_green" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_blue" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+    
+    <!-- Panel kc-nrgyb -->
+    <screenpanel name="kc-nrgyb">
+        <panel name="kc-nrgb" />
+        <widget name="key_yellow" position="974,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+    
+    <!-- *****  COLORS NAME ***** -->
+
+    <!-- Panel c-nrgyb -->
+    <screenpanel name="c-nrgyb">
+        <panel name="rgyb" />
+        <widget name="red" position="165,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="green" position="564,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="yellow" position="974,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="blue" position="1374,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+    
+    <!-- *****  COLORS SOURCE ***** -->
+    
+    <!-- Panel c-srgyb -->
+    <screenpanel name="c-srgyb">
+        <panel name="rgyb" />
+        <widget source="red" render="Label" position="165,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="green" render="Label" position="564,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="yellow" render="Label" position="974,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="blue" render="Label" position="1374,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+
+	<!-- ***** KEY COLORS SOURCE ***** -->
+
+	<!-- Panel kc-sr -->
+ 	<screenpanel name="kc-sr">
+        <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <widget source="key_red" render="Label" position="165,947" size="340,60" zPosition="1" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+	</screenpanel>
+	
+	<!-- Panel kc-srg -->
+ 	<screenpanel name="kc-srg">
+		<panel name="kc-sr" />
+		<eLabel position="574,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <widget source="key_green" render="Label" position="595,947" size="340,60" zPosition="1" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+	</screenpanel>
+
+	<!-- Panel kc-sry -->
+ 	<screenpanel name="kc-sry">
+		<panel name="kc-sr" />
+        <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <widget source="key_yellow" render="Label" position="974,947" size="300,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+	</screenpanel>
+
+	<!-- Panel kc-sryb -->
+ 	<screenpanel name="kc-sryb">
+		<panel name="kc-sry" />
+        <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+        <widget source="key_blue" render="Label" position="1374,947" size="300,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+	</screenpanel>
+
+	<!-- Panel kc-srgy -->
+ 	<screenpanel name="kc-srgy">
+		<panel name="kc-srg" />
+        <eLabel position="1004,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <widget source="key_yellow" render="Label" position="1024,947" size="300,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+	</screenpanel>
+	
+	<!-- Panel kc-srgb -->
+ 	<screenpanel name="kc-srgb">
+        <panel name="kc-sr" />
+        <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+        <widget source="key_green" render="Label" position="564,947" size="300,60" zPosition="1" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="key_blue" render="Label" position="1374,955" size="300,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        </screenpanel>
+    
+	<!-- Panel kc-srgyb -->
+ 	<screenpanel name="kc-srgyb">
+		<panel name="kc-sryb" />
+		<widget source="key_green" render="Label" position="564,947" size="340,60" zPosition="1" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+	</screenpanel>
+    
+    <!-- Panel kc-sgyb -->
+    <screenpanel name="kc-sgyb">
+        <panel name="rgyb" />
+        <widget source="key_green" render="Label" position="564,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="key_yellow" render="Label" position="974,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="key_blue" render="Label" position="1374,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+
+    <!-- ***** BUTTON COLORS NAME ***** -->
+
+    <!-- Panel bc-nrgyb -->
+    <screenpanel name="bc-nrg">
+        <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <widget name="buttonred" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="buttongreen" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+
+    <!-- Panel bc-nrgyb -->
+    <screenpanel name="bc-nrgyb">
+        <panel name="bc-nrg" />
+        <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+        <widget name="buttonyellow" position="974,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="buttonblue" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+    
+    <!-- ***** BUTTON COLORS NAME ***** -->
+    
+    <!-- Panel bc-nrgyb -->
+    <screenpanel name="bc-srgyb">
+        <panel name="rgyb" />
+        <widget source= "ButtonRedText" render="Label" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source= "ButtonGreenText" render="Label" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source= "ButtonYellowText" render="Label" position="974,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source= "ButtonBlueText" render="Label" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+
+
+    <!-- ***** KEY COLORS NAME CH/MOVIE SELECTION ***** -->
+    <!-- Panel kchsel-nrgyb -->
+    <screenpanel name="kchsel-nrgyb">
+        <eLabel position="658,946" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <eLabel position="883,946" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <eLabel position="1108,946" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <eLabel position="1333,946" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+        <widget name="key_red" position="678,948" size="230,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_green" position="903,948" size="230,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_yellow" position="1128,948" size="230,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_blue" position="1353,948" size="230,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+    
+    <!-- Panel epg-nrgyb -->
+    <screenpanel name="epg-nrgyb">
+        <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <eLabel position="415,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <eLabel position="697,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <eLabel position="988,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+        <widget name="key_red" position="164,947" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_green" position="435,947" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_yellow" position="717,947" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_blue" position="1008,947" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+
+    <!-- Panel kmovsel-nrgyb -->
+    <screenpanel name="kmovsel-nrgyb">
+        <eLabel position="658,946" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <eLabel position="893,946" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <eLabel position="1128,946" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <eLabel position="1363,946" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+        <widget name="key_red" position="678,936" size="200,70" zPosition="1" font="SetrixHD; 30" halign="left" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_green" position="913,936" size="200,70" zPosition="1" font="SetrixHD; 30" halign="left" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_yellow" position="1148,936" size="200,70" zPosition="1" font="SetrixHD; 30" halign="left" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="key_blue" position="1383,936" size="200,70" zPosition="1" font="SetrixHD; 30" halign="left" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+    <!-- Panel kmovevent-srgyb -->
+    <screenpanel name="kmovevent-srgyb">
+        <eLabel position="663,946" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <eLabel position="963,946" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <eLabel position="1268,946" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <eLabel position="1563,946" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+        <widget source="key_red" render="Label" position="693,948" size="240,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="key_green" render="Label" position="993,948" size="230,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="key_yellow" render="Label" position="1298,948" size="230,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="key_blue" render="Label" position="1593,948" size="230,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    </screenpanel>
+	<!-- Panel default -->
+ 	<screenpanel name="screenpanel_default">
+        <eLabel position="center,center" zPosition="-10" size="1762,930" backgroundColor="metrixBackground" transparent="0" />
+        <widget source="global.CurrentTime" render="Label" position="1630,65" size="200,100" font="SetrixHD; 85" halign="left" backgroundColor="metrixBackground" transparent="1">
+            <convert type="ClockToText">Default</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="1400,90" size="220,40" font="Regular; 30" halign="right" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent1">
+            <convert type="ClockToText">Format: %A</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="1400,125" size="220,40" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %e. %B</convert>
+        </widget>
+	</screenpanel>
+	<!-- Panel default full screen -->
+ 	<screenpanel name="screenpanel_default_full">
+        <eLabel position="center,center" zPosition="-10" size="1920,1080" backgroundColor="fullBackground" transparent="0" />
+        <widget source="global.CurrentTime" render="Label" position="1630,65" size="200,100" font="SetrixHD; 85" halign="left" backgroundColor="fullBackground" transparent="1">
+            <convert type="ClockToText">Default</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="1400,90" size="220,40" font="Regular; 30" halign="right" backgroundColor="fullBackground" transparent="1" foregroundColor="metrixAccent1">
+            <convert type="ClockToText">Format: %A</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="1400,125" size="220,40" font="Regular; 30" halign="right" backgroundColor="fullBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %e. %B</convert>
+        </widget>
+	</screenpanel>
+    
+    <!-- Panel contextmenu -->
+    <screenpanel name="screenpanel_contextmenu">
+        <eLabel position="396,75" zPosition="-1" size="510,480" backgroundColor="metrixBackground" transparent="0" />
+        <!-- /*ClockWidget-->
+        <widget source="global.CurrentTime" render="Label" position="675,598" size="200,100" font="SetrixHD; 85" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
+            <convert type="ClockToText">Default</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="435,660" size="222,45" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %e. %B</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="470,625" size="188,45" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %A</convert>
+        </widget>
+        <eLabel position="398,605" zPosition="-1" size="510,108" backgroundColor="metrixBackground" transparent="0" />
+        <!--ClockWidget */-->
+        <eLabel name="" position="968,75" zPosition="-11" size="618,848" backgroundColor="metrixBackground" foregroundColor="metrixBackground" />
+    </screenpanel>
+
+    <!-- Panel channelselection -->
+    <screenpanel name="screenpanel_chsel">
+        <eLabel position="78,78" zPosition="-10" size="510,788" backgroundColor="metrixBackground" transparent="0" />
+        <eLabel position="625,78" zPosition="-10" size="1215,930" backgroundColor="metrixBackground" transparent="0" />
+        <!-- /*ClockWidget-->
+        <widget source="global.CurrentTime" render="Label" position="360,890" size="200,100" font="SetrixHD; 85" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
+            <convert type="ClockToText">Default</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="120,950" size="230,50" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %e. %B</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="120,915" size="230,50" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %A</convert>
+        </widget>
+        <eLabel position="78,900" zPosition="-1" size="510,108" backgroundColor="metrixBackground" transparent="0" />
+        <!--ClockWidget */-->
+    </screenpanel>
+    
+    <!-- Panel menu -->
+    <screenpanel name="screenpanel_menu">
+        <eLabel position="397,77" zPosition="-1" size="510,480" backgroundColor="metrixBackground" transparent="0" />
+        <eLabel position="397,616" zPosition="-1" size="510,105" backgroundColor="metrixBackground" transparent="0" />
+        <widget source="global.CurrentTime" render="Label" position="697,606" size="200,100" font="SetrixHD; 85" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
+            <convert type="ClockToText">Default</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="467,666" size="220,50" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %e. %B</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="467,630" size="220,50" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %A</convert>
+        </widget>
+    </screenpanel>
+    
+    <!-- Panel info -->
+    <screenpanel name="screenpanel_info">
+        <eLabel position="100,82" zPosition="-2" size="1284,895" backgroundColor="metrixBackground" foregroundColor="metrixBackground" />
+        <eLabel position="1430,82" zPosition="-1" size="400,400" backgroundColor="metrixBackground" transparent="0" />
+        <!-- /*ClockWidget-->
+        <widget source="global.CurrentTime" render="Label" position="1435,510" size="200,100" font="SetrixHD; 85" halign="right" backgroundColor="metrixBackground" transparent="1" valign="top">
+            <convert type="ClockToText">Default</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="1640,570" size="200,40" font="Regular; 28" halign="left" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format:%e. %B</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="1640,534" size="200,40" font="Regular; 28" halign="left" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %A</convert>
+        </widget>
+        <eLabel position="1430,520" zPosition="-1" size="400,105" backgroundColor="metrixBackground" transparent="0" />
+        <!--ClockWidget */-->
+        <ePixmap position="1440,90" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/info.png" transparent="1" alphatest="blend" />
+    </screenpanel>
+    <!-- Panel SecondInfoBar -->
+    <screenpanel name="screenpanel_sib">
+        <eLabel position="683,62" size="660,105" backgroundColor="metrixBackground" zPosition="-1" transparent="0" />
+        <widget source="session.CurrentService" render="Label" position="708,70" size="610,50" font="SetrixHD; 36" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" halign="center">
+            <convert type="ServiceName">Provider</convert>
+        </widget>
+        <widget source="session.CurrentService" render="Label" position="708,119" zPosition="2" size="610, 38" font="Regular;26" halign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="TSSmartInfo">ExpertInfo</convert>
+        </widget>
+        <eLabel text="SNR" position="120,777" size="70,40" font="Regular; 30" backgroundColor="metrixBackground" transparent="1" valign="top" foregroundColor="metrixForeground" halign="right" zPosition="10" />
+        <widget source="session.FrontendStatus" render="Label" position="585,777" size="70,40" font="Regular; 30" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixForeground" valign="top" zPosition="10" >
+            <convert type="FrontendInfo">SNR</convert>
+        </widget>
+        <widget source="session.FrontendStatus" render="Progress" position="200,796" size="375,7" zPosition="10" transparent="1">
+            <convert type="FrontendInfo">SNR</convert>
+        </widget>
+        <eLabel text="AGC" position="720,777" size="70,40" font="Regular; 30" backgroundColor="metrixBackground" transparent="1" valign="top" foregroundColor="metrixForeground" halign="right" zPosition="10" />
+        <widget source="session.FrontendStatus" render="Label" position="1185,777" size="70,40" font="Regular; 30" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixForeground" valign="top" zPosition="10">
+            <convert type="FrontendInfo">AGC</convert>
+        </widget>
+        <widget source="session.FrontendStatus" render="Progress" position="800,796" size="375,7" zPosition="10" transparent="1">
+            <convert type="FrontendInfo">AGC</convert>
+        </widget>
+        <eLabel position="200,798" size="375,2" backgroundColor="metrixForeground" />
+        <eLabel position="800,798" size="375,2" backgroundColor="metrixForeground" />
+        <eLabel text="BER:" position="1310,777" size="70,40" font="Regular;30" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" zPosition="10" />
+        <widget source="session.FrontendStatus" render="Label" position="1380,777" size="100,40" font="Regular;30" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" zPosition="10">
+            <convert type="FrontendInfo">BER</convert>
+        </widget>
+        <widget render="TSMaxTemp" source="global.CurrentTime" font="Regular; 30" position="1625,777" size="160,40" halign="right" backgroundColor="metrixBackground" transparent="1" noWrap="1" foregroundColor="metrixAccent1" zPosition="10" />
+        <widget render="TSHDDTemp" source="global.CurrentTime" DescriptionText="HDD: " font="Regular; 30" position="1415,777" size="180,40" halign="right" backgroundColor="metrixBackground" transparent="1" noWrap="1" foregroundColor="metrixAccent1" zPosition="10" />
+        <eLabel name="HealthWidgetBG" position="120,770" size="1700,50" backgroundColor="metrixBackground" zPosition="-10" />
+        <!--/* WEATHER WIDGET -->
+        <eLabel position="85,62" size="410,105" zPosition="-10" backgroundColor="metrixBackground" transparent="0" />
+        <widget source="session.TSyWeather" render="Label" position="68,57" size="110,100" font="SetrixHD; 84" zPosition="10" halign="right" valign="center" foregroundColor="metrixForeground" backgroundColor="background" noWrap="1" transparent="1">
+            <convert type="TSyWeather">temperature_current</convert>
+        </widget>
+        <widget source="session.TSyWeather" render="Label" position="180,75" size="70,40" font="Regular; 26" zPosition="10" halign="left" valign="center" foregroundColor="metrixForeground" backgroundColor="background" transparent="1" noWrap="1">
+            <convert type="TSyWeather">unit</convert>
+        </widget>
+        <eLabel text="|" position="210,75" size="35,40" font="Regular; 26" zPosition="10" halign="left" valign="center" foregroundColor="metrixForeground" backgroundColor="background" transparent="1" />
+        <widget source="session.TSyWeather" render="Label" position="225,75" size="145,40" font="Regular; 26" zPosition="10" halign="left" valign="center" noWrap="1" foregroundColor="metrixForeground" backgroundColor="background" transparent="1" >
+            <convert type="TSyWeather">city</convert>
+        </widget>
+        <widget source="session.TSyWeather" render="Label" position="180,114" size="190,70" font="Regular; 26" zPosition="10" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="background" noWrap="1" transparent="1" >
+            <convert type="TSyWeather">temperature_text,current</convert>
+        </widget>
+        <widget source="session.TSyWeather" render="Label" position="355,77" size="72,72" font="Meteo; 65" zPosition="10" halign="right" valign="center" foregroundColor="metrixForeground" backgroundColor="background" transparent="1">
+            <convert type="TSyWeather">codetext,current</convert>
+        </widget>
+        <widget source="session.TSyWeather" render="Label" position="435,77" size="70,40" font="Regular; 26" zPosition="10" halign="left" valign="center" foregroundColor="metrixAccent1" backgroundColor="background" transparent="1" noWrap="1">
+            <convert type="TSyWeather">temperature_high,current</convert>
+        </widget>
+        <widget source="session.TSyWeather" render="Label" position="435,112" size="70,40" font="Regular; 26" zPosition="10" halign="left" valign="center" foregroundColor="metrixAccent2" backgroundColor="background" transparent="1" noWrap="1">
+            <convert type="TSyWeather">temperature_low,current</convert>
+        </widget>
+        <widget source="session.TSyWeather" render="Label" position="497,77" size="72,72" font="Meteo; 65" zPosition="10" halign="right" valign="center" foregroundColor="metrixForeground" backgroundColor="background" transparent="1">
+            <convert type="TSyWeather">codetext,day1</convert>
+        </widget>
+        <widget source="session.TSyWeather" render="Label" position="577,77" size="70,40" font="Regular; 26" zPosition="10" halign="left" valign="center" foregroundColor="metrixAccent1" backgroundColor="background" transparent="1" noWrap="1">
+            <convert type="TSyWeather">temperature_high,day1</convert>
+        </widget>
+        <widget source="session.TSyWeather" render="Label" position="577,112" size="70,40" font="Regular; 26" zPosition="10" halign="left" valign="center" foregroundColor="metrixAccent2" backgroundColor="background" transparent="1" noWrap="1">
+            <convert type="TSyWeather">temperature_low,day1</convert>
+        </widget>  
+        <eLabel position="495,66" size="145,97" zPosition="-10" backgroundColor="metrixBackground" transparent="0" />
+        <!-- WEATHER WIDGET */-->
+    </screenpanel>
+    <!-- Panel Movie Player -->
+    <screenpanel name="screenpanel_movieplayer">
+        <eLabel position="0,855" zPosition="-2" size="1920,225" backgroundColor="metrixBackground" transparent="0" />
+        <ePixmap pixmap="ts-MetrixFHD/icons/ico_dolby_off.png" position="1577,924" size="96,35" zPosition="1" alphatest="blend" />
+        <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixFHD/icons/ico_dolby_on.png" position="1577,924" size="96,35" zPosition="2" alphatest="blend">
+            <convert type="ServiceInfo">IsMultichannel</convert>
+            <convert type="ConditionalShowHide" />
+        </widget>
+        <ePixmap pixmap="ts-MetrixFHD/icons/ico_format_off.png" position="1691,923" size="62,39" zPosition="1" alphatest="blend" />
+        <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixFHD/icons/ico_format_on.png" position="1691,923" size="62,39" zPosition="2" alphatest="blend">
+            <convert type="ServiceInfo">IsWidescreen</convert>
+            <convert type="ConditionalShowHide" />
+        </widget>
+        <ePixmap pixmap="ts-MetrixFHD/icons/ico_hd_off.png" position="1782,926" size="74,36" zPosition="1" alphatest="blend" />
+        <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixFHD/icons/ico_hd_on.png" position="1782,926" size="74,36" zPosition="2" alphatest="blend">
+            <convert type="ServiceInfo">VideoWidth</convert>
+            <convert type="ValueRange">721,1980</convert>
+            <convert type="ConditionalShowHide" />
+        </widget>
+        <widget source="session.CurrentService" render="Label" font="Regular; 27" position="1605,864" size="83,38" halign="right" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1">
+            <convert type="ServiceInfo">VideoWidth</convert>
+        </widget>
+        <eLabel text="x" font="Regular; 27" position="1694,864" size="23,38" halign="center" foregroundColor="metrixAccent2" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="session.CurrentService" render="Label" font="Regular; 27" position="1719,864" size="83,38" halign="left" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1">
+            <convert type="ServiceInfo">VideoHeight</convert>
+        </widget>
+        <widget source="session.RecordState" render="Pixmap" pixmap="ts-MetrixFHD/icons/ico_rec_on.png" position="86,60" size="111,35" zPosition="2" alphatest="blend">
+            <convert type="ConditionalShowHide">Blink</convert>
+        </widget>
+        <widget source="session.CurrentService" render="Label" position="1707,986" size="150,42" font="SetrixHD;36" halign="left" valign="center" backgroundColor="metrixBackground" transparent="1">
+            <convert type="ServicePosition">Remaining</convert>
+        </widget>
+        <!-- /*ClockWidget-->
+        <widget source="global.CurrentTime" render="Label" position="1630,50" size="200,100" font="SetrixHD; 85" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
+            <convert type="ClockToText">Default</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="1400,110" size="220,50" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %e. %B</convert>
+        </widget>
+        <widget source="global.CurrentTime" render="Label" position="1400,75" size="220,50" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+            <convert type="ClockToText">Format: %A</convert>
+        </widget>
+        <eLabel position="1380,62" zPosition="-1" size="480,105" backgroundColor="metrixBackground" transparent="0" />
+        <!--ClockWidget */-->
+        <widget source="session.CurrentService" render="Label" position="45,692" size="1875,384" font="SetrixHD; 142" valign="top" noWrap="1" backgroundColor="metrixPreTrans2" transparent="1" foregroundColor="metrixPreTrans2" zPosition="10">
+            <convert type="ServiceName">Name</convert>
+        </widget>
+    </screenpanel>
+    <!-- CoolTVGuide footer -->
+    <screenpanel name="footer_cooltvguide">
+        <widget source="Event" render="Label" position="60,690" size="150,50" font="Regular;38" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="right" transparent="1">
+            <convert type="EventTime">StartTime</convert>
+            <convert type="ClockToText" />
+        </widget>
+        <widget source="Event" render="Label" position="222,690" size="150,50" font="Regular;38" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1">
+            <convert type="EventTime">EndTime</convert>
+            <convert type="ClockToText">Format:- %H:%M</convert>
+        </widget>
+        <widget source="Event" render="Label" position="397,690" size="1163,50" font="Regular;38" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" halign="left">
+            <convert type="EventName">Name</convert>
+        </widget>
+        <widget source="Event" render="Label" position="120,690" size="1680,50" font="SetrixHD;38" foregroundColor="metrixForeground" halign="right" backgroundColor="metrixBackground" transparent="1">
+            <convert type="EventTime">Remaining</convert>
+            <convert type="RemainingToText">InMinutes</convert>
+        </widget>
+        <widget source="Event" render="TSRunningText" position="120,740" zPosition="1" size="1680,200" valign="top" font="Regular;29" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=auto,wrap=1" emptyText="" transparent="1" foregroundColor="metrixAccent1" backgroundColor="metrixBackground">
+            <convert type="EventName">ExtendedDescription</convert>
+        </widget>
+    </screenpanel>
+    <screenpanel name="footer2_cooltvguide">
+        <widget source="Event" render="Label" position="60,790" size="150,50" font="Regular;35" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="right" transparent="1">
+            <convert type="EventTime">StartTime</convert>
+            <convert type="ClockToText" />
+        </widget>
+        <widget source="Event" render="Label" position="222,790" size="150,50" font="Regular;35" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1">
+            <convert type="EventTime">EndTime</convert>
+            <convert type="ClockToText">Format:- %H:%M</convert>
+        </widget>
+        <widget source="Event" render="Label" position="397,790" size="1163,50" font="Regular;35" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" halign="left">
+            <convert type="EventName">Name</convert>
+        </widget>
+        <widget source="Event" render="Label" position="120,790" size="1680,50" font="SetrixHD;35" foregroundColor="metrixForeground" halign="right" backgroundColor="metrixBackground" transparent="1">
+            <convert type="EventTime">Remaining</convert>
+            <convert type="RemainingToText">InMinutes</convert>
+        </widget>
+        <widget source="Event" render="TSRunningText" position="120,835" zPosition="1" size="1680,105" valign="top" font="Regular;26" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=auto,wrap=1" emptyText="" transparent="1" foregroundColor="metrixAccent1" backgroundColor="metrixBackground">
+            <convert type="EventName">ExtendedDescription</convert>
+        </widget>
+    </screenpanel>
+</skin>
+	

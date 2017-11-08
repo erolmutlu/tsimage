@@ -1,0 +1,40 @@
+
+<!-- tplServiceListEPGItem -->
+															{if item.title != ''}
+																<table cellspacing="0">
+																	<tr>
+																		<td class="epgStart">${item.starttime}</td>
+																		<td class="epgTitle">
+																			<a href="#" class="sListExtEpg" title="${strings.show_hide_extended_desc}">
+																				<i class="sListBulletToggle fa 
+																				{if isVisible}fa-minus-square-o"{else}fa-plus-square-o{/if}" alt="+"></i>&nbsp;${item.title}
+																			</a>
+																		</td>
+																		{if item.duration != item.remaining}
+																		<td class="epgLength">+${item.remaining} of ${item.duration}</td>
+																		{else}
+																		<td class="epgLength">${item.duration}</td>
+																		{/if}
+																	</tr>
+																	<tr class="sListExtEpgLong" {if !isVisible}style="display:none"{/if}>
+																		<td colspan="4" class="epgListItem epgLong"
+																			data-servicereference="${item.servicereference}"
+																			data-servicename="${item.servicename}"
+																			data-eventid="${item.eventid}"
+																			data-start="${item.start}"
+																			data-end=${item.end}
+																			data-title="${item.title}"
+																			data-description="${item.description}">${item.extdescription}<br>
+																			<div class="leftCol">
+																				<a target="_blank" href="/web/epgsearch.rss?search=${item.title}" ><i class="fa fa-border fa-rss-square" title="RSS-Feed (${item.title.e()})"></i></a>&nbsp;&nbsp;
+																				<a target="_blank" href="http://www.imdb.com/find?s=all&amp;q=${item.titleESC}" ><i class="fa fa-border fa-film" title="${strings.imdb_lookup}"></i></a>
+																			</div>
+																			<div class="right rightCol">
+																				<a href="#" class="sListAddTimer"><i class="fa fa-border fa-plus-square-o" title="${strings.add_timer}" onClick="return false;"></i></a>&nbsp;&nbsp;
+																				<a href="#" class="sListZapTimer"><i class="fa fa-border fa-caret-square-o-right" title="${strings.add_zap_timer}" onClick="return false;"></i></a>&nbsp;&nbsp;
+																				<a href="#" class="sListEditTimer"><i class="fa fa-border fa-pencil-square-o" title="${strings.edit_timer}" onClick="return false;"></i></a>&nbsp;&nbsp;
+																			</div>
+																	</tr>
+																</table>
+															{/if}
+<!-- /tplServiceListEPGItem -->

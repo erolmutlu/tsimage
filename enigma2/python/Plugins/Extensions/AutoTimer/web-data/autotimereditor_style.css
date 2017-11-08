@@ -1,0 +1,343 @@
+/**************
+ AutoTimer Editor
+ **************/
+	#bannerHeader_autotimereditor {
+		background-image: url(/autotimereditor/dreambox_autotimereditor.png);
+		background-repeat: no-repeat;
+		#background-position: center;
+		height: 16px;
+		width: 80%;
+		margin: 7px;
+		padding: 0;
+		font-weight: bold;
+		display: inline-block;
+	}
+	#autotimer_version {
+		float: right;
+		height: 16px;
+		font-weight: bold;
+		margin: 7px;
+		padding: 0;
+	}
+	
+	#contentContainer{
+		width: 767px;
+		float: left;
+	}
+	#content{
+		width: 100%;
+	}
+	#contentHd{
+		width: 758px;
+	}
+	#contentHdExt{
+		dipslay:block;
+	}
+	.header{
+		border-bottom: 1px solid #DDD;
+		font-weight: bold;
+	}
+	.tabEditor{
+		width: 100%;
+	}
+	.editor{
+		width: 100%;
+	}
+	.editor .optionTitle{
+		height: 37px;
+		width: 210px;
+	}
+	.optionTitle{
+		padding-left: 5px;
+	}
+	.optionContent{
+		height: 25px;
+		font-weight: normal;
+	}
+	.optionMain{
+		padding-right: 2px;
+	}
+	.optionSub{
+		padding-left: 5px;
+	}
+	
+	.input,.select, a.tags, .list tr {
+		font-family: Tahoma, Sans-Serif;
+		font-size: 14px;
+		font-weight: normal;
+		border: 1px solid #CCC;
+		background-color: #fff;
+		margin: 2px;
+	}
+	.text{
+		width: 350px;
+	}
+	
+	a.tags {
+		margin: 3px 0px 3px 0px;
+		padding: 3px;
+		display: inline-block;
+	}
+	a.tags:hover {
+		box-shadow: 0 0 5px #485052;
+		-webkit-box-shadow: 0 0 5px #485052; 
+		-moz-box-shadow: 0 0 5px #485052; 
+	}
+	a.selected {
+		background: #FFFF99;
+	}
+	a.selected:hover {
+		box-shadow: 0 0 5px #485052;
+		-webkit-box-shadow: 0 0 5px #485052; 
+		-moz-box-shadow: 0 0 5px #485052; 
+	}
+	
+	#mainMenu {
+		width: 998px;
+	}
+	#mainMenu a {
+		display: inline-block;
+	}
+	#mainMenu form {
+		margin: 0;
+	}
+	#mainMenu #mainMenuLeft {
+		float: left;
+		padding-left: 0;
+	}
+	#mainMenu #mainMenuRight {
+		float: right;
+		-webkit-padding-start: 0;
+	}
+	#mainMenu #mainMenuRight #restoreform input{
+		margin-top: 4px;
+	}
+
+	button {
+		margin: 5px;
+	}
+	
+	.container{
+		margin: 2px;
+	}
+	
+	.list{
+		border-collapse: collapse;
+		margin: 3px;
+	}
+	.list td{
+		padding: 3px; 
+	}
+	.list .nopadding{
+		padding: 0px; 
+	}
+	.list tr:hover{
+		background: none repeat scroll 0 0 #D8D6D0;
+	}
+	
+	.list .add{
+		width : 30px;
+		cursor: pointer;
+		background-image:url("add.png");
+		background-position:center center; background-repeat:no-repeat;
+	}
+	.list .remove{
+		width : 30px;
+		cursor: pointer;
+		background-image:url("remove.png");
+		background-position:center center; background-repeat:no-repeat;
+	}
+	
+	.invisible{
+		display: none;
+	}
+	
+	.fixedwidth{
+		width : 150px;
+	}
+	
+	.fixedwidthbouquet{
+		width : 150px;
+	}
+	
+	.fixedwidthservice{
+		width : 240px;
+	}
+	
+	.timepicker{
+		display: inline;
+		background-image:url("clock.png");
+		background-position:96% center; background-repeat:no-repeat;
+	}
+	.timepicker:hover{
+		cursor: pointer;
+		background-image:url("clock_hover.png");
+		background-position:96% center; background-repeat:no-repeat;
+	}
+	
+	.datepicker{
+		display: inline;
+		background-image:url("calendar.png");
+		background-position:98% center; background-repeat:no-repeat;
+	}
+	.datepicker:hover{
+		cursor: pointer;
+		background-image:url("calendar_hover.png");
+		background-position:98% center; background-repeat:no-repeat;
+	}
+
+
+/***************
+ AutoTimer List
+ ***************/
+
+	#navContainer{
+		float:left;
+		width: 220px;
+	}
+	 
+	#nav{
+		font-weight: bold;
+	}
+
+	#navHd{
+		width: 220px;
+	}
+
+	#navContent{
+	}
+
+	#navSearch{
+		width: 100%;
+		height: 61px;
+		background: #FFF;
+		margin-top: 8px;
+		border: 2px solid #000;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+	}
+
+	#searchHd{
+		background: #000;
+		text-align: center;
+		width: 153px;
+	}
+	
+	#navVolume{
+		width: 100%;
+		height: 75px;
+		background: #FFF;
+		margin-top: 8px;
+		border: 2px solid #000;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+	}
+
+	#volHd{
+		background: #000;
+		text-align: center;
+		width: 153px;
+	}
+	
+	.tabOverview{
+		width: 100%;
+	}
+	.overview{
+		width: 219px;
+		margin : 0px;
+		padding: 0px;
+		border: 0px
+	}
+	.buttonbar{
+		border-top: 1px solid #DDD;
+	}
+	.buttonbar button{
+		float: left;
+	}
+	.enabled{
+		background-color: #58FA58;
+	}
+	.disabled{
+		background-color: #D8D8D8;
+	}
+
+
+/**************
+ AutoTimer Preview
+ **************/
+	#previewlist{
+		width: 100%;
+	}
+	#previewlist tr{
+		margin-bottom: 3px;
+	}
+	#previewlist td{
+		vertical-align: text-top;
+		padding-top: 3px;
+	}
+	#previewlist th:not(.nopadding){
+		padding-left: 10px;
+	}
+	#previewlist td:not(.nopadding){
+		padding-left: 10px;
+	}
+	#previewlist tr:hover {
+		margin: 0;
+		background: #DDD;
+	}
+	#previewlist td.tListColumn {
+		width: 120px;
+		text-align: left;
+	}
+	#previewlist td .messageindent {
+		margin-left: 20px;
+	}
+	.nobreak {
+		white-space: nowrap;
+	}
+
+/**************
+ AutoTimer Test
+ **************/
+	#testlist{
+		width: 100%;
+	}
+	#testlist tr{
+		margin-bottom: 3px;
+	}
+	#testlist td.timerList:hover {
+		display: block;
+		margin: 0;
+		background: #DDD;
+	}
+	#testlist td.tListColumn {
+		width: 120px;
+		text-align: left;
+	}
+	#testlist td .messageindent {
+		margin-left: 20px;
+	}
+
+
+/**************
+ AutoTimer About
+ **************/
+	.about {
+		border: NONE;
+	}
+	
+	.about{
+		font-size: 12px;
+	}
+	
+	.about h1{
+		font-size: 16px;
+		margin-left: 20px;
+	}
+
+	.about div, .about pre{
+		margin-left: 25px;
+		margin-bottom: 10px;
+	}

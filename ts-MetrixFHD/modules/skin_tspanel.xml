@@ -1,0 +1,998 @@
+<skin>
+    <!-- TSGetMultiipk [ok] -->
+  <screen name="TSGetMultiipk" position="center,center" size="860,380" title="Installer" flags="wfNoBorder">
+    <widget source="Title" render="Label" position="30,0" size="800,70" font="SetrixHD; 50" backgroundColor="metrixPreTrans" transparent="1" foregroundColor="metrixForeground" />
+    
+    <widget name="connect" pixmaps="ts-MetrixFHD/tsimage/menu/multiInstaller/connect0.png,ts-MetrixFHD/tsimage/menu/multiInstaller/connect1.png,ts-MetrixFHD/tsimage/menu/multiInstaller/connect2.png,ts-MetrixFHD/tsimage/menu/multiInstaller/connect3.png,ts-MetrixFHD/tsimage/menu/multiInstaller/connect4.png,ts-MetrixFHD/tsimage/menu/multiInstaller/connect5.png,ts-MetrixFHD/tsimage/menu/multiInstaller/connect6.png,ts-MetrixFHD/tsimage/menu/multiInstaller/connect7.png,ts-MetrixFHD/tsimage/menu/multiInstaller/connect8.png,ts-MetrixFHD/tsimage/menu/multiInstaller/connect9.png,ts-MetrixFHD/tsimage/menu/multiInstaller/connect10.png" position="182,70" size="500,160" alphatest="blend" transparent="1" />
+    <widget name="status_pix" pixmaps="ts-MetrixFHD/tsimage/menu/multiInstaller/downloading.png,ts-MetrixFHD/tsimage/menu/multiInstaller/installing.png,ts-MetrixFHD/tsimage/menu/multiInstaller/configuring.png,ts-MetrixFHD/tsimage/menu/multiInstaller/status_ok.png,ts-MetrixFHD/tsimage/menu/multiInstaller/status_fail.png" position="548,70" size="160,160" alphatest="blend" transparent="1" />
+    <widget name="package" position="30,230" size="800,60" font="Regular;26" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="status" position="30,290" size="800,80" font="Regular;23" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+  </screen>
+	<!-- TSPanel [ok] --> 
+  <screen name="TSPanelList" position="center,center" size="1920,1080" title=" " flags="wfNoBorder" transparent="0" backgroundColor="transparent">
+    <panel name="screenpanel_menu" />
+    <widget source="Title" render="Label" position="30,0" size="1890,1080" font="SetrixHD; 152" backgroundColor="metrixPreTrans" transparent="1" foregroundColor="metrixPreTrans" valign="bottom" zPosition="-5" />
+    <eLabel position="970,77" zPosition="-1" size="638,848" backgroundColor="metrixBackground" transparent="0" />
+    <widget source="list" render="Listbox" position="955,77" size="663,835" zPosition="3" scrollbarMode="showNever" enableWrapAround="1" transparent="1" >
+                        <convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (90,[
+						MultiContentEntryText(pos = (50, 10), size = (580, 60), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the entry.name
+						
+					]),
+				},
+				"fonts": [gFont("SetrixHD", 45)],
+				"itemHeight": 90
+			}
+			</convert>
+    </widget>
+    <widget source="list" render="Listbox" position="460,125" size="384,384" zPosition="3" scrollbarMode="showNever" selectionDisabled="1" enableWrapAround="1" transparent="1" >
+                        <convert type="TemplatedMultiContent">
+			{"templates":
+				{"default": (384,[
+						MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (384, 384), png = 0), # index 0 is the icon
+						
+					]),
+				},
+				"fonts": [gFont("SetrixHD", 30)],
+				"itemHeight": 384
+			}
+			</convert>
+    </widget>	
+  </screen>
+<!-- TSPanel [ok] --> 
+  <screen name="TSPanelIcons" position="0,0" size="1920,1080" title="TS Panel" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="770,123" zPosition="-1" size="950,840" backgroundColor="metrixBackground" transparent="0" />
+    <eLabel position="170,123" zPosition="-1" size="540,450" backgroundColor="metrixBackground" transparent="0" />
+    <ePixmap position="248,156" size="384,384" pixmap="ts-MetrixFHD/tsimage/menu/bluepanel.png" alphatest="blend" />
+    <eLabel position="170,617" zPosition="-1" size="540,105" backgroundColor="metrixBackground" transparent="0" />
+    <widget source="global.CurrentTime" render="Label" position="485,610" size="200,100" font="SetrixHD; 85" halign="left" backgroundColor="metrixBackground" transparent="1" valign="top">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="255,670" size="220,50" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+      <convert type="ClockToText">Format: %e. %B</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="255,634" size="220,50" font="Regular; 30" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+      <convert type="ClockToText">Format: %A</convert>
+    </widget>
+    <widget source="Title" render="Label" position="40,0" size="1880,1080" font="SetrixHD; 150" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixPreTrans" valign="bottom" zPosition="3" />
+    <widget source="label0" render="Label" zPosition="2" position="765,350" size="280,80" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground"  halign="center" valign="center" transparent="1" />
+    <widget name="thumb0" zPosition="2" position="815,160" size="192,192" alphatest="blend" transparent="1" />
+    <widget source="label1" render="Label" zPosition="2" position="1110,350" size="280,80" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="thumb1" zPosition="2" position="1160,160" size="192,192" alphatest="blend" transparent="1" />
+    <widget source="label2" render="Label" zPosition="2" position="1455,350" size="280,80" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="thumb2" zPosition="2" position="1495,160" size="192,192" alphatest="blend" transparent="1" />
+    <widget source="label3" render="Label" zPosition="2" position="765,610" size="280,80" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="thumb3" zPosition="2" position="815,420" size="192,192" alphatest="blend" transparent="1" />
+    <widget source="label4" render="Label" zPosition="2" position="1110,610" size="280,80" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="thumb4" zPosition="2" position="1160,420" size="192,192" alphatest="blend" transparent="1" />
+    <widget source="label5" render="Label" zPosition="2" position="1445,610" size="280,80" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="thumb5" zPosition="2" position="1495,420" size="192,192" alphatest="blend" transparent="1" />
+    <widget source="label6" render="Label" zPosition="2" position="765,890" size="280,80" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground"  halign="center" valign="center" transparent="1" />
+    <widget name="thumb6" zPosition="2" position="815,700" size="192,192" alphatest="blend" transparent="1" />
+    <widget source="label7" render="Label" zPosition="2" position="1110,890" size="280,80" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="thumb7" zPosition="2" position="1160,700" size="192,192" alphatest="blend" transparent="1" />
+    <widget source="label8" render="Label" zPosition="2" position="1445,890" size="280,80" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="thumb8" zPosition="2" position="1495,700" size="192,192" alphatest="blend" transparent="1" />
+    <widget name="frame" position="50,50" size="205,205" zPosition="1" alphatest="blend" transparent="1"/>   
+  </screen>
+  <!-- [TSMediaPanel] MediaPanel Setup (1) --> 
+  <screen name="TSMediaPanelConfig" position="0,0" size="1920,1080" title="Media panel Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel text="Cancel" position="165,945" size="340,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="Save" position="564,945" size="340,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>   
+  <screen name="TSMediaPanel" position="0,920"  title="TSMedia Panel" size="1920,160" flags="wfNoBorder" backgroundColor="transparent" >
+   <eLabel position="0,0" zPosition="-1" size="1920,160" backgroundColor="metrixBackground" transparent="0" />
+   <widget name="frame" position="0,15" size="100,100" zPosition="1" alphatest="blend" />
+   <widget source="label0" render="Label" position="20,130" size="140,30" font="Regular;25" zPosition="2" transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb0" position="40,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/movie.png" transparent="1" alphatest="blend" />
+   <widget source="label1" render="Label" position="160,130" size="140,30" font="Regular;25" zPosition="2"  transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb1" position="180,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/music.png" transparent="1" alphatest="blend" />
+   <widget source="label2" render="Label" position="300,130" size="140,30" font="Regular;25" zPosition="2" transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb2" position="320,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/pictures.png" transparent="1" alphatest="blend" />
+   <widget source="label3" render="Label" position="440,130" size="140,30" font="Regular;25" zPosition="2" transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb3" position="460,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/timers.png" transparent="1" alphatest="blend" />
+   <widget source="label4" render="Label" position="580,130" size="140,30" font="Regular;25" zPosition="2" transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb4" position="600,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/filesexplorer.png" transparent="1" alphatest="blend" />
+   <widget source="label5" render="Label" position="720,130" size="140,30" font="Regular;25" zPosition="2" transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb5" position="740,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/dvd.png" transparent="1" alphatest="blend" />
+   <widget source="label6" render="Label" position="860,130" size="140,30" font="Regular;25" zPosition="2" transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb6" position="880,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/tsmedia.png" transparent="1" alphatest="blend" />
+   <widget source="label7" render="Label" position="1000,130" size="140,30" font="Regular;25" zPosition="2" transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb7" position="1020,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/netradio.png" transparent="1" alphatest="blend" />
+   <widget source="label8" render="Label" position="1140,130" size="140,30" font="Regular;25" zPosition="2" transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb8" position="1160,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/youtube.png" transparent="1" alphatest="blend" />
+   <widget source="label9" render="Label" position="1280,130" size="140,30" font="Regular;25" zPosition="2" transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb9" position="1300,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/vlc.png" transparent="1" alphatest="blend" />
+   <widget source="label10" render="Label" position="1420,130" size="140,30" font="Regular;25" zPosition="2" transparent="1" noWrap="1" halign="center"  valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+   <widget name="thumb10" position="1440,15" size="100,100" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSMediaPanel/mediabuttons/weather.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="TSSoftcamsManager" position="0,0" size="1920,1080" title="Softcam manager" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="120,450" size="1140,1" zPosition="2" backgroundColor="metrixAccent2" transparent="0"/>
+  <widget source="session.CurrentService" render="Label" position="120,460" size="1200,480" font="SetrixHD;32" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1">
+    <convert type="TSEcmInfo">Default</convert>
+  </widget>
+    <widget name="cams_count" position="1090,175" size="150,70" font="SetrixHD;27" foregroundColor="metrixAccent1" backgroundColor="metrixBackground"  halign="center" valign="centerOrTop" transparent="1" />
+    <widget source="menu" render="Listbox" position="120,190" size="950,45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+		                <convert type="TemplatedMultiContent">
+					{"template": [
+					                MultiContentEntryPixmapAlphaBlend(pos = (12, 6), size = (33, 33), png = 0), # Status Icon,
+							MultiContentEntryText(pos = (55, 0), size = (615, 45), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 1),
+                                                ],
+					"fonts": [gFont("SetrixHD", 35)],
+					"itemHeight": 45
+					}
+				</convert>
+    </widget>
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>   
+  <!-- TS Cam Manager (2) -->   
+  <screen name="Getipklist" position="0,0" size="1920,1080" title="Install/Remove" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="list" render="Listbox" position="120,190" size="1200,576" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+		                <convert type="TemplatedMultiContent">
+					{"template": [
+					                MultiContentEntryPixmapAlphaBlend(pos = (12, 10), size = (28, 28), png = 1), # Status Icon,
+							MultiContentEntryText(pos = (55, 0), size = (945, 48), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+							MultiContentEntryPixmapAlphaBlend(pos = (5, 4), size = (40, 40), png = 2), # action Icon,
+                                                ],
+					"fonts": [gFont("SetrixHD", 35)],
+					"itemHeight": 48
+					}
+				</convert>
+    </widget>
+    <widget name="waiting" position="120,190" size="1200,560" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="info" position="120,780" size="1200,60" font="SetrixHD;33" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" transparent="1" />
+    <widget name="fspace" position="1400,780" size="340,80" font="Regular;31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/software_manager.svg" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- TS Addons manger -->
+  <screen name="IpkgList" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="menu" render="Listbox" position="120,190" size="1200,480" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+              <convert type="TemplatedMultiContent">
+					{"template": [
+					                MultiContentEntryPixmapAlphaBlend(pos = (12, 10), size = (28, 28), png = 1), # Status Icon,
+							MultiContentEntryText(pos = (55, 0), size = (945, 48), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+							MultiContentEntryPixmapAlphaBlend(pos = (5, 4), size = (40, 40), png = 2), # action Icon,
+                                        	],
+					"fonts": [gFont("SetrixHD", 35)],
+					"itemHeight": 48
+					}
+	       </convert>
+    </widget>
+    <widget name="waiting" position="120,190" size="1200,480" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="info" position="120,670" size="1200,48" zPosition="3" font="Regular; 31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <eLabel position="120,720" size="1200,2" zPosition="2" backgroundColor="#606060" />
+    <widget name="pkginfo" position="120,725" size="1200,200" font="SetrixHD;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" />
+    <widget name="fspace" position="1400,780" size="340,80" font="Regular;31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <panel name="kc-nrgyb" />
+    <widget name="key_info" position="1688,945" size="122,60" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" zPosition="-2" transparent="1" />
+    <ePixmap name="key_info" position="1688,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/software_manager.svg" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="TSAddonsSetup" position="0,0" size="1920,1080" title="Addons Manager Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>   
+  <screen name="ServerGroups" position="0,0" size="1920,1080" title="TS Server Groups" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="list" render="Listbox" position="120,190" size="1200,480" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+		                <convert type="TemplatedMultiContent">
+					{"template": [
+					                MultiContentEntryPixmapAlphaBlend(pos = (7, 4), size = (40, 40), png = 1), # Type Icon,
+							MultiContentEntryText(pos = (66, 0), size = (1045, 48), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+						],
+					"fonts": [gFont("SetrixHD", 35)],
+					"itemHeight": 48
+					}
+				</convert>
+    </widget>
+    <widget name="waiting" position="120,190" size="1200,640" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <eLabel position="120,770" size="1200,1" zPosition="2" backgroundColor="metrixAccent2" transparent="0"/>
+    <widget name="info" position="120,780" size="1200,50" zPosition="3" font="Regular; 31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="info2" position="120,820" size="1200,50" zPosition="3" font="Regular; 31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="fspace" position="1400,780" size="340,80" font="Regular;31" foregroundColor="metrixAccent1" backgroudColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <panel name="kc-nrgyb" />
+    <widget name="key_info" position="1556,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+    <ePixmap name="key_menu" position="1688,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/software_manager.svg" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="showUpgradeInfo" position="0,0" size="1920,1080" title="TS Server Groups" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="upgradeinfo" render="Listbox" position="120,190" size="1200,630" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (105, 0), size = (1000, 50), font=0, flags = RT_HALIGN_LEFT, text = 0), # Package name
+					MultiContentEntryText(pos = (105, 45), size = (1000, 40), font=1, flags = RT_HALIGN_LEFT, text = 1), # from --> to
+                                        MultiContentEntryPixmapAlphaBlend(pos = (3, 7), size = (72, 72), png = 2), # Upgrade Icon
+				],
+				"fonts": [gFont("Regular", 33),gFont("SetrixHD", 28)],
+				"itemHeight": 90
+				}
+			</convert>
+    </widget>
+    <eLabel text="-" position="120,830" size="1200,2" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="info" position="120,835" size="1200,50" zPosition="3" font="Regular; 31" foregroundColor="metrixAccent1" halign="center" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="fspace" position="1400,780" size="340,80" font="Regular;31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/upgrade.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="TSConsole" position="0,0" size="1920,1080" title="TSConsole" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="waiting" position="120,190" size="1200,720" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="text" position="120,190" size="1200,720" font="Console;28" transparent="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/console.png" transparent="1" alphatest="blend" />
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel name="key_red" text="Back" position="165,945" size="340,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+  </screen>     
+  <screen name="metaDescScreen" position="0,0" size="1920,1080" title="Ipk Description" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="pkgname" position="120,160" size="1180,60" font="SetrixHD;48" backgroundColor="metrixBackground" halign="left" valign="center" transparent="1" />
+    <widget name="author" position="120,200" size="1180,60" font="SetrixHD;30" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="left" valign="center" transparent="1" />
+    <eLabel text="-" position="120,770" size="1180,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="preview" position="240,255" size="896,504" zPosition="5" backgroundColor="transpBlack" alphatest="blend" transparent="1" />
+    <widget name="desc" position="120,777" size="1180,220" font="SetrixHD;30" transparent="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/info.png" transparent="1" alphatest="blend" />
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel name="key_red" text="Back" position="165,945" size="340,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+  </screen> 
+  <screen name="TSSkinSetup" position="0,0" size="1920,1080" title="TSimage Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgyb" />
+    <widget name="key_ok" position="1650,954" size="45,44" zPosition="2" pixmap="ts-MetrixFHD/buttons/key_ok.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="TSyWeatherEntries" position="0,0" size="1920,1080" title="Weather Entries" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="city" position="150,190" size="270,45" font="Regular;33" valign="center" halign="left" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" zPosition="1" />
+    <widget name="defaultentry" position="825,190" size="270,45" font="Regular;33" valign="center" halign="right" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" zPosition="1" />
+    <eLabel text="-" position="120,232" size="1180,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget source="entrylist" render="Listbox" position="120,240" size="1180,600" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+			      <convert type="TemplatedMultiContent">
+				{"template": [
+					             MultiContentEntryText(pos = (15, 0), size = (375, 60), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ,
+					             MultiContentEntryPixmapAlphaBlend(pos = (870, 6), size = (48, 48), png = 2),
+					             ],
+						     "fonts": [gFont("Regular", 36)],
+						     "itemHeight": 60
+							}
+						</convert>
+    </widget>
+    <panel name="kc-nrgyb" />
+    <widget name="key_ok" position="1650,954" size="45,44" zPosition="2" pixmap="ts-MetrixFHD/buttons/key_ok.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="TSyWeatherSearch" position="0,0" size="1920,1080" title="yWeather Location Search" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgy" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <screen name="TSyWeatherSearchResult" position="0,0" size="1920,1080" title="Location Search Result" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="searchlist" position="120,190" size="1180,540" itemHeight="90" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>     
+  <screen name="TSiSkinThemes" position="0,0" size="1920,1080" title="Skin Themes" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1180,160" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="waiting" position="120,190" size="1180,720" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="preview" position="134,281" size="1152,648" backgroundColor="transparent" alphatest="blend" transparent="1" />
+    <!--widget name="preview" position="198,350" size="1024,576" zPosition="5" backgroundColor="transpBlack" alphatest="blend" transparent="1" />-->
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>   
+  <screen name="TSiPiconEdit" position="0,0" size="1920,1080" title="Edit Picon Path" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>   
+  
+  <screen name="PanelIconslist" position="0,0" size="1920,1080" title="Edit Picon Path" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="menu" render="Listbox" position="120,190" size="1200,160" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+		                <convert type="TemplatedMultiContent">
+					{"template": [
+					                MultiContentEntryPixmapAlphaBlend(pos = (12, 8), size = (24, 24), png = 1), # Status Icon,
+							MultiContentEntryText(pos = (52, 0), size = (922, 40), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+                                                ],
+					"fonts": [gFont("SetrixHD", 34)],
+					"itemHeight": 40
+					}
+				</convert>
+    </widget>
+    <widget name="waiting" position="120,190" size="1200,720" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <widget name="preview" position="240,370" size="960,540" zPosition="5" backgroundColor="transpBlack" alphatest="blend" transparent="1" />
+    <widget name="fspace" position="1400,780" size="340,80" font="Regular;31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />  
+    <panel name="kc-nrgy" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/net.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSPanel] TS FileExplorer -->
+  <screen name="FileExplorerII" position="0,0" size="1920,1080" title="Files Explorer" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="info" position=" 120,190" size="750,48" font="SetrixHD;36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="120,250" size="1200,2" backgroundColor="metrixAccent1" />
+    <widget name="filelist" position="120,270" size="1200,585" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+    <eLabel name="key_red" text="Delete" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel name="key_green" text="Rename" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel name="key_yellow" text="Move/Copy" position="974,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel name="key_blue" text="Bookmarks" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap name="key_info" position="1556,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+    <ePixmap name="key_menu" position="1688,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/filesexplorer.png" transparent="1" alphatest="blend" />
+  </screen>   
+  <!-- [TSPanel] Copy manager  -->
+  <screen name="CPmaniger" position="0,0" size="1920,1080" title="Files Explorer" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="File" position=" 120,190" size="750,48" font="SetrixHD;36" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="120,250" size="1200,2" backgroundColor="metrixAccent1" />
+    <widget name="CPto" position="120,270" size="1200,585" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+    <eLabel name="key_red" text="Move" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel name="key_yellow" text="Copy" position="974,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/filesexplorer.png" transparent="1" alphatest="blend" />
+  </screen>   
+  <!-- [TSPanel] TS RSS Reader (1)  -->  
+  <screen name="TSFeedScreenList" position="0,0" size="1920,1080" title="RSS Reader" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="mylist" position="120,190" size="1200,700" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/rss.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <!-- [TSPanel] TS RSS Reader (2)  -->  
+  <screen name="TSFeedScreenContent" position="0,0" size="1920,1080" title="RSS Reader" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="mylist" position="120,190" size="1200,720" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="info" position="120,190" size="1200,720" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="center" transparent="1" />
+    <panel name="kc-nr" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/rss.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSPanel] TS RSS Reader (2)  -->  
+  <screen name="TSFeedScreenItemviewer" position="0,0" size="1920,1080" title="RSS Reader" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="text" position="120,190" size="1200,720" font="Console;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="leagueNumberWidget" position="120,890" size="1200,50" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" transparent="1" />
+    <panel name="kc-nryb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/rss.png" transparent="1" alphatest="blend" />
+  </screen>    
+  <screen name="TSFeedScreenMore" position="0,0" size="1920,1080" title="RSS Reader" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="text" position="120,190" size="1200,720" font="Console;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="leagueNumberWidget" position="120,890" size="1200,50" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" transparent="1" />
+    <widget name="waiting" position="120,190" size="1200,720" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <panel name="kc-nry" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/rss.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <!-- [TSPanel] TS EPG setup (1)  -->
+  <screen name="TSEpgSetup" position="0,0" size="1920,1080" title="EPG Setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <screen name="TSEpgPath" position="0,0" size="1920,1080" title="EPG Path" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="filelist" position="120,190" size="1200,630" zPosition="3" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget name="target" position="120,840" size="1200,90" font="SetrixHD;31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" transparent="1" />
+    <panel name="kc-srg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSTools] TS Uninstaller (1)  -->
+  <screen name="TSiMenuscrn" position="0,0" size="1920,1080" title="Uninstaller menu" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_contextmenu" />
+    <widget source="Title" render="Label" position="30,0" size="1890,1080" font="SetrixHD; 152" backgroundColor="metrixPreTrans" transparent="1" foregroundColor="metrixPreTrans" valign="bottom" zPosition="-5" />
+    <widget name="menu" position="954,90" size="645,825" zPosition="3" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+    <ePixmap position="465,128" size="384,384" pixmap="ts-MetrixFHD/tsimage/menu/uninstaller.png" alphatest="blend" />
+  </screen>
+  <screen name="TSRemoveList" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="menu" render="Listbox" position="120,190" size="1200,700" scrollbarMode="showOnDemand" transparent="1" backgroundColor="metrixBackground" >
+           <convert type="TemplatedMultiContent">
+				{"template": [
+                               MultiContentEntryPixmapAlphaBlend(pos = (5, 6), size = (38, 38), png = 1), # Type Icon,
+				               MultiContentEntryText(pos = (55, 0), size = (945, 50), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+				             ],
+				 "fonts": [gFont("SetrixHD", 35)],
+				 "itemHeight": 50
+					}
+           </convert>
+    </widget>
+    <widget name="info" position="1400,780" size="340,80" font="Regular;31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+    <eLabel name="key_red" text="Back" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="ButtonBluetext" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/uninstaller.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- [TSTools] dBackup -->
+  <screen name="dBackup" position="0,0" size="1920,1080" title="dBackup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="120,185" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_flash.png" transparent="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Label" position="135,283" size="420,68" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2" font="Regular;27" transparent="1" >
+      <convert type="TSProgressDiskSpaceInfo">FlashTotal,Partial</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Progress" position="240,223" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="1" >
+      <convert type="TSProgressDiskSpaceInfo">FlashTotal</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="488,213" size="75,36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2" font="Regular;30" transparent="1" >
+      <convert type="TSProgressDiskSpaceInfo">FlashTotal,Percent</convert>
+    </widget>
+    <ePixmap position="120,387" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_memory.png" transparent="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Label" position="135,485" size="375,68" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2" font="Regular;27" transparent="1" >
+      <convert type="TSProgressDiskSpaceInfo">MemTotal,Partial</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Progress" position="240,432" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="1" >
+      <convert type="TSProgressDiskSpaceInfo">MemTotal</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="488,422" size="75,36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2" font="Regular;30" transparent="1" >
+      <convert type="TSProgressDiskSpaceInfo">MemTotal,Percent</convert>
+    </widget>
+    <ePixmap position="120,577" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_swap.png" transparent="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Label" position="135,694" size="375,68" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2" font="Regular;27" transparent="1" >
+      <convert type="TSProgressDiskSpaceInfo">SwapTotal,Partial</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Progress" position="240,634" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="1" >
+      <convert type="TSProgressDiskSpaceInfo">SwapTotal</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="488,624" size="75,36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2" font="Regular;30" transparent="1" >
+      <convert type="TSProgressDiskSpaceInfo">SwapTotal,Percent</convert>
+    </widget>               
+    <widget name="slider" position="120,825" size="1020,23" borderWidth="1" transparent="1" />
+    <panel name="bc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/backup.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <!-- [TSTools] TSdFlash Checking-->
+  <screen name="dBackupChecking" position="0,0" size="1920,1080" title="choose NAND Flash Check" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="menu" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="bc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <!-- [TSTools] TSdFlash Configuration-->
+  <screen name="dBackupConfiguration" position="0,0" size="1920,1080" title="dBackup Configuration" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="bc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSTools] TSdFlash About-->
+  <screen name="dBackupAbout" position="0,0" size="1920,1080" title="About dBackup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="600,150" size="195,150" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/dBackup/g3icon_dbackup.png" transparent="1" alphatest="blend" />
+    <widget name="aboutdbackup" position="240,345" size="870,105" valign="center" halign="center" zPosition="2"  foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;36" transparent="1" />
+    <widget name="freefilesystem" position="345,450" size="270,375" valign="center" halign="center" zPosition="2"  foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;36" transparent="1"/>
+    <widget name="freememory" position="750,450" size="270,375" valign="center" halign="center" zPosition="2"  foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;36" transparent="1" />
+    <panel name="bc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/info.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- [TSTools] TSdFlash Backup running  -->
+  <screen name="TSBackupImage" position="30,20" size="200,60" backgroundColor="transparent" title="Backup running"  flags="wfNoBorder" >	
+    <eLabel position="0,0" zPosition="-10" size="200,60" backgroundColor="metrixBackground" transparent="0" />
+    <widget name="info" position="5,0" size="190,47" font="Regular;16" halign="center" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="slider" position="5,47" size="190,8" borderColor="metrixForeground" borderWidth="1" transparent="1"/>
+  </screen> 
+  <!-- [TSTools] Settings backup (1)-->
+  <screen name="TSBackupSettings" position="0,0" size="1920,1080" title="Settings backup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,190" size="1200,600" itemHeight="60" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="info" position="120,750" zPosition="4" size="1200,120" font="Regular;31" halign="center" valign="center" foregroundColor="metrixAccent1" backgroundColor="background" transparent="1" />
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel name="key_red" text="Close" position="165,945" size="340,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <!-- [TSTools] Settings loader (1) -->
+  <screen name="TSiServersScreen" position="0,0" size="1920,1080" title="Settings Loader Servers" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="list" render="Listbox" position="120,190" size="1200,720" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+		                <convert type="TemplatedMultiContent">
+					{"template": [
+					                MultiContentEntryPixmapAlphaBlend(pos = (7, 10), size = (40, 40), png = 1), # Type Icon,
+							MultiContentEntryText(pos = (60, 0), size = (975, 60), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+						],
+					"fonts": [gFont("SetrixHD", 35)],
+					"itemHeight": 60
+					}
+				</convert>
+    </widget>				
+    <panel name="kc-nry" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSTools] Settings loader (2) -->
+  <screen name="TSSLSelection" position="0,0" size="1920,1080" title="Settings loader" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="list" render="Listbox" position="120,190" size="1200,720" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (75, 0), size = (815, 60), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+						MultiContentEntryText(pos = (920, 0), size = (200, 60), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
+						MultiContentEntryPixmapAlphaBlend(pos = (7, 11), size = (38, 38), png = 0), # Icon
+
+						],
+						"fonts": [gFont("SetrixHD", 35)],
+						"itemHeight": 60
+					}
+                        </convert>
+    </widget> 
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+    <widget name="waiting" position="120,190" size="1200,720" font="SetrixHD;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" />
+  </screen> 
+<!-- [TSTools] Settings loader (3) -->
+  <screen name="TSSLSetup" position="0,0" size="1920,1080" title="Settings loader setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSTools] Settings loader (4) -->
+  <screen name="TSSLKeepBouquets" position="0,0" size="1920,1080" title="Keep Bouquets" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="list" render="Listbox" position="120,190" size="1200,720" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (75, 0), size = (712, 60), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+						MultiContentEntryText(pos = (825, 0), size = (180, 60), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
+						MultiContentEntryPixmapAlphaBlend(pos = (7, 11), size = (38, 38), png = 0), # Icon
+
+						],
+						"fonts": [gFont("SetrixHD", 35)],
+						"itemHeight": 60
+					}
+                        </convert>
+    </widget> 
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSTools] Sat manager (1)-->
+  <screen name="SatellitesEditor" position="0,0" size="1920,1080" title="Satellite editor" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="head" position="220,230" size="800,390" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" zPosition="2" />
+    <widget name="list" position="220,260" size="800,360" backgroundColor="metrixBackground" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+    <!--eLabel position="100,537" zPosition="1" size="620,1" backgroundColor="metrixForeground"/> -->
+    <widget name="polhead" foregroundColor="metrixForeground" backgroundColor="metrixBackground" zPosition="1" position="295,707" size="660,24"  />
+    <widget name="bandlist" foregroundColor="metrixForeground" backgroundColor="metrixBackground" zPosition="1" position="197,740" size="65,72" />
+    <widget name="infolist" foregroundColor="metrixForeground" backgroundColor="metrixBackground" zPosition="1" position="295,740" size="660,72" />
+    <panel name="kc-nrgyb" />
+    <ePixmap name="key_menu" position="1688,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/sat.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSTools] Sat manager (2)-->
+  <screen name="SatEditor" position="0,0" size="1920,1080" title="Sat editor" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/sat.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSTools] Sat manager (3)-->
+  <screen name="TranspondersEditor" position="0,0" size="1920,1080" title="Transponders editor" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="head" position="120,190" size="1200,390" foregroundColor="metrixForeground" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" zPosition="2" />
+    <widget name="list" position="120,220" size="1200,720" foregroundColor="metrixForeground" backgroundColor="metrixBackground" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/sat.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- [TSTools] Sat manager (4)-->
+  <screen name="TransponderEditor" position="0,0" size="1920,1080" title="Transponder editor" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/sat.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSTools] Sat manager (5)--> 
+  <screen name="TSipanelMenuSelection" position="center,center" size="1920,1080" title="Menu selection" flags="wfNoBorder" transparent="0" backgroundColor="transparent">
+    <panel name="screenpanel_contextmenu" />
+    <eLabel text="Satmanager menu" position="20,552" size="1273,296" font="SetrixHD; 150" backgroundColor="metrixPreTrans" transparent="1" foregroundColor="metrixPreTrans" valign="top" zPosition="-5" />
+    <widget source="menulist" render="Listbox" position="984,90" size="585,825" zPosition="3" scrollbarMode="showNever" enableWrapAround="1" transparent="1" >
+		<convert type="TemplatedMultiContent">
+		          {"template": [
+                                MultiContentEntryText(pos = (0, 0), size = (1, 50), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 1),
+                                MultiContentEntryText(pos = (20, 0), size = (650, 50), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+                                ],
+                                "fonts": [gFont("Regular", 38)],
+                                "itemHeight": 50
+		          }
+		</convert>
+    </widget>
+    <ePixmap position="465,128" size="384,384" pixmap="ts-MetrixFHD/icons/sat.png" alphatest="blend" />
+  </screen>
+  <!-- [TSTools] Sat manager (6)-->
+  <screen name="LyngSat" position="0,0" size="1920,1080" title="LyngSat" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/sat.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- [TSTools] Sat manager (7)-->
+  <screen name="TSiServiceEditor" position="0,0" size="1920,1080" title="Service editor" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/sat.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- [TSTools] Sat manager (8)-->
+  <screen name="NewTSisatEditor" position="0,0" size="1920,1080" title="Sat editor" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="satlist" render="Listbox" position="120,190" size="1200,720" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+                <convert type="TemplatedMultiContent">
+					{"template": [
+							MultiContentEntryText(pos = (75, 0), size = (690, 42), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+							MultiContentEntryPixmapAlphaBlend(pos = (7, 3), size = (37, 36), png = 2),
+						],
+					"fonts": [gFont("Regular", 33)],
+					"itemHeight": 42
+					}
+		</convert>
+    </widget>
+    <widget name="info" position="120,825" zPosition="4" size="1200,105" font="Regular;31" halign="center" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgy" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/sat.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- [TSTools] Sat manager (9)-->
+  <screen name="TSiServicesEditor" position="0,0" size="1920,1080" title="Services editor" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="info" position="173,230" zPosition="2" size="930,360" font="Regular;33" halign="center" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="head" position="220,200" size="923,390" scrollbarMode="showNever" zPosition="1" transparent="1" />
+    <widget name="list" position="200,230" size="930,360" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+    <widget name="infolist" position="200,690" size="930,144" zPosition="4" backgroundColor="metrixBackground" foregroundColor="yellow" transparent="1" />
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/sat.png" transparent="1" alphatest="blend" />
+  </screen>   
+  <!-- [TSTools] Grabber (1)-->
+  <screen name="TSiScreenGrabberSetup" position="0,0" size="1920,1080" title="Screen grabber setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-srgy" />
+    <widget name="key_ok" position="1650,954" size="45,44" zPosition="2" pixmap="ts-MetrixFHD/buttons/key_ok.png" transparent="1" alphatest="blend" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <screen name="TSiScreenGrabberFiles" position="0,0" size="1920,1080" title="Screen grabber files" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="menu" render="Listbox" position="120,190" size="1200,720" scrollbarMode="showOnDemand" transparent="1" backgroundColor="metrixBackground" >
+           <convert type="TemplatedMultiContent">
+				{"template": [
+                                               MultiContentEntryPixmapAlphaBlend(pos = (7, 12), size = (36, 36), png = 0), # Type Icon,
+				               MultiContentEntryText(pos = (60, 0), size = (975, 60), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 1),
+				             ],
+				 "fonts": [gFont("SetrixHD", 35)],
+				 "itemHeight": 60
+					}
+           </convert>
+    </widget> 
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+    <eLabel name="ButtonRedtext" text="Back" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="ButtonGreentext" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="ButtonYellowtext" position="974,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="ButtonBluetext" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/grabber.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- [TSTools] Language Selection (1)-->
+  <screen name="TSilangScreen" position="0,0" size="1920,1080" title="Language manager" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="menu" render="Listbox" position="120,190" size="1200,720" zPosition="3" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (195, 0), size = (825, 90), flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0), # index 1 is the language name,
+				MultiContentEntryPixmap(pos = (30, 15), size = (90, 60), png = 2), # index 2 is the pixmap
+				MultiContentEntryPixmapAlphaBlend(pos = (981, 25), size = (40, 40), png = 3) # index 2 is the pixmap selection
+				],
+				"fonts": [gFont("SetrixHD", 36)],
+				"itemHeight": 90
+				}
+			</convert>
+    </widget>
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+    <eLabel name="ButtonRedtext" text="Close" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="ButtonGreentext" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="ButtonYellowtext" position="974,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="ButtonBluetext" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/languages.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <screen name="TSilangGroups" position="0,0" size="1920,1080" title="Download Language" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="list" render="Listbox" position="120,190" size="1200,720" scrollbarMode="showOnDemand" transparent="1">
+		                <convert type="TemplatedMultiContent">
+					{"template": [
+					                MultiContentEntryPixmapAlphaBlend(pos = (12, 16), size = (28, 28), png = 1), # Status Icon,
+							MultiContentEntryText(pos = (52, 0), size = (975, 60), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+						],
+					"fonts": [gFont("SetrixHD", 35)],
+					"itemHeight": 60
+					}
+				</convert>
+    </widget>
+    <widget name="fspace" position="1400,780" size="340,80" font="Regular;31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" valign="center" transparent="1" /> 
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel name="key_red" text="Back" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/net.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="TSiswapScreen" position="0,0" size="1920,1080" title="Swap manager" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1180,120" itemHeight="40" scrollbarMode="showOnDemand" zPosition="1" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="110,320" size="1200,1" backgroundColor="metrixAccent2" transparent="0" />
+    <eLabel text="Swapfile status:" zPosition="1" position="120,330" size="240,65" font="SetrixHD;31" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="selstatus" position="920,330" size="345,65" font="SetrixHD;28" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="seloffpic"  position="1280,345" size="18,18" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/swapoff.png" zPosition="1" alphatest="blend" />
+    <widget name="selonpic"  position="1280,345" size="18,18" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/swapon.png" zPosition="1" alphatest="blend" />
+    <ePixmap position="120,427" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_memory.png" transparent="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Label" position="135,525" size="375,68" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2" font="Regular;27" transparent="1" >
+    <convert type="TSProgressDiskSpaceInfo">MemTotal,Partial</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Progress" position="240,472" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="1" >
+    <convert type="TSProgressDiskSpaceInfo">MemTotal</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="488,462" size="75,36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2" font="Regular;30" transparent="1" >
+    <convert type="TSProgressDiskSpaceInfo">MemTotal,Percent</convert>
+    </widget>
+    <ePixmap position="120,617" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_swap.png" transparent="1" alphatest="blend" />
+    <widget name="swapoffpic" position="190,673" size="18,18" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/swapoff.png" zPosition="1" alphatest="blend" />
+    <widget name="swaponpic" position="190,673" size="18,18" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/swapon.png" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Label" position="135,734" size="375,68" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2" font="Regular;27" transparent="1" >
+    <convert type="TSProgressDiskSpaceInfo">SwapTotal,Partial</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Progress" position="240,674" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="1" >
+    <convert type="TSProgressDiskSpaceInfo">SwapTotal</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="488,664" size="75,36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2" font="Regular;30" transparent="1" >
+    <convert type="TSProgressDiskSpaceInfo">SwapTotal,Percent</convert>
+    </widget>
+    <widget name="info" zPosition="1" position="70,190" size="1100,600" font="SetrixHD;33" valign="center" halign="center" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <!-- [TSTools] Cron manager (1) -->
+  <screen name="TSiCronScreen" flags="wfNoBorder" position="0,0" size="1920,1080" title="Cron Manager" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="CronList" render="Listbox" position="120,190" scrollbarMode="showOnDemand" size="680,480" transparent="1" >
+		<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (15, 0), size = (840, 45), font=0, flags = RT_HALIGN_LEFT, text = 0), # Description
+					MultiContentEntryText(pos = (720, 38), size = (315, 45), font=0, flags = RT_HALIGN_RIGHT, text = 1), # Status
+					MultiContentEntryText(pos = (15, 38), size = (780, 33), font=1, flags = RT_HALIGN_LEFT, text = 2), # Scriptname
+					MultiContentEntryText(pos = (15, 67), size = (780, 33), font=1, flags = RT_HALIGN_LEFT, text = 3), # time
+				],
+				"fonts": [gFont("SetrixHD", 34),gFont("Regular", 27)],
+				"itemHeight": 105
+				}
+		</convert>
+    </widget>
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/timer.png" transparent="1" alphatest="blend" />
+  </screen>
+  
+  <screen name="TSiAddCronScript" flags="wfNoBorder" position="0,0" size="1920,1080" title="Add Cron Job" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1020,720" scrollbarMode="showOnDemand" transparent="1" />
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <widget name="canceltext" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="oktext" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/timer.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="TSiListScript" position="0,0" size="1920,1080" title="Script List" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="menu" render="Listbox" position="120,190" size="1200,660" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+            <convert type="TemplatedMultiContent">
+					{"template": [
+					                MultiContentEntryPixmapAlphaBlend(pos = (7, 12), size = (36, 36), png = 1), # Type Icon,
+							MultiContentEntryText(pos = (60, 0), size = (780, 60), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+						],
+					"fonts": [gFont("SetrixHD", 35)],
+					"itemHeight": 60
+					}
+	    </convert>
+    </widget> 
+    <widget name="info" position="120,840" size="1200,90" zPosition="4" font="Regular;30" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1" halign="center" valign="center" />
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel name="key_red" text="Back" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="key_green" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/console.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- [TSInfos] General infos -->    
+  <screen name="TSGeneralInfo" position="1,1" size="1920,1080" title="General Info" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_info" />
+    <widget source="Title" render="Label" position="40,0" size="1880,1080" font="SetrixHD; 150" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixPreTrans" valign="bottom" zPosition="3" />
+    <widget name="DreamboxModel" position="170,120" size="1180,48" font="Regular;33" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="FPVersion" position="170,170" size="1180,48" font="Regular;33" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="EnigmaVersion" zPosition="9" position="170,220" size="1180,48" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="TSPanel" position="170,270" size="1180,48" font="Regular;33" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="ImageVersion" position="170,320" size="1180,48" font="Regular;33" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="Secondstage" position="170,370" size="1180,48" font="Regular;33" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="DVBModules" position="170,420" size="1180,48" font="Regular;33" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="Kernel" position="170,470" size="1180,48" font="Regular;33" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="NetworkAdapter" zPosition="9" position="170,520" size="1180,48" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="IPAddress" position="170,570" size="1180,48" font="Regular;33" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="MACAddress" position="170,620" size="1180,48" font="Regular;33" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="Uptime" position="170,670" size="1180,48" font="Regular;33" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="1430,660" zPosition="-1" size="400,105" backgroundColor="metrixBackground" transparent="0" />
+    <eLabel text="skin by iMaxxx" position="1440,652" size="375,80" font="SetrixHD; 62" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" valign="top" halign="right" />
+    <eLabel text="mod colombo555" position="1440,721" size="375,40" font="SetrixHD; 30" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1" valign="top" halign="right" />
+  </screen>
+  <!-- [TSInfos] Devices info -->
+  <screen name="TSDevicesInfo" position="1,1" size="1920,1080" title="Devices Information" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_info" />
+    <widget source="Title" render="Label" position="40,0" size="1880,1080" font="SetrixHD; 150" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixPreTrans" valign="bottom" zPosition="3" />
+    
+    <ePixmap position="160,147" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_cf.png" transparent="1" alphatest="blend" />
+    <widget name="cf" position="160,244" size="400,68" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;27" transparent="1"/>
+    <widget name="cfbar" position="273,184" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="0"/>
+    <widget name="cfused" position="520,175" size="90,36" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;30" transparent="1"/>
+    
+    <ePixmap position="160,340" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_usb.png" transparent="1" alphatest="blend" />
+    <widget name="usb" position="160,436" size="400,68" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;27" transparent="1"/>
+    <widget name="usbbar" position="273,384" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="0"/>
+    <widget name="usbused" position="520,375" size="90,36" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;30" transparent="1"/>
+    
+    <ePixmap position="160,538" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_hdd.png" transparent="1" alphatest="blend" />
+    <widget name="sleep" position="261,538" size="48,48" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/zzz-sleeping.png" zPosition="1" alphatest="blend" />
+    <widget name="hdd" position="160,636" size="400,68" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;27" transparent="1"/>
+    <widget name="hddbar" position="273,576" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="0"/>
+    <widget name="hddused" position="520,567" size="90,36" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;30" transparent="1"/>
+    
+    <ePixmap position="160,738" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_storage.png" transparent="1" alphatest="blend" />
+    <widget name="storage" position="160,835" size="400,68" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2"  foregroundColor="metrixSelection" font="Regular;27" transparent="1"/>
+    <widget name="storagebar" position="273,775" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="0"/>
+    <widget name="storageused" position="520,766" size="90,36" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;30" transparent="1"/>
+    
+    <ePixmap position="880,147" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_flash.png" transparent="1" alphatest="blend" />
+    <widget name="flash" position="895,244" size="400,68" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;27" transparent="1"/>
+    <widget name="flashbar" position="1000,184" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="0"/>
+    <widget name="flashused" position="1248,175" size="90,36" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;30" transparent="1"/>
+    
+    <ePixmap position="880,324" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_memory.png" transparent="1" alphatest="blend" />
+    <widget name="ram" position="895,436" size="400,68" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;27" transparent="1"/>
+    <widget name="rambar" position="1000,384" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="0"/>
+    <widget name="ramused" position="1248,375" size="90,36" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;30" transparent="1"/>
+    
+    
+    <ePixmap position="880,538" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_swap.png" transparent="1" alphatest="blend" />
+    <widget name="swapoff" position="955,600" size="18,18" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/swapoff.png" zPosition="1" alphatest="blend" />
+    <widget name="swapon" position="955,600" size="18,18" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/swapon.png" zPosition="1" alphatest="blend" />
+    <widget name="swap" position="895,636" size="400,68" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;27" transparent="1"/>
+    <widget name="swapbar" position="1000,576" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="0"/>
+    <widget name="swapused" position="1248,567" size="90,36" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;30" transparent="1"/>
+    
+    <ePixmap position="880,730" size="96,96" pixmap="/usr/lib/enigma2/python/Plugins/TSimage/TSimagePanel/TSInfos/pictures/dev_mem.png" transparent="1" alphatest="blend" />
+    <widget name="total" position="895,835" size="540,68" backgroundColor="metrixBackground" valign="top" halign="left" zPosition="2"  foregroundColor="metrixSelection" font="Regular;27" transparent="1"/>
+    <widget name="totalbar" position="1000,775" size="225,18" pixmap="ts-MetrixFHD/tsimage/memory_bar.png" borderColor="metrixForeground" borderWidth="1" transparent="0"/>
+    <widget name="totalused" position="1248,766" size="90,36" backgroundColor="metrixBackground" valign="center" halign="left" zPosition="2"  foregroundColor="metrixForeground" font="Regular;30" transparent="1"/>
+  </screen>	
+  <screen name="TSKernelModules" position="1,1" size="1920,1080" title="Kernel Modules" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_info" />
+    <widget source="Title" render="Label" position="40,0" size="1880,1080" font="SetrixHD; 150" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixPreTrans" valign="bottom" zPosition="3" />
+    <widget name="header" position="150,150" size="1200,75" font="SetrixHD; 31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="menu" itemHeight="45" position="150,211" size="1200,630" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+  </screen>
+  <screen name="TSProcessList" position="1,1" size="1920,1080" title="Process List" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_info" />
+    <widget source="Title" render="Label" position="40,0" size="1880,1080" font="SetrixHD; 150" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixPreTrans" valign="bottom" zPosition="3" />
+    <widget name="header" position="150,150" size="1200,75" font="SetrixHD; 31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="menu" itemHeight="45" position="150,211" size="1200,630" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+  </screen>
+  <screen name="TSMounts" position="1,1" size="1920,1080" title="Process List" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_info" />
+    <widget source="Title" render="Label" position="40,0" size="1880,1080" font="SetrixHD; 150" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixPreTrans" valign="bottom" zPosition="3" />
+    <widget source="mountslist" render="Listbox" position="150,166" size="1200,700" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" >
+		<convert type="TemplatedMultiContent"> <!-- iface, name, description, interfacepng, defaultpng, activepng, divpng -->
+				{"template": [
+					MultiContentEntryText(pos = (120, 5), size = (975, 34), font=0, flags = RT_HALIGN_LEFT, text = 0), # Device
+					MultiContentEntryText(pos = (120, 36), size = (975, 30), font=1, flags = RT_HALIGN_LEFT, text = 1), # Mountpoint
+					MultiContentEntryText(pos = (120, 64), size = (975, 30), font=1, flags = RT_HALIGN_LEFT, text = 2), # filesystem+parameter
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 2), size = (96, 96), png = 3), # Icon
+				],
+				"fonts": [gFont("Regular", 30),gFont("Regular", 25)],
+				"itemHeight": 100
+				}
+		</convert>
+    </widget>
+  </screen>
+  <screen name="TSShowSettings" position="1,1" size="1920,1080" title="E2 settings" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_info" />
+    <widget source="Title" render="Label" position="40,0" size="1880,1080" font="SetrixHD; 150" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixPreTrans" valign="bottom" zPosition="3" />
+    <widget name="menu" itemHeight="45" position="150,150" size="1200,720" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+  </screen>
+  <screen name="TSCustomCmd" position="0,0" size="1920,1080" title="Execute script..." flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="menu" render="Listbox" position="120,190" size="1050,660" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+            <convert type="TemplatedMultiContent">
+					{"template": [
+					                MultiContentEntryPixmapAlphaBlend(pos = (7, 12), size = (36, 36), png = 1), # Type Icon,
+							MultiContentEntryText(pos = (60, 0), size = (780, 60), font=0, flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+						],
+					"fonts": [gFont("Regular", 35)],
+					"itemHeight": 60
+					}
+	    </convert>
+    </widget> 
+    <widget name="info" position="120,840" size="1050,90" zPosition="4" font="Regular;30" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1" halign="center" valign="center" />
+    <panel name="kc-nrgy" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/console.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="AboutScreen" position="1,1" size="1920,1080" title="TSimage About" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_info" />
+    <widget source="Title" render="Label" position="40,0" size="1880,1080" font="SetrixHD; 150" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixPreTrans" valign="bottom" zPosition="3" />
+    <widget name="logo" position="1110,150" size="225,246" alphatest="blend" transparent="1" />
+    <widget name="about" position="120,150" size="1050,712" font="SetrixHD; 36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="1430,660" zPosition="-1" size="400,105" backgroundColor="metrixBackground" transparent="0" />
+    <eLabel text="skin by iMaxxx" position="1440,652" size="375,80" font="SetrixHD; 62" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" valign="top" halign="right" />
+    <eLabel text="mod colombo555" position="1440,721" size="375,40" font="SetrixHD; 30" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1" valign="top" halign="right" />
+  </screen>
+</skin>

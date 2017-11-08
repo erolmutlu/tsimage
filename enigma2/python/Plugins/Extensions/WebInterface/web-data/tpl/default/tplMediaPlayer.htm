@@ -1,0 +1,103 @@
+
+<!-- tplMediaplayer -->
+						<table id="contentTable">
+							<tr>
+								<td><div class="mpListHeader">MediaPlayer ${mp.root}</div></td>
+								<td style="text-align: right;">
+									<button class="mpCmd" data-command="prev" title="${strings.previous}">
+										<i class="fa fa-fw fa-backward" alt="&lt;&lt;"></i>
+									</button>
+									<button class="mpCmd" data-command="play" title="${strings.play}">
+										<i class="fa fa-fw fa-play" alt="&gt;"></i>
+									</button>
+									<button class="mpCmd" data-command="next" title="${strings.next}">
+										<i class="fa fa-fw fa-forward" alt="&lt;&lt;"></i>
+									</button>
+									<button class="mpCmd" data-command="stop" title="${strings.stop}">
+										<i class="fa fa-fw fa-stop" alt="[]"></i>
+									</button>
+									<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<a href="#!/extras/mediaplayer/filesystems">
+										<button class="mpFilelist" title="${strings.filebrowser}">
+											<i class="fa fa-fw fa-files-o" alt="${strings.filebrowser}"></i>
+										</button>
+									</a>
+									<a href="#!/extras/mediaplayer/playlist">
+										<button class="mpPlaylist" title="${strings.playlist}">
+											<i class="fa fa-fw fa-th-list" alt="${strings.playlist}"></i>
+										</button>
+									</a>
+									<button class="mpSavePlaylist" title="${strings.save_playlist}">
+										<i class="fa fa-fw fa-floppy-o" alt="${strings.save}"></i>
+									</button>
+									<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<button class="mpCmd" data-command="exit" title="${strings.close_mediaplayer}" >
+										<i class="fa fa-fw fa-times" alt="X"></i>
+									</button>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<table border="0" cellpadding="0" cellspacing="0" style="width: 100%;" id="mpContent">
+										{if mp.hasparent}
+										<tr class="mpListItem" data-servicereference="${mp.servicereference.e()}">
+											<td>
+												<div class="sListSName">
+													<a href="#!/extras/mediaplayer/${mp.servicereference}" style="color: #000; display:block;" class="mpListSLink" title="${strings.change_to_item.format(mp.name)}">
+														<i class="fa fa-fw fa-folder-o" style="vertical-align: bottom;" alt="|"></i> ${mp.name}</a>
+												</div>
+											</td>
+											<td>&nbsp;</td>
+										</tr>
+										{/if}
+										{for item in items}
+										<tr class="mpListItem" data-servicereference="${item.servicereference}">
+											<!-- ItemBody -->
+											<td>
+												<div class="sListSName">
+													{if item.isdir}
+													<a href="#!/extras/mediaplayer/${item.servicereference}" style="color: #000; display:block;" class="mpListSLink" title="${strings.change_to_item.format(item.name)}">
+														<i class="fa fa-fw fa-folder-o" alt="|"></i> ${item.name}</a>
+													{else}
+													<a href="#" class="mpListFile mpListSLink" title="${strings.play_item.format(item.name)}">
+														<i class="fa fa-file-o"alt="-"></i> ${item.name}</a>
+													{/if}
+												</div>
+											</td>
+											<td style="width: 80px;">
+												<div style="text-align: right;">
+												{if item.root == "playlist"}
+													<a href="#" style="color: #000;" class="mpPlayFile" title="${strings.play_item.format(item.name)}">
+														<i class="fa fa-border fa-play"></i>
+													</a>
+													<a href="#" style="color: #000;" class="mpRemoveFile" title="${strings.remove_item_from_playlist.format(item.name)}">
+														<i class="fa fa-border fa-trash"></i>
+													</a>
+													<a target="_blank" href="/file?file=${item.name.e()}">
+														<i class="fa fa-border fa-download" title="${strings.download_item.format(item.name)}" alt="${strings.download}"></i>
+													</a>
+												{elseif !item.isdir}
+													<a href="#" class="mpPlayFile" title="${strings.play_item.format(item.name)}">
+														<i class="fa fa-border fa-play"></i>
+													</a>
+													<a href="#" class="mpAddFile" title="${strings.add_item_to_playlist.format(item.name)}">
+														<i class="fa fa-border fa-plus"></i>
+													</a>
+													<a target="_blank" href="/file?file=${item.name.e()}&root=${item.root.e()}">
+														<i class="fa fa-border fa-download" title="${strings.download_item.format(item.name)}" alt="${strings.download}"></i>
+													</a>
+												{/if}
+												</div>
+											</td>
+										</tr>
+										{forelse}
+										<tr>
+											<td colspan="2">${strings.no_items}</td>
+										</tr>
+										{/for}
+										<tr><td colspan="2">&nbsp;</td></tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+<!-- /tplMediaplayer -->

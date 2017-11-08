@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<feeds>
+    <feed>
+        <name>TunisiaSat للأسئلة والمناقشة انغما2</name>
+        <url>https://www.tunisia-sat.com/forums/forums/272/index.rss</url>
+    </feed>
+    <feed>
+        <name>TunisiaSat السكينات و البيكون و اللوغو مع مؤشرات</name>
+        <url>https://www.tunisia-sat.com/forums/forums/182/index.rss</url>
+    </feed>
+    <feed>
+        <name>TunisiaSat ملفات القنوات و البلاكين و المحاكيات</name>
+        <url>https://www.tunisia-sat.com/forums/forums/234/index.rss</url>
+    </feed>
+    <feed>
+        <name>TunisiaSat new topics</name>
+        <url>https://www.tunisia-sat.com/forums/forums/-/index.rss</url>
+    </feed>
+    <feed>
+        <name>Git opendreambox OE-2.5 (krogoth) news</name>
+        <url>http://git.opendreambox.org/?p=opendreambox.git;a=rss</url>
+    </feed>
+    <feed>
+        <name>Git opendreambox OE-2.2 (dora) news</name>
+        <url>http://git.opendreambox.org/?p=opendreambox.git;a=rss;h=refs/heads/dora</url>
+    </feed>
+    <feed>
+        <name>Git opendreambox OE-2.0 (denzil) news</name>
+        <url>http://git.opendreambox.org/?p=opendreambox.git;a=rss;h=refs/heads/denzil</url>
+    </feed>
+    <feed>
+        <name>Enigma2 4.x updates news</name>
+        <url>http://git.opendreambox.org/?p=enigma2.git;a=rss</url>
+    </feed>
+    <feed>
+        <name>KingOfSat News</name>
+        <url>http://en.kingofsat.net/rssnews.php</url>
+    </feed>
+    <feed>
+        <name>Dream Multimedia News</name>
+        <url>http://www.dream-multimedia-tv.de/rssfeed</url>
+    </feed>
+    <feed>
+        <name>[NEWS] CNN بالعربية</name>
+        <url>http://arabic.cnn.com/rss</url>
+    </feed>
+    <feed>
+        <name>[NEWS] الجزيرة</name>
+        <url>http://www.aljazeera.net/aljazeerarss/3c66e3fb-a5e0-4790-91be-ddb05ec17198/4e9f594a-03af-4696-ab98-880c58cd6718</url>
+    </feed>
+    <feed>
+        <name>[NEWS] جريدة الفجر</name>
+        <url>http://www.al-fadjr.com/ar/feed/index.1.rss</url>
+    </feed>
+    <feed>
+        <name>[Sport] الـهــداف</name>
+        <url>http://feeds.feedburner.com/GalerieArtciles</url>
+    </feed>
+    <feed>
+        <name>[Sport] Alriadi رياضة عالمية</name>
+        <url>http://alriadi.net/news_rss.php</url>
+    </feed>
+</feeds>

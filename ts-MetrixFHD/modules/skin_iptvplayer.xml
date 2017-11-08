@@ -1,0 +1,137 @@
+<skin>
+    <!-- IPTVPlayer -->
+    <screen name="IPTVPlayerWidget" position="0,0" size="1920,1080" title="IPTV Player" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <panel name="kc-srgyb" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="headertext" position="120,180" size="1200,75" zPosition="1" font="SetrixHD;30" transparent="1" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" />
+        <widget name="list" position="120,230" size="1080,630" itemHeight="45" zPosition="2" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+        <widget name="statustext" position="453,435" zPosition="1" size="537,100" font="Regular;30" halign="center" valign="center" transparent="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+        <widget name="cover" position="1350,210" size="360,270" zPosition="2" transparent="1" alphatest="blend" />
+        <widget name="console" position="1230,490" size="600,440" zPosition="1" font="Regular;30" transparent="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+        <widget name="playerlogo" zPosition="4" position="1658,935" size="150,60" alphatest="blend" />
+        <widget name="sequencer" position="0,0" zPosition="6" size="1090,525" font="Regular;140" halign="center" valign="center" transparent="1" backgroundColor="metrixBackground" />
+        <widget name="spinner"   zPosition="2" position="689,500" size="16,16" transparent="1" alphatest="blend" />
+        <widget name="spinner_1" zPosition="1" position="689,500" size="16,16" transparent="1" alphatest="blend" />
+        <widget name="spinner_2" zPosition="1" position="705,500" size="16,16" transparent="1" alphatest="blend" />
+        <widget name="spinner_3" zPosition="1" position="721,500" size="16,16" transparent="1" alphatest="blend" />
+        <widget name="spinner_4" zPosition="1" position="737,500" size="16,16" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="ConfigMenu" title="IPTVPlayer Setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+        <panel name="kc-nrg" />
+        <widget name="key_ok" position="1400,954" size="400,44" zPosition="2" valign="center" halign="center" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <ePixmap alphatest="blend" pixmap="ts-MetrixFHD/menu/setup_selection.png" position="1365,382" size="384,384" transparent="1" zPosition="2" />
+    </screen>
+    <screen name="ConfigHostMenu" title="IPTVPlayer Host Setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+        <panel name="kc-nrg" />
+        <widget name="key_ok" position="1400,954" size="400,44" zPosition="2" valign="center" halign="center" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <ePixmap alphatest="blend" pixmap="ts-MetrixFHD/menu/setup_selection.png" position="1365,382" size="384,384" transparent="1" zPosition="2" />
+    </screen>
+    <screen name="ConfigExtMoviePlayer" title="IPTVPlayer ExtMoviePlayer Setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+        <panel name="kc-nrg" />
+        <widget name="key_ok" position="1400,954" size="400,44" zPosition="2" valign="center" halign="center" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <ePixmap alphatest="blend" pixmap="ts-MetrixFHD/menu/setup_selection.png" position="1365,382" size="384,384" transparent="1" zPosition="2" />
+    </screen>
+    <screen name="IPTVFavouritesMainWidget" title="IPTVPlayer Favorites" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="title" position="120,180" size="1200,75" zPosition="1" font="SetrixHD;30" transparent="1" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" />
+        <widget name="list" position="120,230" size="1080,630" itemHeight="45" zPosition="2" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+        <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+        <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+        <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+        <widget name="label_red" position="165,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="label_green" position="564,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="label_yellow" position="974,945" size="300,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/setup_selection.png" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="IPTVDMWidget" title="IPTVPlayer Download Manager" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="titel" position="120,180" size="1200,75" zPosition="1" font="SetrixHD;30" transparent="1" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" />
+        <widget name="list" position="120,230" size="1180,600" itemHeight="120" zPosition="2" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+        <panel name="kc-srgyb" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/net.png" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="IPTVSubDownloaderWidget" position="0,0" size="1920,1080" title="IPTVPlayer Subtitles" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <panel name="kc-sr" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="headertext" position="120,180" size="1200,75" zPosition="1" font="SetrixHD;30" transparent="1" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" />
+        <widget name="list" position="120,230" size="1080,630" itemHeight="45" zPosition="2" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+        <widget name="statustext" position="453,435" zPosition="1" size="537,100" font="Regular;30" halign="center" valign="center" transparent="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+        <widget name="console" position="1230,230" size="600,630" zPosition="1" font="Regular;30" valign="bottom" transparent="1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" />
+        <widget name="spinner"   zPosition="2" position="689,500" size="16,16" transparent="1" alphatest="blend" />
+        <widget name="spinner_1" zPosition="1" position="689,500" size="16,16" transparent="1" alphatest="blend" />
+        <widget name="spinner_2" zPosition="1" position="705,500" size="16,16" transparent="1" alphatest="blend" />
+        <widget name="spinner_3" zPosition="1" position="721,500" size="16,16" transparent="1" alphatest="blend" />
+        <widget name="spinner_4" zPosition="1" position="737,500" size="16,16" transparent="1" alphatest="blend" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/net.png" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="IPTVFileSelectorWidget" position="0,0" size="1920,1080" title="IPTVPlayer File Browser" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="list" position="120,180" size="1200,630" zPosition="3" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+        <widget name="curr_dir" position="120,180" size="1200,75" font="SetrixHD;30" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" transparent="1" />
+        <panel name="kc-nr" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="IPTVDirectorySelectorWidget" position="0,0" size="1920,1080" title="IPTVPlayer Directory Browser" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="list" position="120,180" size="1200,630" zPosition="3" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+        <widget name="curr_dir" position="120,180" size="1200,75" font="SetrixHD;30" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" transparent="1" />
+        <panel name="kc-nrgb" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+    </screen>
+    <!-- IPTVChoiceBoxWidget -->
+    <screen name="IPTVChoiceBoxWidget" position="195,210" size="900,600" title="Select option">
+        <widget name="title" position="15,15" size="680,38" font="SetrixHD;36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="list" position="0,30" size="680,450" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" />
+        <applet type="onLayoutFinish">
+from enigma import eSize, ePoint
+
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self["title"].getSize()
+
+# y size still must be fixed in font stuff...
+textsize = (textsize[0] + 40, textsize[1] + 40)
+count = len([ (x,) for x in self.params['options']])
+if count &gt; 12:
+   count = 12
+offset = 45 * count
+wsizex = textsize[0]
+wsizey = textsize[1] + offset + 30
+
+if (680 &gt; wsizex):
+   wsizex = 680
+wsize = (wsizex, wsizey)
+
+# resize
+self.instance.resize(eSize(*wsize))
+
+# resize label
+self["title"].instance.resize(eSize(*textsize))
+
+# move list
+listsize = (wsizex - 30, 45 * count)
+self["list"].instance.move(ePoint(15, textsize[1]))
+self["list"].instance.resize(eSize(*listsize))
+
+# center window
+newwidth = wsize[0]
+self.instance.move(ePoint((1920-wsizex)/2, (1080-wsizey)/2))
+        </applet>
+    </screen>
+
+</skin>

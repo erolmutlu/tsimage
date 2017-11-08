@@ -1,0 +1,110 @@
+<skin>
+    <!-- InternetRadio -->
+  <screen name="InternetRadioSetup" position="0,0" size="1920,1080" title="Internet Radio Setup" flags="wfNoBorder" backgroundColor="fullBackground">
+      <panel name="screenpanel_default_full" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="fullBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="metrixForeground" backgroundColor="fullBackground" transparent="1" />
+      <panel name="kc-srg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="InternetRadioInformationScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="fullBackground" title="Streaming Information">
+      <panel name="screenpanel_default_full" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="fullBackground" transparent="1" />
+      <widget name="text" position="120,190" size="1200,720" font="Regular;30" foregroundColor="metrixForeground" backgroundColor="fullBackground" transparent="1" />
+      <panel name="kc-sr" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/info.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="InternetRadioScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="fullBackground" title="Internet Radio" >
+      <widget transparent="0" name="video" position="0,0" size="1920,1080" zPosition="-11"/>
+      <panel name="screenpanel_default_full" />
+      <eLabel name="Title" text="Internet Radio" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="fullBackground" transparent="1" />
+      <panel name="kc-srgyb" />
+      <ePixmap name="key_info" position="1556,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+      <ePixmap name="key_menu" position="1688,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+      <widget name="headertext" position="120,186" zPosition="1" size="1770,40" font="Regular;32" transparent="1" foregroundColor="metrixSelection" backgroundColor="fullBackground"/>
+      <widget name="list" position="120,245" size="1000,420" scrollbarMode="showOnDemand" itemHeight="60" foregroundColor="metrixForeground" backgroundColor="fullBackground" transparent="0" />
+      <widget name="statustext" position="120,765" zPosition="1" size="1800,30" font="Regular;24" transparent="1" foregroundColor="metrixForeground" backgroundColor="fullBackground"/>
+      <widget name="cover" zPosition="2" position="120,735" size="77,83" />
+      <eLabel name="stationCap" position="120,825" size="128,40" text="Station:" font="Regular;27" transparent="1"  zPosition="1" foregroundColor="metrixForeground" backgroundColor="fullBackground"/>
+      <widget name="station" position="225,825" zPosition="1" size="1238,40" font="Regular;27" transparent="1"  foregroundColor="metrixForeground" backgroundColor="fullBackground"/>
+      <eLabel name="titleCap" position="120,863" size="98,40" text="Title:" font="Regular;27" transparent="1"  zPosition="1" foregroundColor="metrixForeground" backgroundColor="fullBackground"/>
+      <widget name="title" position="203,863" zPosition="1" size="1080,80" font="Regular;27" transparent="1" foregroundColor="metrixForeground" backgroundColor="fullBackground"/>
+      <widget name="console" position="120,930" zPosition="1" size="1350,90" font="Regular;27" transparent="1" foregroundColor="metrixForeground" backgroundColor="fullBackground"/>
+      <widget name="progress_0" zPosition="3" position="1245,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_1" zPosition="3" position="1283,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_2" zPosition="3" position="1320,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_3" zPosition="3" position="1358,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_4" zPosition="3" position="1395,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_5" zPosition="3" position="1433,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_6" zPosition="3" position="1470,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_7" zPosition="3" position="1508,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_8" zPosition="3" position="1545,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_9" zPosition="3" position="1583,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_10" zPosition="3" position="1620,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_11" zPosition="3" position="1658,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_12" zPosition="3" position="1695,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_13" zPosition="3" position="1738,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_14" zPosition="3" position="1770,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_15" zPosition="3" position="1808,434" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="top_0" position="1245,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_1" position="1283,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_2" position="1320,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_3" position="1358,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_4" position="1395,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_5" position="1433,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_6" position="1470,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_7" position="1508,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_8" position="1545,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_9" position="1583,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_10" position="1620,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_11" position="1658,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_12" position="1695,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_13" position="1733,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_14" position="1770,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_15" position="1808,427" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+  </screen>
+<screen name="InternetRadioFullScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="fullBackground" title="InternetRadio">
+      <widget name="station" position="75,180" zPosition="1" size="1770,40" font="Regular;27" transparent="1"  halign="center" foregroundColor="#356835" backgroundColor="fullBackground"/>
+      <widget name="title" position="75,825" zPosition="1" size="1770,120" font="Regular;33" transparent="1"  halign="center" foregroundColor="#4e9a4e" backgroundColor="fullBackground"/>
+      <widget name="progress_0" zPosition="3" position="660,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_1" zPosition="3" position="698,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_2" zPosition="3" position="735,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_3" zPosition="3" position="773,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_4" zPosition="3" position="810,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_5" zPosition="3" position="848,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_6" zPosition="3" position="885,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_7" zPosition="3" position="923,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_8" zPosition="3" position="960,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_9" zPosition="3" position="998,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_10" zPosition="3" position="1035,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_11" zPosition="3" position="1073,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_12" zPosition="3" position="1110,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_13" zPosition="3" position="1148,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_14" zPosition="3" position="1185,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="progress_15" zPosition="3" position="1223,360" size="38,300" transparent="1" orientation="orBottomToTop" pixmap="ts-MetrixFHD/extensions/bar_green.png" />
+      <widget name="top_0" position="660,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_1" position="698,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_2" position="735,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_3" position="773,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_4" position="810,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_5" position="848,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_6" position="885,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_7" position="923,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_8" position="960,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_9" position="998,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_10" position="1035,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_11" position="1073,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_12" position="1110,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_13" position="1148,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_14" position="1185,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+      <widget name="top_15" position="1223,353" zPosition="6" size="38,8" transparent="1" pixmap="ts-MetrixFHD/extensions/bar_green_top.png" />
+</screen>
+  <screen name="InternetRadioStreamripperRecordingPath" position="0,0" size="1920,1080" title="Select record path for streamripper" flags="wfNoBorder" backgroundColor="fullBackground">
+      <panel name="screenpanel_default_full" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="fullBackground" transparent="1" />
+      <widget name="filelist" position="120,190" size="1200,630" zPosition="3" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="metrixForeground" backgroundColor="fullBackground" transparent="1" />
+      <widget name="target" position="120,840" size="1200,90" font="SetrixHD;31" foregroundColor="metrixAccent1" backgroundColor="fullBackground" halign="center" transparent="1" />
+      <panel name="kc-srg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+</skin>

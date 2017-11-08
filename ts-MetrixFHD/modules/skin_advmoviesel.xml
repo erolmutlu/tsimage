@@ -1,0 +1,181 @@
+<skin>
+    <!-- Advanced Movie Selection -->
+    <screen name="AdvancedMovieSelection_noMiniTV" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_chsel" />
+        <widget source="Title" render="Label" position="640,90" size="1200,60" font="SetrixHD; 45" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="CoverPreview" position="90,80" size="185,278" zPosition="3" alphatest="blend" />
+        <widget source="Service" render="Label" position="283,140" size="240,40" font="Regular; 33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="MovieInfo">RecordServiceName</convert>
+        </widget>
+        <widget source="Service" render="Label" position="283,180" size="240,40" font="SetrixHD;31" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" zPosition="1">
+            <convert type="ServiceTime">StartTime</convert>
+            <convert type="ClockToText">Format:%a %d %b, %Y</convert>
+        </widget>
+        <widget source="Service" render="Label" position="283,220" size="240, 40" font="SetrixHD;31" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="MovieInfo">FileSize</convert>
+        </widget>
+        <widget source="Service" render="Label" position="283,260" size="240, 40" font="SetrixHD;31" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1">
+            <convert type="ServiceTime">Duration</convert>
+            <convert type="ClockToText">InMinutes</convert>
+        </widget>
+        <widget name="waitingtext" foregroundColor="metrixForeground" font="Regular;33" halign="center" valign="center" backgroundColor="metrixBackground" position="633,160" size="1200,768" transparent="1"/>
+        <widget name="list" position="633,160" size="1200,702" scrollbarMode="showNever" transparent="1" />
+        <eLabel position="633,875" zPosition="-2" size="1200,1" backgroundColor="metrixForeground" transparent="0" />
+        <widget name="freeDiskSpace" position="633,870" size="1200,48" font="SetrixHD;30" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="Service" render="Label" position="90,352" size="480,75" font="SetrixHD; 45" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="MovieInfo">ShortDescription</convert>
+        </widget>
+        <widget source="Service" render="TSRunningText" zPosition="1" position="92,447" size="475,370" font="Regular; 27" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=auto,wrap=1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" >
+            <convert type="EventName">ExtendedDescription</convert>
+        </widget>
+        <panel name="kmovsel-nrgyb" />
+        
+        <ePixmap name="key_info" position="1563,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+        <ePixmap name="key_menu" position="1690,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+        <ePixmap name="key_pvr" position="1690,881" size="122,60" pixmap="ts-MetrixFHD/icons/key_pvr.png" alphatest="blend" />
+        <ePixmap name="key_text" position="1563,881" size="122,60" pixmap="ts-MetrixFHD/icons/key_radio.png" alphatest="blend" />
+        <widget name="DescriptionBorder" position="0,0" size="0,0" />
+    </screen>
+    <screen name="AdvancedMovieSelection_noMiniTV_Backdrop" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_chsel" />
+        <widget source="Title" render="Label" position="640,90" size="1200,60" font="SetrixHD; 45" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="CoverPreview" position="90,80" size="185,278" zPosition="3" alphatest="blend" />
+        <widget source="Service" render="Label" position="283,140" size="240,40" font="Regular; 33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="MovieInfo">RecordServiceName</convert>
+        </widget>
+        <widget source="Service" render="Label" position="283,180" size="240,40" font="SetrixHD;31" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" zPosition="1">
+            <convert type="ServiceTime">StartTime</convert>
+            <convert type="ClockToText">Format:%a %d %b, %Y</convert>
+        </widget>
+        <widget source="Service" render="Label" position="283,220" size="240, 40" font="SetrixHD;31" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="MovieInfo">FileSize</convert>
+        </widget>
+        <widget source="Service" render="Label" position="283,260" size="240, 40" font="SetrixHD;31" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1">
+            <convert type="ServiceTime">Duration</convert>
+            <convert type="ClockToText">InMinutes</convert>
+        </widget>
+        <widget name="waitingtext" foregroundColor="metrixForeground" font="Regular;33" halign="center" valign="center" backgroundColor="metrixBackground" position="633,160" size="1200,768" transparent="1"/>
+        <widget name="list" position="633,160" size="1200,702" scrollbarMode="showNever" transparent="1" />
+        <eLabel position="633,875" zPosition="-2" size="1200,1" backgroundColor="metrixForeground" transparent="0" />
+        <widget name="freeDiskSpace" position="633,870" size="1200,48" font="SetrixHD;30" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="Service" render="Label" position="90,352" size="480,75" font="SetrixHD; 45" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="MovieInfo">ShortDescription</convert>
+        </widget>
+        <widget source="Service" render="TSRunningText" zPosition="1" position="92,447" size="475,370" font="Regular; 27" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=auto,wrap=1" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" >
+            <convert type="EventName">ExtendedDescription</convert>
+        </widget>
+        <panel name="kmovsel-nrgyb" />
+        
+        <ePixmap name="key_info" position="1563,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+        <ePixmap name="key_menu" position="1690,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+        <ePixmap name="key_pvr" position="1690,881" size="122,60" pixmap="ts-MetrixFHD/icons/key_pvr.png" alphatest="blend" />
+        <ePixmap name="key_radio" position="1563,881" size="122,60" pixmap="ts-MetrixFHD/icons/key_radio.png" alphatest="blend" />
+        <widget name="DescriptionBorder" position="0,0" size="0,0" />
+        <ePixmap position="0,0" size="1920,1080" zPosition="0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/background.png" alphatest="blend" />
+        <widget name="backdrop" zPosition="-1" position="0,0" size="1920,1080" alphatest="blend" />
+    </screen>
+    <screen name="AdvancedMovieSelectionEventView" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_chsel" />
+        <widget name="CoverPreview" position="242,90" size="185,278" zPosition="2" alphatest="blend" />
+        <widget source="Service" render="Label" position="98,438" size="490,50" font="SetrixHD; 36" halign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" zPosition="1">
+            <convert type="ServiceTime">StartTime</convert>
+            <convert type="ClockToText">Format: %d.%m.%Y</convert>
+        </widget>
+        <widget source="Service" render="Label" position="98,518" size="480,50" font="SetrixHD; 36" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="ServiceTime">Duration</convert>
+            <convert type="ClockToText">InMinutes</convert>
+        </widget>
+        <widget source="Service" render="Label" position="98,518" zPosition="1" size="480,50" font="Regular;36" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="MovieInfo">FileSize</convert>
+        </widget>
+        <widget source="Service" render="Label" position="98,310" size="490,60" font="SetrixHD; 36" halign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="MovieInfo">RecordServiceName</convert>
+        </widget>
+        <widget source="Title" render="Label" zPosition="1" position="640,110" size="1180,70" font="SetrixHD; 45" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="Service" render="Label" position="640,190" zPosition="1" size="1180,70" font="Regular;42" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1">
+            <convert type="MovieInfo">ShortDescription</convert>
+        </widget>
+        <widget name="epg_description" position="640,260" size="1180,785" font="SetrixHD; 36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <ePixmap position="90,435" size="50,50" zPosition="10" pixmap="ts-MetrixFHD/left.png" transparent="1" alphatest="blend" />
+        <ePixmap position="528,435" size="50,50" zPosition="10" pixmap="ts-MetrixFHD/right.png" transparent="1" alphatest="blend" />
+        <panel name="kmovevent-srgyb" />
+    </screen>
+    <screen name="AdvancedMovieSelectionEventView_Backdrop" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_chsel" />
+        <widget name="CoverPreview" position="242,90" size="185,278" zPosition="2" alphatest="blend" />
+        <widget source="Service" render="Label" position="98,438" size="490,50" font="SetrixHD; 36" halign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" zPosition="1">
+            <convert type="ServiceTime">StartTime</convert>
+            <convert type="ClockToText">Format: %d.%m.%Y</convert>
+        </widget>
+        <widget source="Service" render="Label" position="98,518" size="480,50" font="SetrixHD; 36" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="ServiceTime">Duration</convert>
+            <convert type="ClockToText">InMinutes</convert>
+        </widget>
+        <widget source="Service" render="Label" position="98,518" zPosition="1" size="480,50" font="Regular;36" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="MovieInfo">FileSize</convert>
+        </widget>
+        <widget source="Service" render="Label" position="98,310" size="490,60" font="SetrixHD; 36" halign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+            <convert type="MovieInfo">RecordServiceName</convert>
+        </widget>
+        <widget source="Title" render="Label" zPosition="1" position="640,110" size="1180,70" font="SetrixHD; 45" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="Service" render="Label" position="640,190" zPosition="1" size="1180,70" font="Regular;42" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1">
+            <convert type="MovieInfo">ShortDescription</convert>
+        </widget>
+        <widget name="epg_description" position="640,260" size="1180,785" font="SetrixHD; 36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <ePixmap position="90,435" size="50,50" zPosition="10" pixmap="ts-MetrixFHD/left.png" transparent="1" alphatest="blend" />
+        <ePixmap position="528,435" size="50,50" zPosition="10" pixmap="ts-MetrixFHD/right.png" transparent="1" alphatest="blend" />
+        <panel name="kmovevent-srgyb" />
+        <ePixmap position="0,0" size="1920,1080" zPosition="0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/background.png" alphatest="blend" />
+        <widget name="backdrop" zPosition="-1" position="0,0" size="1920,1080" alphatest="blend" />
+    </screen>
+    <screen name="AdvancedMovieSelectionSetup" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="config" position="120,190" size="1200,630" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+        <eLabel position="120,830" size="1200,2" backgroundColor="metrixAccent1" />
+        <widget source="help" render="Label" position="120,835" size="1200,132" font="SetrixHD;30" foregroundColor="metrixAccent1"  backgroundColor="metrixBackground" transparent="1" />
+        <panel name="kc-srgyb" />
+        <ePixmap name="key_info" position="1688,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+        <ePixmap position="1378,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/setup_selection.png" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="AdvancedMovieSelectionButtonSetup" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="config" position="120,190" size="1200,675" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+        <panel name="kc-nrgy" />
+        <widget name="OKIcon" position="1650,954" size="45,44" zPosition="2" pixmap="ts-MetrixFHD/buttons/key_ok.png" transparent="1" alphatest="blend" />
+        <ePixmap position="1378,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/setup_selection.png" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="AdvancedMovieSelectionOwnButtonName" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="config" position="120,190" size="1200,360" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+        <eLabel position="120,560" size="1200,2" backgroundColor="metrixAccent1" />
+        <widget source="help" render="Label" position="120,565" size="1200,50" font="SetrixHD;30" halign="center" foregroundColor="metrixAccent1"  backgroundColor="metrixBackground" transparent="1" />
+        <widget name="HelpWindow" position="260,650" zPosition="2" />
+        <panel name="kc-sr" />
+        <widget name="VKeyIcon" pixmap="ts-MetrixFHD/icons/key_text.png" position="1688,945" size="122,60" zPosition="10" alphatest="blend" />
+        <ePixmap position="1378,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/setup_selection.png" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="AdvancedMovieSelectionAbout" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="version" render="Label" position="120,180" size="1200,75" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" zPosition="1" halign="left" valign="center" />
+        <widget source="author" render="Label" position="180,270" size="1200,75" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" zPosition="1" halign="left" valign="center" />
+        <widget source="translation" render="Label" position="255,360" size="750,75" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" zPosition="1" halign="left" valign="center" />
+        <widget source="thanks" render="Label" position="120,750" size="1200,195" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" zPosition="1" halign="left" valign="top" />
+        <widget source="license" render="Label" position="120,645" size="1200,195" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" zPosition="1" halign="left" valign="top" />
+        <ePixmap position="940,180" size="350,138" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/gp3.png" transparent="1" alphatest="blend" />
+        <panel name="kc-srg" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/info.png" transparent="1" alphatest="blend" />
+    </screen>
+    <screen name="AdvancedMovieSelectionAboutDetails" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="version_list" position="120,180" size="1200,360" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+        <eLabel position="120,548" zPosition="-1" size="1200,2" backgroundColor="metrixForeground" transparent="0" />
+        <widget name="details" position="120,555" size="1200,390" font="Regular;30" valign="top" halign="left" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+        <panel name="kc-sr" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/info.png" transparent="1" alphatest="blend" />
+    </screen>
+</skin>

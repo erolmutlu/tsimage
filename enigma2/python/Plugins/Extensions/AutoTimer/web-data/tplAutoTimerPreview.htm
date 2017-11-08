@@ -1,0 +1,41 @@
+<!-- tplAutoTimerPreview -->
+					<table class="tabEditor"> 
+						<tr>
+							<td>
+								<table id="previewlist">
+									<tr class="optionTitle">
+										<th class="nopadding">
+											<div class="headerindent">Name</div>
+										</th>
+										<th>Date</th>
+										<th>Begin</th>
+										<th>End</th>
+										<th>Channel</th>
+										<th>AutoTimer</th>
+									</tr>
+									{for timer in list}
+										<tr class="optionContent">
+											<td class="nopadding" colspan="6">
+												<div class="headerindent">${timer.name}</div>
+											</td>
+										</tr>
+										<tr class="optionContent">
+											<td class="nopadding"></td>
+											<td class="nobreak">${timer.date}</td>
+											<td class="nobreak">${timer.begin}</td>
+											<td class="nobreak">${timer.end}</td>
+											<td class="nobreak">${timer.servicename}</td>
+											<td class="nobreak">${timer.autotimer}</td>
+										</tr>
+									{/for}
+								</table>
+							</td>
+						</tr>
+					</table>
+					<div class="center remark">
+						Results represents an EPG keyword search and aren't filtered!
+						<br />
+						If You like the AutoTimer WebInterface feel free to buy me a 
+						<a href="http://bit.ly/autotimerwebifpaypal" target="_blank" class="underline">beer</a>
+					</div>
+<!-- /tplAutoTimerEditor -->

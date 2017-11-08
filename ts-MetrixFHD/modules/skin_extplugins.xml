@@ -1,0 +1,916 @@
+<skin>
+  <!-- *** EXTERNAL PLUGINS *** -->
+  <!-- Homebridge -->
+  <screen name="Homebridge" title="Homebridge" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget source="status" render="Listbox" position="120,190" size="1200,360" scrollbarMode="showOnDemand" selectionDisabled="1" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+          <convert type="TemplatedMultiContent">
+              {"template": [
+              MultiContentEntryText(pos = (45, 0), size = (1100, 60), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2) ,
+              MultiContentEntryText(pos = (5, 0), size = (1000, 60), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1) ,
+              MultiContentEntryPixmapAlphaBlend(pos = (1120, 15), size = (30, 30), png = 0),
+              ],
+              "fonts": [gFont("Regular", 32)],
+              "itemHeight": 60
+              }
+          </convert>
+      </widget>
+      <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/SystemPlugins/Homebridge/buttons/HomeKit.png" zPosition="2" position="125,700" size="170,170" alphatest="blend" />
+      <widget name="pin" position="500,710" size="440,150" zPosition="1" font="SetrixHD;70" halign="center" valign="center" foregroundColor="metrixBackground" backgroundColor="metrixForeground" />
+      <panel name="kc-srgyb" />
+      <ePixmap name="key_info" position="1688,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+      <ePixmap alphatest="blend" pixmap="ts-MetrixFHD/menu/setup_selection.png" position="1365,382" size="384,384" transparent="1" zPosition="2" />
+  </screen>
+  <!-- Homebridge Setup -->
+  <screen name="HomebridgeConfig" title="Homebridge Setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,495" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-srg" />
+      <ePixmap alphatest="blend" pixmap="ts-MetrixFHD/menu/setup_selection.png" position="1365,382" size="384,384" transparent="1" zPosition="2" />
+  </screen>
+  <screen name="HbbTVVideoWindow" flags="wfNoBorder" zPosition="-1" position="0,0" size="1920,1080" title="HbbTVVideoWindow" backgroundColor="transparent" transparent="1" >
+      <widget name="video" position="0,0" zPosition="0" size="0,0" backgroundColor="transparent" />
+		</screen>
+  <!-- Genuine Dreambox  -->
+  <screen name="genuineDreambox" position="0,0" size="1920,1080" title="Genuine Dreambox" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="infotext" position="120,225" zPosition="1" size="1200,285" font="SetrixHD;33" halign="center" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="resulttext" position="70,555" zPosition="1" size="1200, 75" font="SetrixHD;53" halign="center" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="infotext2" position="70,750" zPosition="1" size="1200, 120" font="SetrixHD;33" halign="center" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <widget name="kRed" position="165,945" size="260,60" zPosition="1" halign="left" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="kGreen" position="564,945" size="260,60" zPosition="1" halign="left" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/setup_selection.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- PicturePlayer -->
+  <screen name="picshow" position="0,0" size="1920,1080" title="PicturePlayer" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="thn" position="1150,210" size="640,360" zPosition="4" alphatest="blend" />
+    <widget source="label" render="Label" position="1150,580" size="640,50" font="SetrixHD;33" halign="right" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="filelist" position="120,180" size="970,720" itemHeight="45" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-srgyb" />
+  </screen>
+  <screen name="Pic_Exif" position="0,0" size="1920,1080" title="Info" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source="menu" render="Listbox" position="120,180" size="1200,735" scrollbarMode="showOnDemand" selectionDisabled="1" backgroundColor="metrixBackground" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (15, 0), size = (525, 53), flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryText(pos = (540, 11), size = (465, 53), flags = RT_HALIGN_LEFT| RT_VALIGN_CENTER, text = 1)],
+					"fonts": [gFont("SetrixHD", 33)],
+					"itemHeight": 53
+				}
+			</convert>
+    </widget>
+    <panel name="kc-sr" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/pplayer.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- MovieEpgSetup  -->
+  <screen name="MovieEpgSetup" position="0,0" size="1920,1080" title="MovieEpg Setup" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,630" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <eLabel position="120,830" size="1200,2" backgroundColor="metrixAccent1" />
+      <widget source="help" render="Label" position="120,835" size="1200,132" font="SetrixHD;30" foregroundColor="metrixAccent1"  backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-srg" />
+      <ePixmap position="1378,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/setup_selection.png" transparent="1" alphatest="blend" />
+  </screen>
+   <!-- ThreeDSettings -->
+  <screen name="ThreeDSettings" position="0,0" size="1920,1080" title="UI 3D setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+     <widget name="config" position="120,170" size="1100,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+     <panel name="c-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+
+  <!-- CoolTV -->
+
+  <!-- EPGRefresh -->
+  <screen name="EPGRefreshServiceEditor" position="0,0" size="1920,1080" title="Edit Services to refresh" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1200,630" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="EPGRefreshConfiguration" position="0,0" size="1920,1080" title="Configure EPGRefresh" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,190" size="1200,630" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="120,830" size="1200,2" backgroundColor="metrixAccent1" />
+    <widget source="help" render="Label" position="120,835" size="1200,132" font="SetrixHD;30" foregroundColor="metrixAccent1"  backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- IMDb Details -->
+  <screen name="IMDbSetup" position="0,0" size="1920,1080" title="IMDB Setup" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="description" position="120,835" size="1200,132" font="SetrixHD;30" foregroundColor="metrixAccent1"  backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-srg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="IMDBv2" position="0,0" size="1920,1080" title="IMDB" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="menu" position="120,240" size="1180,640" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="titlelabel" position="120,150" size="850,90" valign="center" font="SetrixHD;40" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="statusbar" position="120,850" size="1600,132" font="SetrixHD;29" foregroundColor="metrixAccent1"  backgroundColor="metrixBackground" transparent="1" />
+      <widget alphatest="blend" name="starsbg" pixmap="ts-MetrixFHD/skin_default/icons/starsbar_empty.png" position="1005,162" size="315,32" zPosition="2" />
+      <widget name="stars" pixmap="ts-MetrixFHD/skin_default/icons/starsbar_filled.png" position="1005,162" size="315,32" transparent="1" zPosition="3" />
+      <widget name="ratinglabel" position="985,195" size="355,40" font="SetrixHD;28" foregroundColor="yellow" backgroundColor="metrixBackground"  halign="center" transparent="1" />
+      <widget name="poster" position="120,225" size="165,270" alphatest="blend"/>
+      <widget name="detailslabel" position="300,235" size="1020,275" foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;29" transparent="1" />
+      <widget name="castlabel" position="120,525" size="1200,330" foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;29" transparent="1" />
+      <widget name="storylinelabel" position="720,525" size="600,330" foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;29" transparent="1" />
+      <widget name="extralabel" position="120,240" size="1200,620" foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;29" transparent="1" />
+      <panel name="kc-nrgyb" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/imdb.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- MovieSelectionButton -->
+  <screen name="MovieSelectionButtonSetup" position="0,0" size="1920,1080" title="Movie Selection Button Setup" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-nrg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- Partnerbox -->
+  <screen name="PartnerboxSetup" position="0,0" size="1920,1080" title="Partnerbox Setup" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-nrgy" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="PartnerboxEntryConfigScreen" position="0,0" size="1920,1080" title="Partnerbox: Edit Entry" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-nrgb" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="PartnerboxEntriesListConfigScreen" position="0,0" size="1920,1080" title="Partnerbox: List of Entries" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="name" position="120,190" size="250,45" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" font="Regular;30" halign="left"/>
+      <widget name="ip" position="385,190" size="190,45" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" font="Regular;30" halign="left"/>
+      <widget name="port" position="570,190" size="120,45" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" font="Regular;30" halign="left"/>
+      <widget name="type" position="690,190" size="250,45" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" font="Regular;30" halign="left"/>
+      <eLabel position="115,240" size="1190,1" zPosition="2" backgroundColor="metrixForeground" transparent="0" />
+      <widget name="entrylist" position="120,250" size="1180,640" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-nryb" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="RemoteTimerEntry" position="0,0" size="1920,1080" title="Timer entry" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+      <eLabel position="574,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+      <widget name="canceltext" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="oktext" position="595,945" size="260,60" zPosition="1" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="left"  transparent="1" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- YTTrailer -->
+  <screen name="YTTrailerSetup" position="0,0" size="1920,1080" title="YTTrailer" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-srg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="YTTrailerList" position="0,0" size="1920,1080" title="YTTrailer List" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="list" position="120,190" size="1180,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/youtube.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- VirtualZap -->
+  <!-- FritzCall -->
+  <!-- MerlinMusicPlayer -->
+  <!-- FancontrolConfiguration -->
+  <screen name="FancontrolConfiguration" position="0,0" size="1920,1080" title="Standbymode Fancontrol settings" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,630" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-srg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/fan.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- CCcamOscam InfoConfig --> 
+  <screen name="CCcamOscamInfoConfigScreen" position="0,0" size="1920,1080" title="CCcamOscam Configuration" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="70,38" zPosition="-10" size="1780,975" backgroundColor="metrixBackground" transparent="0" />
+    <widget source="global.CurrentTime" render="Label" position="1630,30" size="200,100" font="SetrixHD; 85" halign="left" backgroundColor="metrixBackground" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1420,55" size="200,50" font="Regular; 28" halign="right" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent1">
+      <convert type="ClockToText">Format: %A</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1420,90" size="200,50" font="Regular; 28" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+      <convert type="ClockToText">Format: %e. %B</convert>
+    </widget>
+    <eLabel text="Setup" position="120,55" size="1100,80" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,170" size="1100,720" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,953" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="574,953" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="674,635" zPosition="-1" size="6,40" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="964,635" zPosition="-1" size="6,40" backgroundColor="metrixBlue" transparent="0" />
+    <widget source= "ButtonRedText" render="Label" position="165,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonGreenText" render="Label" position="595,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonYellowText" render="Label" position="685,637" size="240,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonBlueText" render="Label" position="975,637" size="260,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1346,380" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- CCcamOScam Select cam -->
+  <screen name="CCcamOScamSelectCam" position="0,0" size="1920,1080" title="CCcamOScam Select cam" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="70,38" zPosition="-10" size="1780,975" backgroundColor="metrixBackground" transparent="0" />
+    <widget source="global.CurrentTime" render="Label" position="1630,30" size="200,100" font="SetrixHD; 85" halign="left" backgroundColor="metrixBackground" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1420,55" size="200,50" font="Regular; 28" halign="right" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixAccent1">
+      <convert type="ClockToText">Format: %A</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1420,90" size="200,50" font="Regular; 28" halign="right" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" transparent="1">
+      <convert type="ClockToText">Format: %e. %B</convert>
+    </widget>
+    <widget source="Title" render="Label" position="70,47" size="750,50" font="SetrixHD;35" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="header" itemHeight="25" position="70,105" size="750,50" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="70,135" size="750,1" font="Regular;26" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="list" itemHeight="25" position="70,140" size="750,250" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,953" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="574,953" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="674,635" zPosition="-1" size="6,40" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="964,635" zPosition="-1" size="6,40" backgroundColor="metrixBlue" transparent="0" />
+    <widget source= "ButtonRedText" render="Label" position="165,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonGreenText" render="Label" position="595,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonYellowText" render="Label" position="685,637" size="240,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonBlueText" render="Label" position="975,637" size="260,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcamOScam Start -->
+  <screen name="CCcamOScamStart" position="0,0" size="1920,1080" title="CCcamOScam Start" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="header" itemHeight="25" position="70,120" size="750,50" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="70,155" size="750,1" font="Regular;26" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="list" itemHeight="25" position="70,160" size="750,275" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="70,450" size="750,1" font="Regular;26" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="footer" position="70,455" size="750,100" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel position="144,953" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="574,953" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="674,635" zPosition="-1" size="6,40" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="964,635" zPosition="-1" size="6,40" backgroundColor="metrixBlue" transparent="0" />
+    <widget source= "ButtonRedText" render="Label" position="165,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonGreenText" render="Label" position="595,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonYellowText" render="Label" position="685,637" size="240,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonBlueText" render="Label" position="975,637" size="260,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcamOScam InfoText -->
+  <screen name="CCcamOscamInfoTextScreen" position="0,0" size="1920,1080" title="CCcamOScam InfoText" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="text" position="70,120" size="750,520" font="Regular;20" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,953" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="574,953" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="674,635" zPosition="-1" size="6,40" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="964,635" zPosition="-1" size="6,40" backgroundColor="metrixBlue" transparent="0" />
+    <widget source= "ButtonRedText" render="Label" position="165,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonGreenText" render="Label" position="595,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonYellowText" render="Label" position="685,637" size="240,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonBlueText" render="Label" position="975,637" size="260,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcam Clients -->
+  <screen name="CCcamClientsScreen" position="0,0" size="1920,1080" title="CCcam Clients" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+    <widget name="header" itemHeight="25" position="70,105" size="750,50" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="70,135" size="750,1" font="Regular;26" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="clients" itemHeight="25" position="70,140" size="750,275" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="70,450" size="750,1" font="Regular;26" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="footer" position="70,455" size="750,100" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+    <widget name= "ButtonRedText" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonGreenText" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonYellowText" position="974,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonBlueText" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcam Servers General Info -->
+  <screen name="CCcamServersAllgemeinScreen" position="0,0" size="1920,1080" title="CCcam Servers General Info" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="header" itemHeight="38" position="120,158" size="1200,75" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="120,202" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="servers" itemHeight="38" position="120,210" size="1200,412" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="120,675" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="footer" position="120,682" size="1200,150" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <panel name="bc-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcam Servers Detail -->
+  <screen name="CCcamServersDetailScreen" position="0,0" size="1920,1080" title="CCcam Servers Detail" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="header1" position="120,165" size="1200,75" font="SetrixHD;30" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="header2" itemHeight="38" position="120,232" size="1200,75" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="120,292" size="1380,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="servers" itemHeight="38" position="120,300" size="1200,412" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="120,675" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="footer" itemHeight="38" position="120,682" size="1200,38" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <panel name="bc-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcam Ping Servers -->
+  <screen name="CCcamPingServersScreen" position="0,0" size="1920,1080" title="CCcam Ping Servers" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+    <widget name="header" itemHeight="38" position="120,158" size="1200,75" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="120,202" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="menu" itemHeight="38" position="120,210" size="1200,375" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="bc-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcam Providers -->
+  <screen name="CCcamProvidersScreen" position="0,0" size="1920,1080" title="CCcam Providers" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+    <widget name="header_info" itemHeight="38" position="300,158" size="1200,38" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="120,202" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <eLabel text="-" position="255,150" size="2,630" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="info" itemHeight="38" position="300,210" size="1200,600" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="header_menu" itemHeight="38" position="120,158" size="135,38" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <widget name="menu" itemHeight="38" position="120,210" size="135,600" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    
+    <panel name="bc-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcam Shares -->
+  <screen name="CCcamSharesScreen" position="0,0" size="1920,1080" title="CCcam Shares" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+    <widget name="header_menu" itemHeight="38" position="120,158" size="135,38" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="120,202" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <eLabel text="-" position="255,150" size="2,630" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="menu" itemHeight="38" position="120,210" size="135,600" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="header_info" itemHeight="38" position="300,158" size="1200,38" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <widget name="info" itemHeight="38" position="300,210" size="1200,600" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    
+    <panel name="bc-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- CCcam Pairs -->
+  <screen name="CCcamPairsScreen" position="0,0" size="1920,1080" title="CCcam Pairs" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+    <widget name="header" itemHeight="38" position="120,158" size="1200,75" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="120,202" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="pairs" itemHeight="38" position="120,210" size="1200,412" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="120,675" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="details" itemHeight="38" position="120,682" size="1200,38" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    
+    <panel name="bc-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcam Entitlements -->
+  <screen name="CCcamEntitlementsScreen" position="0,0" size="1920,1080" title="CCcam Entitlements" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+    <widget name="header" position="120,158" size="1200,38" font="SetrixHD;30" foregroundColor="metrixAccent1" backgroundColor="metrixBackground"  transparent="1" />
+    <eLabel text="-" position="120,202" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <eLabel text="-" position="255,202" size="2,630" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="menu" itemHeight="38" position="120,210" size="135,600" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <widget name="info" position="300,210" size="750,600" font="SetrixHD;30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    
+    <panel name="bc-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcam ECMInfo -->
+  <screen name="CCcamECMInfoScreen" position="0,0" size="1920,1080" title="CCcam ECMInfo" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+    <eLabel text="-" position="255,150" size="2,630" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="menu" itemHeight="38" position="120,165" size="135,600" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <widget name="info" itemHeight="38" position="300,165" size="1200,600" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="bc-srgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/info.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- Enable/Disable Cline/Fline -->
+  <screen name="EnableDisableClineFlineScreen" position="0,0" size="1920,1080" title="CCcamOscamInfo Enable Disable C/F-Line" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+    <widget name="header" itemHeight="38" position="120,158" size="1200,75" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="120,202" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="menu" itemHeight="38" position="120,210" size="1200,375" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+    <widget name= "ButtonRedText" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonGreenText" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonYellowText" position="974,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonBlueText" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcamOscamInfo Backup CCcam.cfg -->
+  <screen name="EnableDisableClineFlineBackupScreen" position="0,0" size="1920,1080" title="CCcamOscamInfo Backup CCcam.cfg" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+    <widget name="menu" itemHeight="38" position="120,165" size="1200,375" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    
+    <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="544,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="954,945" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="1354,945" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+    <widget name= "ButtonRedText" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonYellowText" position="974,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonBlueText" position="1374,945" size="260,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- Oscam General -->
+  <screen name="OscamGeneralScreen" position="0,0" size="1920,1080" title="Oscam General" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="text_oscam" position="70,155" size="700,25" font="SetrixHD;20" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="menu_oscam" itemHeight="25" position="70,190" size="700,75" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="70,260" size="750,1" font="Regular;26" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="text_cw" position="70,265" size="750,25" font="SetrixHD;20" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="menu_cw" itemHeight="25" position="70,300" size="700,75" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="70,370" size="750,1" font="Regular;26" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="text_user" position="70,375" size="700,25" font="SetrixHD;20" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="menu_user" itemHeight="25" position="70,405" size="700,75" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,953" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="574,953" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="674,635" zPosition="-1" size="6,40" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="964,635" zPosition="-1" size="6,40" backgroundColor="metrixBlue" transparent="0" />
+    <widget source= "ButtonRedText" render="Label" position="165,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonGreenText" render="Label" position="595,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonYellowText" render="Label" position="685,637" size="240,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonBlueText" render="Label" position="975,637" size="260,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- Oscam Client Server -->
+  <screen name="OscamClientServerScreen" position="0,0" size="1920,1080" title="Oscam Client Server" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="header" itemHeight="25" position="70,105" size="750,50" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="70,135" size="750,1" font="Regular;26" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="servers" itemHeight="25" position="70,140" size="750,275" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="70,450" size="750,1" font="Regular;26" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="footer" position="70,455" size="750,100" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel position="144,953" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="574,953" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="674,635" zPosition="-1" size="6,40" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="964,635" zPosition="-1" size="6,40" backgroundColor="metrixBlue" transparent="0" />
+    <widget name= "ButtonRedText" position="165,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonGreenText" position="595,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonYellowText" position="685,637" size="240,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonBlueText" position="975,637" size="260,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- Oscam Clients Info -->
+  <screen name="OScamTextList" position="0,0" size="1920,1080" title="Oscam Clients Info" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" itemHeight="25" position="70,110" size="800,250" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,953" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="574,953" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="674,635" zPosition="-1" size="6,40" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="964,635" zPosition="-1" size="6,40" backgroundColor="metrixBlue" transparent="0" />
+    <widget source= "ButtonRedText" render="Label" position="165,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonGreenText" render="Label" position="595,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonYellowText" render="Label" position="685,637" size="240,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget source= "ButtonBlueText" render="Label" position="975,637" size="260,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- Enable/Disable Clients Readers Proxys -->
+  <screen name="EnableDisableClientsReadersProxysScreen" position="0,0" size="1920,1080" title="Enable/Disable Clients Readers Proxys" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="header" itemHeight="25" position="70,105" size="800,50" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" scrollbarMode="showNever" transparent="1" />
+    <eLabel text="-" position="70,135" size="700,1" font="Regular;26" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="menu" itemHeight="25" position="70,140" size="800,250" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,953" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="574,953" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="674,635" zPosition="-1" size="6,40" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="964,635" zPosition="-1" size="6,40" backgroundColor="metrixBlue" transparent="0" />
+    <widget name= "ButtonRedText" position="165,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonGreenText" position="595,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonYellowText" position="685,637" size="240,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonBlueText" position="975,637" size="260,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- Oscam Restat Server -->
+  <screen name="OscamRestatServer" position="0,0" size="1920,1080" title="Oscam Restat Server" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="menu" itemHeight="25" position="70,110" size="800,250" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel position="144,953" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+    <eLabel position="574,953" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+    <eLabel position="674,635" zPosition="-1" size="6,40" backgroundColor="metrixYellow" transparent="0" />
+    <eLabel position="964,635" zPosition="-1" size="6,40" backgroundColor="metrixBlue" transparent="0" />
+    <widget name= "ButtonRedText" position="165,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonGreenText" position="595,955" size="340,60" zPosition="1" font="SetrixHD;32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name= "ButtonBlueText" position="975,637" size="260,30" zPosition="1" font="SetrixHD;20" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- CCcam General Info -->
+  <screen name="CCcamInfoMain" position="0,0" size="1920,1080" title="CCcam Mainmenu" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="menu" position="120,170" size="1100,640" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcam General Info -->
+  <screen name="CCcamInfoInfoScreen" position="0,0" size="1920,1080" title="CCcam General Info" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="text" position="120,210" size="1200,795" font="Regular;31" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>   
+  <!-- CCcam Client Info -->
+  <screen name="CCcamInfoSubMenu" position="0,0" size="1920,1080" title="CCcam Client Info" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="120,638" size="1200,1" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="info" position=" 120,645" size="1200,330" font="SetrixHD;31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,210" size="1200,400" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>   
+  <!-- CCcam Server Menu -->
+  <screen name="CCcamInfoServerMenu" position="0,0" size="1920,1080" title="CCcam Server View" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="120,638" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="info" position="120,645" size="1200,330" font="SetrixHD;31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,180" size="1200,400" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <!-- CCcam Share View -->
+  <screen name="CCcamShareViewMenu" position="0,0" size="1920,1080" title="CCcam Share View" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="120,862" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="uphops" position="120,870" size="1200,38" font="SetrixHD;31" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="cards" position=" 120,870" size="1200,38" font="SetrixHD;31" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="providers" position="120,907" size="1200,38" font="SetrixHD;31" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="reshare" position="120,907" size="1200,38" font="SetrixHD;31" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,170" size="1100,640" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <!-- CCcam Remote Box Info -->
+  <screen name="CCcamInfoRemoteBoxMenu" position="0,0" size="1920,1080" title="CCcam Remote Box Info" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,170" size="1100,640" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <!-- CCcam Info Shared -->
+  <screen name="CCcamInfoShareInfo" position="0,0" size="1920,1080" title="CCcam Info Shared" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,210" size="1200,700" itemHeight="100" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- CCcam Ecm Info Selection -->
+  <screen name="CCcamInfoEcmInfoSelection" position="0,0" size="1920,1080" title="CCcam Ecm Info Selection" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,210" size="1100,640" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="CCcamInfoConfigMenu" position="0,0" size="1920,1080" title="CCcam Info Config Menu" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,170" size="1100,640" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- CCcam Ecm Info SubMenu -->
+  <screen name="CCcamInfoSubMenu" position="0,0" size="1920,1080" title="CCcam Info SubMenu" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <eLabel text="-" position="120,638" size="1200,2" font="Regular;39" zPosition="2" foregroundColor="metrixForeground" backgroundColor="#606060" />
+    <widget name="info" position="120,645" size="1200,330" font="SetrixHD;31" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,180" size="1200,405" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- CCcam Ecm Info Selection -->
+  <screen name="CCcamInfoEcmInfoSelection" position="0,0" size="1920,1080" title="CCcam Ecm Info Selection" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,170" size="1100,640" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- CCcam Info Config Menu -->
+  <screen name="CCcamInfoMenuConfig" position="0,0" size="1920,1080" title="CCcam Info Menu Config" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,170" size="1100,640" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgy" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- CCcam Info Config Switcher -->
+  <screen name="CCcamInfoConfigSwitcher" position="0,0" size="1920,1080" title="CCcam Info Config Switcher" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,170" size="1100,640" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/camd.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="DVBUsbTunerSetup" position="0,0" size="1920,1080" title="DVB-T/S/C USB Tuner Setup Plugin" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="usbtunerStatusText" position="120,180" size="1200,60" backgroundColor="metrixBackground" foregroundColors="#aaaaaa,#ff0000,#00ff00" halign="left" valign="center" zPosition="2" font="Regular;22" transparent="1"/>
+    <widget source="list" render="Listbox" position="120,240" size="1200,180" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (15, 0), size = (900, 45), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryPixmapAlphaBlend(pos = (920, 2), size = (40, 40), png = 1),
+					],
+					"fonts": [gFont("Regular", 22)],
+					"itemHeight": 45
+				}
+			</convert>
+    </widget>
+    <widget name="downloadStatusText" position="120,240" size="1200,60" backgroundColor="metrixBackground" foregroundColor="metrixForeground" halign="center" valign="center" zPosition="3" font="Regular;27" transparent="1"/>
+    <widget name="slider" position="120,300" size="1200,23" zPosition="3"/>
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen> 
+  <screen name="ShowAdvancedMenu" position="0,0" size="1920,1080" title="Advanced Menu" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="advanced_actions" position="120,180" size="1200,180" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="StatusText" position="120,777" size="1200,75" font="SetrixHD;33" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" halign="center" zPosition="2" transparent="1" />
+    <panel name="kc-nrg" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="EPGImportConfig" position="0,0" size="1920,1080" title="EPG Import Configuration" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,630" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="status" position="120,810" size="1200,120" font="Regular;30" valign="top" halign="left" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="statusbar" position="120,771" size="1200,38" font="Regular;30" valign="top" halign="left" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" transparent="1" />
+      <ePixmap name="key_info" position="1688,945" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+      <panel name="kc-nrgyb" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/tvguide.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="EPGImportSources" position="0,0" size="1920,1080" title="EPG Import Sources" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,180" size="1200,720" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgy" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/tvguide.png" transparent="1" alphatest="blend" />
+  </screen>   
+  <screen name="EPGImportLog" position="0,0" size="1920,1080" title="EPG Import Log" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="list" position="120,180" size="1200,720" font="Console;27" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <panel name="kc-nrgyb" />
+    <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/menu/tvguide.png" transparent="1" alphatest="blend" />
+  </screen>  
+  <!-- TempFanControl Setup -->
+  <screen name="TempFanControl" position="0,0" size="1920,1080" title="Temp Fan Control" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="screenpanel_default" />
+    <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="config" position="120,170" size="1100,720" itemHeight="40" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorTempText0" render="Label" position="40,240" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorTemp0" render="Label" position="130,240" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText1" render="Label" position="40,270" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorTemp1" render="Label" position="130,270" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText2" render="Label" position="40,280" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorTemp2" render="Label" position="130,280" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText3" render="Label" position="40,300" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorTemp3" render="Label" position="130,270" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText4" render="Label" position="40,320" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorTemp4" render="Label" position="130,320" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText5" render="Label" position="40,340" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorTemp5" render="Label" position="130,340" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText6" render="Label" position="40,360" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorTemp6" render="Label" position="130,360" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText7" render="Label" position="40,380" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorTemp7" render="Label" position="130,380" zPosition="1" size="100,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		
+		<widget source="SensorFanText0" render="Label" position="320,240" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorFan0" render="Label" position="410,240" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText1" render="Label" position="320,260" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorFan1" render="Label" position="410,260" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText2" render="Label" position="320,280" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorFan2" render="Label" position="410,280" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText3" render="Label" position="320,300" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorFan3" render="Label" position="410,300" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText4" render="Label" position="320,320" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorFan4" render="Label" position="410,320" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText5" render="Label" position="320,340" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorFan5" render="Label" position="410,340" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText6" render="Label" position="320,360" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorFan6" render="Label" position="410,360" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText7" render="Label" position="320,380" zPosition="1" size="90,40" font="Regular;20" halign="left" valign="top" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+		<widget source="SensorFan7" render="Label" position="410,380" zPosition="1" size="150,20" font="Regular;19" halign="right">
+			<convert type="SensorToText"></convert>
+		</widget>
+    <panel name="c-srgyb" />
+    <ePixmap position="1346,380" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- BarryAllen -->
+  <screen name="BarryAllenMain" position="center,center" size="880,600" title="Barry Allen Menu" >
+    <ePixmap name="logo" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BarryAllen/barryallen.png" position="35,525" size="150,60" alphatest="blend" />
+    <widget name="left" position="35,45" size="30,60" backgroundColor="background" valign="center" halign="center" zPosition="2"  foregroundColor="white" font="Regular;48"/>
+    <widget name="right" position="815,45" size="30,60" backgroundColor="background" valign="center" halign="center" zPosition="2"  foregroundColor="white" font="Regular;48"/>
+    <widget name="image" position="80,30" size="720,90" backgroundColor="red" valign="center" halign="center" zPosition="2"  foregroundColor="white" font="Regular;36"/>
+    <widget name="menu" position="35,150" size="810,360" itemHeight="45" scrollbarMode="showOnDemand" />
+    <widget name="buttonred" position="200,525" size="150,60" backgroundColor="red" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttongreen" position="365,525" size="150,60" backgroundColor="green" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttonyellow" position="530,525" size="150,60" backgroundColor="yellow" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttonblue" position="695,525" size="150,60" backgroundColor="blue" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+  </screen>
+  <screen name="ChangeWizardba" position="center,center" size="880,600" title="Wizard for installed Images" >
+    <widget name="menu" position="35,15" size="810,510" itemHeight="45" scrollbarMode="showOnDemand" />
+    <ePixmap name="logo" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BarryAllen/barryallen.png" position="35,525" size="150,60" alphatest="blend" />
+    <widget name="buttonred" position="200,525" size="150,60" backgroundColor="red" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttongreen" position="365,525" size="150,60" backgroundColor="green" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttonyellow" position="530,525" size="150,60" backgroundColor="yellow" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttonblue" position="695,525" size="150,60" backgroundColor="blue" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+  </screen>
+  <screen name="ManipulateWizardba" position="center,center" size="880,600" title="Wizard for Images at backup" >
+    <widget name="menu" position="35,15" size="810,510" itemHeight="45" scrollbarMode="showOnDemand" />
+    <ePixmap name="logo" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BarryAllen/barryallen.png" position="35,525" size="150,60" alphatest="blend" />
+    <widget name="buttonred" position="200,525" size="150,60" backgroundColor="red" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttongreen" position="365,525" size="150,60" backgroundColor="green" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttonyellow" position="530,525" size="150,60" backgroundColor="yellow" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttonblue" position="695,525" size="150,60" backgroundColor="blue" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+  </screen>
+  <screen name="ToolsWizardba" position="center,center" size="880,600" title="Wizard for Tools" >
+    <widget name="menu" position="35,15" size="810,510" itemHeight="45" scrollbarMode="showOnDemand" />
+    <ePixmap name="logo" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BarryAllen/barryallen.png" position="35,525" size="150,60" alphatest="blend" />
+    <widget name="buttonred" position="200,525" size="150,60" backgroundColor="red" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttongreen" position="365,525" size="150,60" backgroundColor="green" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttonyellow" position="530,525" size="150,60" backgroundColor="yellow" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+    <widget name="buttonblue" position="695,525" size="150,60" backgroundColor="blue" valign="center" halign="center" zPosition="2"  foregroundColor="black" font="Regular;27"/>
+  </screen>
+  <screen name="BarryAllenConfiguration" position="0,0" size="1920,1080" title="BarryAllen Configuration" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="bc-nrgyb" />
+      <ePixmap name="logo" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BarryAllen/barryallen.png" position="1658,935" size="150,60" alphatest="blend" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="AboutBarryAllen" position="0,0" size="1920,1080" title="About BarryAllen" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <ePixmap position="600,220" size="195,180" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BarryAllen/g3icon_ba.png" transparent="1" alphatest="blend" />
+      <widget name="about" position="240,415" size="870,330" valign="center" halign="center" zPosition="2"  foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;36" transparent="1" />
+      <ePixmap name="logo" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BarryAllen/barryallen.png" position="1658,935" size="150,60" alphatest="blend" />
+      <panel name="bc-nrg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/info.png" transparent="1" alphatest="blend" />
+  </screen>
+  <!-- Dumbo -->
+  <screen name="Dumbo" position="center,120" size="1020,90" title="Dumb Booting" >
+    <widget name="logo" position="15,15" size="150,60" alphatest="blend" />
+    <widget name="buttonred" position="180,15" size="195,60" backgroundColor="red" valign="center" halign="center" zPosition="2"  foregroundColor="white" font="Regular;27"/>
+    <widget name="buttongreen" position="390,15" size="195,60" backgroundColor="green" valign="center" halign="center" zPosition="2"  foregroundColor="white" font="Regular;27"/>
+    <widget name="buttonyellow" position="600,15" size="195,60" backgroundColor="yellow" valign="center" halign="center" zPosition="2"  foregroundColor="white" font="Regular;27"/>
+    <widget name="buttonblue" position="810,15" size="195,60" backgroundColor="blue" valign="center" halign="center" zPosition="2"  foregroundColor="white" font="Regular;27"/>
+  </screen>
+  <screen name="DumboConfiguration" position="0,0" size="1920,1080" title="Dumbo Configuration" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="bc-nrgyb" />
+      <widget name="logo" position="1658,935" size="150,60" alphatest="blend" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="DumboAbout" position="0,0" size="1920,1080" title="About dBackup" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <ePixmap position="600,150" size="195,150" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Dumbo/g3icon_dumbo.png" transparent="1" alphatest="blend" />
+      <widget name="aboutdumbo" position="240,345" size="870,105" valign="center" halign="center" zPosition="2"  foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;36" transparent="1" />
+      <widget name="freefilesystem" position="345,450" size="270,375" valign="center" halign="center" zPosition="2"  foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;36" transparent="1"/>
+      <widget name="freememory" position="750,450" size="270,375" valign="center" halign="center" zPosition="2"  foregroundColor="metrixForeground" backgroundColor="metrixBackground" font="SetrixHD;36" transparent="1" />
+      <panel name="bc-nrg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/info.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="DVDBackupScreen" position="0,0" size="1920,1080" title="DVD Backup" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-nrgyb" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="DVDBackupProgress" position="0,0" size="1920,1080" title="DVD Backup Progress" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="list" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-nr" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/info.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="KiddyTimerSetup" position="0,0" size="1920,1080" title="KiddyTimer Setup" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,585" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="LastDayStarted" position="120,795" size="1200,40" zPosition="4" font="Regular;27" fbackgroundColor="metrixBackground" foregroundColor="metrixAccent1" />
+      <widget name="RemainingTime" position="120,835" size="1200,40" zPosition="4" font="Regular;27" fbackgroundColor="metrixBackground" foregroundColor="metrixAccent1" />
+      <widget name="PluginInfo" position="120,875" size="1200,40" zPosition="4" font="Regular;27" backgroundColor="metrixBackground" foregroundColor="metrixAccent1" />
+      <panel name="kc-nrgyb" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="QuickbuttonSetup" position="0,0" size="1920,1080" title="Quickbutton Setup" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-nrg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="DynDNSScreenMain" position="0,0" size="1920,1080" title="DynDNS Setup" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="bc-nrg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="LogoManagerConfigScreen" position="0,0" size="1920,1080" title="LogoManager Setup" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="bc-nrg" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="fstabViewerScreen" position="0,0" size="1920,1080" title="fstab-Editor" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="menulist" position="120,190" size="1200,660" itemHeight="220" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="entryinfo" position="120,880" size="1200,50" font="SetrixHD;30" foregroundColor="metrixAccent1"  backgroundColor="metrixBackground" halign="center" transparent="1" />
+      <panel name="rgyb" />
+      <eLabel name="key_red" text="Cancel" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <eLabel name="key_green" text="Add entry" position="564,945" size="260,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <eLabel name="key_yellow" text="Restore fstab.backup" position="974,945" size="360,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <eLabel name="key_blue" text="Run mount -a" position="1374,945" size="360,60" zPosition="1" font="SetrixHD;32" valign="center" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="fstabEditorScreen" position="0,0" size="1920,1080" title="fstab-Editor" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <eLabel position="144,945" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+      <eLabel position="574,945" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+      <widget name="ButtonRedText" position="165,945" size="260,60" zPosition="1" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="left"  transparent="1" />
+      <eLabel name="ButtonGreenText" text="Save" position="595,945" size="260,60" zPosition="1" font="SetrixHD;32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" valign="center" halign="left"  transparent="1" />
+      <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/icons/setup.png" transparent="1" alphatest="blend" />
+  </screen>
+</skin>

@@ -1,0 +1,136 @@
+<keymap>
+	<map context="TSiPanelActions">
+		<key id="KEY_BLUE" mapto="TSiPanel" flags="b" />
+		<key id="KEY_YELLOW" mapto="showCrossEPG" flags="b" />
+		<key id="KEY_GREEN" mapto="showextensions" flags="b" />
+	</map>
+	<map context="InfobarSubserviceSelectionActions">
+		<key id="KEY_GREEN" mapto="subserviceSelection" flags="l" />
+	</map>    
+    	<map context="InfobarExtensions">
+		<device name="Console; DirectFB; Qt; SDL">
+			<key id="KEY_F4" mapto="extensions" flags="l" />
+		</device>
+		<key id="KEY_BLUE" mapto="extensions" flags="l" />
+	</map>
+	<map context="SatellitesEditorActions">
+		<key id="KEY_OK" mapto="select" flags="m" />
+		<key id="KEY_EXIT" mapto="exit" flags="m" />
+		
+		<key id="KEY_LEFT" mapto="left" flags="m" />
+		<key id="KEY_RIGHT" mapto="right" flags="m" />
+		
+		<key id="KEY_UP" mapto="up" flags="m" />
+		<key id="KEY_UP" mapto="upUp" flags="b" />
+		<key id="KEY_UP" mapto="upRepeated" flags="r" />
+		
+		<key id="KEY_DOWN" mapto="down" flags="m" />
+		<key id="KEY_DOWN" mapto="downUp" flags="b" />
+		<key id="KEY_DOWN" mapto="downRepeated" flags="r" />
+		
+		<key id="KEY_RED" mapto="red" flags="m" />
+		<key id="KEY_RED" mapto="redRepeated" flags="r" />
+		<key id="KEY_RED" mapto="redUp" flags="b" />
+		<key id="KEY_GREEN" mapto="green" flags="m" />
+		<key id="KEY_GREEN" mapto="greenRepeated" flags="r" />
+		<key id="KEY_GREEN" mapto="greenUp" flags="b" />
+		<key id="KEY_YELLOW" mapto="yellow" flags="m" />
+		<key id="KEY_BLUE" mapto="blue" flags="m" />
+		
+		<key id="KEY_CHANNELUP" mapto="nextPage" flags="m" />
+		<key id="KEY_CHANNELDOWN" mapto="prevPage" flags="m" />
+		
+		<key id="KEY_HELP" mapto="displayHelp" flags="m" />
+		<key id="KEY_MENU" mapto="displayMenu" flags="m" />
+		<key id="KEY_INFO" mapto="displayInfo" flags="m" />
+
+	</map>	
+	<map context="ServicesEditorActions">
+		<key id="KEY_OK" mapto="select" flags="m" />
+		<key id="KEY_EXIT" mapto="exit" flags="m" />
+		
+		<key id="KEY_LEFT" mapto="left" flags="m" />
+		<key id="KEY_RIGHT" mapto="right" flags="m" />
+		
+		<key id="KEY_UP" mapto="up" flags="m" />
+		<key id="KEY_UP" mapto="upUp" flags="b" />
+		<key id="KEY_UP" mapto="upRepeated" flags="r" />
+		
+		<key id="KEY_DOWN" mapto="down" flags="m" />
+		<key id="KEY_DOWN" mapto="downUp" flags="b" />
+		<key id="KEY_DOWN" mapto="downRepeated" flags="r" />
+		
+		<key id="KEY_RED" mapto="red" flags="m" />
+		<key id="KEY_RED" mapto="redRepeated" flags="r" />
+		<key id="KEY_RED" mapto="redLong" flags="l" />
+		<key id="KEY_RED" mapto="redUp" flags="b" />
+		<key id="KEY_GREEN" mapto="green" flags="m" />
+		<key id="KEY_GREEN" mapto="greenRepeated" flags="r" />
+		<key id="KEY_GREEN" mapto="greenUp" flags="b" />
+		<key id="KEY_YELLOW" mapto="yellow" flags="m" />
+		<key id="KEY_BLUE" mapto="blue" flags="m" />
+		
+		<key id="KEY_CHANNELUP" mapto="nextPage" flags="m" />
+		<key id="KEY_CHANNELDOWN" mapto="prevPage" flags="m" />
+		<key id="KEY_CHANNELUP" mapto="nextPageRepeated" flags="r" />
+		<key id="KEY_CHANNELDOWN" mapto="prevPageRepeated" flags="r" />
+		<key id="KEY_CHANNELUP" mapto="nextPageUp" flags="b" />
+		<key id="KEY_CHANNELDOWN" mapto="prevPageUp" flags="b" />
+		
+		<key id="KEY_HELP" mapto="displayHelp" flags="m" />
+		<key id="KEY_MENU" mapto="displayMenu" flags="m" />
+		<key id="KEY_INFO" mapto="displayInfo" flags="m" />
+
+	</map>
+	<map context="CCcamOscamInfoActions">
+		<key id="KEY_RED" mapto="red" flags="m" />
+		<key id="KEY_GREEN" mapto="green" flags="m" />
+		<key id="KEY_YELLOW" mapto="yellow" flags="m" />
+		<key id="KEY_BLUE" mapto="blue" flags="m" />
+		<key id="KEY_OK" mapto="ok" flags="m" />
+		<key id="KEY_EXIT" mapto="cancel" flags="m" />
+		<key id="KEY_UP" mapto="up" flags="m" />
+		<key id="KEY_DOWN" mapto="down" flags="m" />
+		<key id="KEY_LEFT" mapto="left" flags="m" />
+		<key id="KEY_RIGHT" mapto="right" flags="m" />
+		<key id="KEY_CHANNELUP" mapto="ch_up" flags="m" />
+		<key id="KEY_CHANNELDOWN" mapto="ch_down" flags="m" />
+		<key id="KEY_MENU" mapto="key_menu" flags="m" />
+	</map>
+	<map context="CCcamInfoActions">
+		<key id="KEY_1" mapto="1" flags="m"/>
+		<key id="KEY_2" mapto="2" flags="m"/>
+		<key id="KEY_3" mapto="3" flags="m"/>
+		<key id="KEY_4" mapto="4" flags="m"/>
+		<key id="KEY_5" mapto="5" flags="m"/>
+		<key id="KEY_6" mapto="6" flags="m"/>
+		<key id="KEY_7" mapto="7" flags="m"/>
+		<key id="KEY_8" mapto="8" flags="m"/>
+		<key id="KEY_9" mapto="9" flags="m"/>
+		<key id="KEY_0" mapto="0" flags="m"/>
+		<key id="KEY_RED" mapto="red" flags="m" />
+		<key id="KEY_GREEN" mapto="green" flags="m" />
+		<key id="KEY_YELLOW" mapto="yellow" flags="m" />
+		<key id="KEY_BLUE" mapto="blue" flags="m" />
+		<key id="KEY_INFO" mapto="info" flags="m" />
+		<key id="KEY_MENU" mapto="menu" flags="m" />
+		<key id="KEY_EXIT" mapto="cancel" flags="m" />
+		<key id="KEY_OK" mapto="ok" flags="m" />
+		<key id="KEY_UP" mapto="up" flags="m" />
+		<key id="KEY_DOWN" mapto="down" flags="m" />
+		<key id="KEY_LEFT" mapto="left" flags="m" />
+		<key id="KEY_RIGHT" mapto="right" flags="m" />
+		<key id="KEY_CHANNELUP" mapto="incUphop" flags="m" />
+		<key id="KEY_CHANNELDOWN" mapto="decUphop" flags="m" />
+	</map>
+	<map context="MGcamdInfoActions">
+		<key id="KEY_RED" mapto="red" flags="m" />
+		<key id="KEY_GREEN" mapto="green" flags="m" />
+		<key id="KEY_EXIT" mapto="cancel" flags="m" />
+		<key id="KEY_OK" mapto="ok" flags="m" />
+		<key id="KEY_UP" mapto="up" flags="m" />
+		<key id="KEY_DOWN" mapto="down" flags="m" />
+		<key id="KEY_LEFT" mapto="left" flags="m" />
+		<key id="KEY_RIGHT" mapto="right" flags="m" />
+	</map>
+</keymap>

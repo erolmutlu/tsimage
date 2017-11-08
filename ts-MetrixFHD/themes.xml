@@ -1,0 +1,151 @@
+<themes>
+     <colortheme bsWindow="ts-MetrixFHD/SkinDesign_Black" name="Black" type="Dark" value="active">
+         <colors>
+             <color name="metrixSelection" value="#00647687" />
+             <color name="metrixBackground" value="#40000000" />
+             <color name="metrixForeground" value="#00ffffff" />
+             <color name="background" value="#40000000" />
+             <color name="foreground" value="#00ffffff" />
+	     <color name="fullBackground" value="#00000000" />
+             <color name="metrixAccent1" value="#00bbbbbb" />
+             <color name="metrixAccent2" value="#00999999" />
+         </colors>
+         <selectioncolors name="metrixSelection">
+             <selectioncolor name="Amber" value="#00f0a30a" />
+             <selectioncolor name="Brown" value="#00825a2c" />
+             <selectioncolor name="Cobalt" value="#000050ef" />
+             <selectioncolor name="Crimson" value="#00911d10" />
+             <selectioncolor name="Cyan" value="#001ba1e2" />
+             <selectioncolor name="DarkGrey" value="#082f3447" />
+             <selectioncolor name="Magenta" value="#00a61d4d" />
+             <selectioncolor name="Lime" value="#00a4c400" />
+             <selectioncolor name="Indigo" value="#006a00ff" />
+             <selectioncolor name="Green" value="#0070ad11" />
+             <selectioncolor name="Grey" value="#08c5c5c5" />
+             <selectioncolor name="Emerald" value="#00008A00" />
+             <selectioncolor name="Mauve" value="#0076608a" />
+             <selectioncolor name="Olive" value="#006d8764" />
+             <selectioncolor name="Orange" value="#00c3461b" />
+             <selectioncolor name="Pink" value="#00f472d0" />
+             <selectioncolor name="Red" value="#00e51400" />
+             <selectioncolor name="Sienna" value="#007a3b3f" />
+             <selectioncolor name="Steel" value="#00647687" />
+             <selectioncolor name="Teal" value="#00149baf" />
+             <selectioncolor name="Violet" value="#006c0aab" />
+             <selectioncolor name="Yellow" value="#00bf9217" />
+         </selectioncolors>     
+     </colortheme> 
+     <colortheme bsWindow="ts-MetrixFHD/SkinDesign_Grey" name="Grey" type="Light" value="inactive">
+         <colors>
+             <color name="metrixSelection" value="#00bf9217" />
+             <color name="metrixBackground" value="#10bbbbbb" />
+             <color name="metrixForeground" value="#00000000" />
+             <color name="background" value="#10bbbbbb" />
+             <color name="foreground" value="#00000000" />
+	     <color name="fullBackground" value="#00bbbbbb" />
+             <color name="metrixAccent1" value="#00222222" />
+             <color name="metrixAccent2" value="#00555555" />
+         </colors>
+         <selectioncolors name="metrixSelection">
+             <selectioncolor name="Amber" value="#00f0a30a" />
+             <selectioncolor name="Brown" value="#00825a2c" />
+             <selectioncolor name="Cobalt" value="#000050ef" />
+             <selectioncolor name="Crimson" value="#00911d10" />
+             <selectioncolor name="Cyan" value="#001ba1e2" />
+             <selectioncolor name="DarkGrey" value="#082f3447" />
+             <selectioncolor name="Magenta" value="#00a61d4d" />
+             <selectioncolor name="Lime" value="#00a4c400" />
+             <selectioncolor name="Indigo" value="#006a00ff" />
+             <selectioncolor name="Green" value="#0070ad11" />
+             <selectioncolor name="Grey" value="#08c5c5c5" />
+             <selectioncolor name="Emerald" value="#00008A00" />
+             <selectioncolor name="Mauve" value="#0076608a" />
+             <selectioncolor name="Olive" value="#006d8764" />
+             <selectioncolor name="Orange" value="#00c3461b" />
+             <selectioncolor name="Pink" value="#00f472d0" />
+             <selectioncolor name="Red" value="#00e51400" />
+             <selectioncolor name="Sienna" value="#007a3b3f" />
+             <selectioncolor name="Steel" value="#00647687" />
+             <selectioncolor name="Teal" value="#00149baf" />
+             <selectioncolor name="Violet" value="#006c0aab" />
+             <selectioncolor name="White" value="#00ffffff" />
+             <selectioncolor name="Yellow" value="#00bf9217" />
+         </selectioncolors>      
+     </colortheme>
+     <colortheme bsWindow="ts-MetrixFHD/SkinDesign_White" name="White" type="Light" value="inactive">
+         <colors>
+             <color name="metrixSelection" value="#08c5c5c5" />
+             <color name="metrixBackground" value="#10ffffff" />
+             <color name="metrixForeground" value="#00000000" />
+             <color name="background" value="#10ffffff" />
+             <color name="foreground" value="#00000000" />
+	     <color name="fullBackground" value="#00ffffff" />
+             <color name="metrixAccent1" value="#00444444" />
+             <color name="metrixAccent2" value="#00777777" />
+         </colors>
+         <selectioncolors name="metrixSelection">
+             <selectioncolor name="Amber" value="#00f0a30a" />
+             <selectioncolor name="Brown" value="#00825a2c" />
+             <selectioncolor name="Cobalt" value="#000050ef" />
+             <selectioncolor name="Crimson" value="#00911d10" />
+             <selectioncolor name="Cyan" value="#001ba1e2" />
+             <selectioncolor name="DarkGrey" value="#082f3447" />
+             <selectioncolor name="Magenta" value="#00a61d4d" />
+             <selectioncolor name="Lime" value="#00a4c400" />
+             <selectioncolor name="Indigo" value="#006a00ff" />
+             <selectioncolor name="Green" value="#0070ad11" />
+             <selectioncolor name="Grey" value="#08c5c5c5" />
+             <selectioncolor name="Emerald" value="#00008A00" />
+             <selectioncolor name="Mauve" value="#0076608a" />
+             <selectioncolor name="Olive" value="#006d8764" />
+             <selectioncolor name="Orange" value="#00c3461b" />
+             <selectioncolor name="Pink" value="#00f472d0" />
+             <selectioncolor name="Red" value="#00e51400" />
+             <selectioncolor name="Sienna" value="#007a3b3f" />
+             <selectioncolor name="Steel" value="#00647687" />
+             <selectioncolor name="Teal" value="#00149baf" />
+             <selectioncolor name="Violet" value="#006c0aab" />
+             <selectioncolor name="White" value="#00ffffff" />
+             <selectioncolor name="Yellow" value="#00bf9217" />
+         </selectioncolors>      
+     </colortheme>
+     <colortheme bsWindow="ts-MetrixFHD/SkinDesign_Sky" name="Sky" type="Dark" value="inactive">   
+         <colors>
+             <color name="metrixSelection" value="#00e9c403" />
+             <color name="metrixBackground" value="#101e187e" />
+             <color name="metrixForeground" value="#00ffffff" />
+             <color name="background" value="#101e187e" />
+             <color name="foreground" value="#00ffffff" />
+	     <color name="fullBackground" value="#001e187e" />
+             <color name="metrixAccent1" value="#00888888" />
+             <color name="metrixAccent2" value="#00d3d3d9" />
+         </colors>
+         <selectioncolors name="metrixSelection">
+             <selectioncolor name="SkyYellow" value="#00e9c403" />
+             <selectioncolor name="SkyRed" value="#00f23d21" />
+             <selectioncolor name="SkyBlueEpgLight" value="#006b809c" />
+             <selectioncolor name="Amber" value="#00f0a30a" />
+             <selectioncolor name="Brown" value="#00825a2c" />
+             <selectioncolor name="Cobalt" value="#000050ef" />
+             <selectioncolor name="Crimson" value="#00911d10" />
+             <selectioncolor name="Cyan" value="#001ba1e2" />
+             <selectioncolor name="DarkGrey" value="#082f3447" />
+             <selectioncolor name="Magenta" value="#00a61d4d" />
+             <selectioncolor name="Lime" value="#00a4c400" />
+             <selectioncolor name="Indigo" value="#006a00ff" />
+             <selectioncolor name="Green" value="#0070ad11" />
+             <selectioncolor name="Grey" value="#08c5c5c5" />
+             <selectioncolor name="Emerald" value="#00008A00" />
+             <selectioncolor name="Mauve" value="#0076608a" />
+             <selectioncolor name="Olive" value="#006d8764" />
+             <selectioncolor name="Orange" value="#00c3461b" />
+             <selectioncolor name="Pink" value="#00f472d0" />
+             <selectioncolor name="Red" value="#00e51400" />
+             <selectioncolor name="Sienna" value="#007a3b3f" />
+             <selectioncolor name="Steel" value="#00647687" />
+             <selectioncolor name="Teal" value="#00149baf" />
+             <selectioncolor name="Violet" value="#006c0aab" />
+             <selectioncolor name="Yellow" value="#00bf9217" />
+         </selectioncolors>     
+     </colortheme> 
+ </themes>

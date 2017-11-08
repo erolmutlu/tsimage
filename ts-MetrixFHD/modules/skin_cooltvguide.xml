@@ -1,0 +1,254 @@
+<skin>
+  <!-- CoolTV -->
+  <screen name="CoolChannelGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool Channel Guide" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_chsel" />
+      <eLabel text="C  o  o  l    C  h  a  n  n  e  l    G  u  i  d  e" position="753,75" size="1120,100" font="SetrixHD;56" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" />
+      <widget source="Title" render="Label" position="640,150" size="1200,60" font="SetrixHD; 45" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget source="Service" render="CoolPico" position="633,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="CoolPico" position="1733,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="TSPicon2" position="168,90" size="333,200" transparent="1" alphatest="blend" />
+      <widget source="Event" render="Label" position="95,300" size="480,100" font="SetrixHD; 42" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" valign="bottom" >
+          <convert type="EventName">Name</convert>
+      </widget>
+      <!--widget name="date" position="98,380" size="490,50" font="SetrixHD; 36" halign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" /> -->
+      <widget source="Event" render="Label" position="90,410" size="70,40" font="SetrixHD; 30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" halign="right" >
+          <convert type="EventTime">StartTime</convert>
+          <convert type="ClockToText" />
+      </widget>
+      <widget source="Event" render="Label" position="490,410" size="77,40" font="SetrixHD; 30" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" >
+          <convert type="EventTime">EndTime</convert>
+          <convert type="ClockToText">Format: %H:%M</convert>
+      </widget>
+      <widget name="list" position="633,220" size="1200,680" itemHeight="85" zPosition="25" CoolPico="60" CoolFont="Regular;33" CoolServiceFont="Regular;33" CoolEventFont="SetrixHD;27" CoolServiceSize="457" CoolEventSize="717" CoolServicePos="0" CoolServiceHPos="4" CoolEventPos="0" CoolEventHPos="40" CoolBarPos="1000" CoolBarHPos="25" CoolBarSize="100" CoolBarHigh="10" CoolTimePos="350" CoolTimeHPos="9" CoolTimeSize="150" CoolDurationPos="1085" CoolDurationSize="100" CoolServiceColor="metrixForeground" CoolBarColor="metrixSelection" CoolEventColor="metrixAccent1" CoolBackColorSel="metrixSelection" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" CoolCurrentCol="metrixForeground" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <eLabel position="176,428" size="310,2" backgroundColor="metrixAccent1" foregroundColor="metrixAccent1" />
+      <widget source="Event" render="Progress" position="176,426" size="310,6" borderWidth="0" backgroundColor="metrixForeground" transparent="1" zPosition="1">
+          <convert type="EventTime">Progress</convert>
+      </widget>
+      <widget position="176,423" progress_pointer="ts-MetrixFHD/SkinDesign/pointer.png:18,3" render="PositionGauge" size="310,14" source="Event" transparent="1" zPosition="2">
+          <convert type="EventPosition">Gauge</convert>
+      </widget>
+      <widget source="Event" render="TSRunningText" position="95,466" size="480,288" zPosition="2" valign="top" font="Regular;30" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=auto,wrap=1" emptyText="" transparent="1" foregroundColor="metrixAccent1" backgroundColor="metrixBackground" >
+          <convert type="EventName">ExtendedDescription</convert>
+      </widget>
+      <widget source="Service" render="CoolNextEvent" position="95,775" size="480,90" font="Regular;30" backgroundColor="metrixBackground" foregroundColor="metrixAccent2" transparent="1">
+      </widget>
+      <panel name="kchsel-nrgyb" />
+      <ePixmap name="key_info" position="1558,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+      <ePixmap name="key_menu" position="1690,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+      <widget source="Service" render="TSPicon2" position="168,90" size="333,200" zPosition="2" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="CoolInfoGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool Info Guide" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_chsel" />
+      <eLabel text="C  o  o  l    I  n  f  o    G  u  i  d  e" position="820,75" size="1120,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" />
+      <widget source="Service" render="CoolPico" position="700,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="CoolPico" position="1660,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="TSPicon2" position="168,90" size="333,200" transparent="1" alphatest="blend" />
+      <widget source="Service" render="Label" position="98,310" size="490,50" font="SetrixHD; 36" halign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+          <convert type="ServiceName">Name</convert>
+      </widget>
+      <widget name="date" position="98,380" size="490,50" font="SetrixHD; 36" halign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget source="Event" render="Label" position="168,438" size="150,50" font="SetrixHD;38" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="right" transparent="1">
+          <convert type="EventTime">StartTime</convert>
+          <convert type="ClockToText" />
+      </widget>
+      <widget source="Event" render="Label" position="330,438" size="150,50" font="SetrixHD;38" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1">
+          <convert type="EventTime">EndTime</convert>
+          <convert type="ClockToText">Format:- %H:%M</convert>
+      </widget>
+      <widget source="Event" render="Label" position="98,518" size="490,50" font="SetrixHD; 36" halign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+          <convert type="EventTime">Remaining</convert>
+          <convert type="RemainingToText">InMinutes</convert>
+      </widget>
+      <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixFHD/icons/ico_dolby_on.png" position="176,800" size="96,36" zPosition="2" alphatest="blend">
+          <convert type="ServiceInfo">IsMultichannel</convert>
+          <convert type="ConditionalShowHide" />
+      </widget>
+      <ePixmap pixmap="ts-MetrixFHD/icons/ico_format_off.png" position="304,798" size="62,39" zPosition="1" alphatest="blend" />
+      <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixFHD/icons/ico_format_on.png" position="304,798" size="62,39" zPosition="2" alphatest="blend">
+          <convert type="ServiceInfo">IsWidescreen</convert>
+          <convert type="ConditionalShowHide" />
+      </widget>
+      <ePixmap pixmap="ts-MetrixFHD/icons/ico_txt_off.png" position="403,800" size="42,36" zPosition="1" alphatest="blend" />
+      <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixFHD/icons/ico_txt_on.png" position="403,800" size="42,36" zPosition="2" alphatest="blend">
+          <convert type="ServiceInfo">HasTelext</convert>
+          <convert type="ConditionalShowHide" />
+      </widget>
+      <ePixmap pixmap="ts-MetrixFHD/icons/ico_hd_off.png" position="477,800" size="74,36" zPosition="1" alphatest="blend" />
+      <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixFHD/icons/ico_hd_on.png" position="477,800" size="74,36" zPosition="2" alphatest="blend">
+          <convert type="ServiceInfo">VideoWidth</convert>
+          <convert type="ValueRange">721,1980</convert>
+          <convert type="ConditionalShowHide" />
+      </widget>
+      <ePixmap pixmap="ts-MetrixFHD/icons/ico_crypt_off.png" position="112,799" size="41,38" zPosition="1" alphatest="blend" />
+      <widget source="session.CurrentService" render="Pixmap" pixmap="ts-MetrixFHD/icons/ico_crypt_on.png" position="112,799" size="41,38" zPosition="2" alphatest="blend">
+          <convert type="ServiceInfo">IsCrypted</convert>
+          <convert type="ConditionalShowHide" />
+      </widget>
+      <eLabel text="Similar broadcasts:" position="640,738" size="1180,50" font="Regular;33" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="CoolSimilar" position="640,788" size="1180,170" font="Regular;33" foregroundColor="#00e5b243" backgroundColor="metrixBackground" transparent="1" />
+      
+      <widget name="CoolShort" position="640,260" size="1180,150" font="Regular;33" foregroundColor="#00e5b243" backgroundColor="metrixBackground" transparent="1" />
+      
+      <widget name="CoolEvent" position="640,190" size="1180,45" itemHeight="45" zPosition="5" CoolFont="Regular;34" CoolDayPos="0" CoolTimePos="60" CoolEventPos="300" CoolDurationPos="980" CoolDaySize="60" CoolTimeSize="240" CoolDurationSize="180" CoolDayColor="#FF6600" CoolTimeColor="#3B98C9" CoolEventColor="#FF6600" CoolDurationColor="#3B98C9" CoolTunerCol="#606060" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColorSel="metrixBackground" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+      <widget name="CoolDescription" position="640,330" size="1180,385" font="SetrixHD; 36" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      
+      <eLabel position="663,946" zPosition="-1" size="10,60" backgroundColor="metrixRed" transparent="0" />
+      <eLabel position="963,946" zPosition="-1" size="10,60" backgroundColor="metrixGreen" transparent="0" />
+      <eLabel position="1268,946" zPosition="-1" size="10,60" backgroundColor="metrixYellow" transparent="0" />
+      <eLabel position="1563,946" zPosition="-1" size="10,60" backgroundColor="metrixBlue" transparent="0" />
+      <widget name="key_red" position="683,948" size="240,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="key_green" position="983,948" size="230,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="key_yellow" position="1288,948" size="230,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="key_blue" position="1583,948" size="230,60" zPosition="1" font="SetrixHD; 32" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <ePixmap position="90,435" size="50,50" zPosition="10" pixmap="ts-MetrixFHD/left.png" transparent="1" alphatest="blend" />
+      <ePixmap position="528,435" size="50,50" zPosition="10" pixmap="ts-MetrixFHD/right.png" transparent="1" alphatest="blend" />
+  </screen>
+  
+  <screen name="CoolSingleGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool Single Guide" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <eLabel text="C  o  o  l    S  i  n  g  l  e    G  u  i  d  e" position="240,75" size="1680,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" />
+      <widget name="date" position="1230,170" size="600,50" font="SetrixHD; 42" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget source="Service" render="CoolPico" position="120,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="CoolPico" position="1200,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="Label" position="150,170" size="900,50" font="SetrixHD; 42" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+          <convert type="ServiceName">Name</convert>
+      </widget>
+      <widget name="list" position="120,240" size="1100,675" itemHeight="45" zPosition="25" CoolFont="Regular;33" CoolEventFont="Regular;33" CoolDayPos="0" CoolDaySize="60" CoolTimePos="80" CoolTimeSize="105" CoolEventPos="185" CoolEventSize="885" CoolDayColor="#FF6600" CoolTimeColor="#3B98C9" CoolEventColor="metrixForeground" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColor="metrixBackground" CoolBackColorSel="metrixSelection" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget source="Event" render="Label" position="1230,240" size="580,50" font="SetrixHD;38" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" noWrap="1" halign="left">
+          <convert type="EventName">Name</convert>
+      </widget>
+      <widget source="Event" render="Label" position="1170,290" size="150,50" font="SetrixHD;38" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="right" transparent="1">
+          <convert type="EventTime">StartTime</convert>
+          <convert type="ClockToText" />
+      </widget>
+      <widget source="Event" render="Label" position="1332,290" size="150,50" font="SetrixHD;38" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1">
+          <convert type="EventTime">EndTime</convert>
+          <convert type="ClockToText">Format:- %H:%M</convert>
+      </widget>
+      <widget source="Event" render="Label" position="1230,290" size="580,50" font="SetrixHD;38" foregroundColor="metrixForeground" halign="right" backgroundColor="metrixBackground" transparent="1">
+          <convert type="EventTime">Remaining</convert>
+          <convert type="RemainingToText">InMinutes</convert>
+      </widget>
+      <widget source="Event" render="Label" position="1230,350" size="600,570" font="Regular; 32" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" valign="top">
+          <convert type="EventName">ExtendedDescription</convert>
+      </widget>
+      <panel name="epg-nrgyb" />
+      <ePixmap position="1556,945" size="122,60" zPosition="10" pixmap="ts-MetrixFHD/icons/key_info.png" transparent="1" alphatest="blend" />
+      <ePixmap position="1688,945" size="122,60" zPosition="10" pixmap="ts-MetrixFHD/icons/key_menu.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="CoolSearch" position="0,0" size="1920,1080" zPosition="1" title="Cool Search" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <eLabel text="C  o  o  l    S  e  a  r  c  h" position="240,75" size="1680,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" />
+      <!--widget name="date" position="1230,170" size="600,50" font="SetrixHD; 42" halign="left" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" /> -->
+      <widget source="Service" render="CoolPico" position="120,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="CoolPico" position="880,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="Label" position="120,170" size="900,50" font="SetrixHD; 42" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1">
+          <convert type="ServiceName">Name</convert>
+      </widget>
+      
+      <widget name="list" position="120,230" size="1680,450" itemHeight="45" zPosition="3" CoolFont="Regular;33" CoolServiceFont="Regular;33" CoolEventFont="Regular;33" CoolDayPos="0" CoolDayHPos="2" CoolDatePos="75" CoolDateHPos="2" CoolTimePos="175" CoolTimeHPos="2" CoolServicePos="280" CoolServiceHPos="2" CoolEventPos="520" CoolEventHPos="2" CoolDaySize="60" CoolDateSize="125" CoolTimeSize="125" CoolServiceSize="280" CoolEventSize="1160" CoolServiceColor="#FF6600" CoolEventColor="metrixForeground" CoolDateColor="metrixForeground" CoolTimeColor="#3B98C9" CoolDayColor="#FF6600" CoolBackColor="metrixBackground" CoolBackColorSel="metrixSelection" CoolRecEventBackColor="metrixBackground" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="footer_cooltvguide" />
+      <panel name="epg-nrgyb" />
+      <ePixmap position="1688,945" size="122,60" zPosition="10" pixmap="ts-MetrixFHD/icons/key_info.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="CoolEasyGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool Easy Guide" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <eLabel text="C  o  o  l    E  a  s  y    G  u  i  d  e" position="240,75" size="1680,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" />
+      <!--widget name="date" position="120,170" size="1680,40" font="SetrixHD; 28" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" /> -->
+      <widget source="Service" render="CoolPico" position="120,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="CoolPico" position="1080,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget name="list" position="120,190" size="1680,495" itemHeight="45" zPosition="25" CoolFont="Regular;33" CoolServiceFont="Regular;33" CoolEventFont="Regular;33" CoolServiceSize="368" CoolEventSize="1018" CoolServicePos="5" CoolServiceHPos="2" CoolEventPos="550" CoolEventHPos="2" CoolPicoHPos="10" CoolBarPos="380" CoolBarHPos="15" CoolBarSize="150" CoolBarHigh="18" CoolTimePos="265" CoolTimeHPos="2" CoolTimeSize="150" CoolDurationPos="1555" CoolDurationSize="105" CoolDurationColor="metrixSelection" CoolCurrentCol="metrixForeground" CoolServiceColor="#FF6600" CoolBarColor="metrixSelection" CoolEventColor="metrixForeground" CoolBackColorSel="metrixSelection" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="footer_cooltvguide" />
+      <panel name="epg-nrgyb" />
+      <ePixmap name="key_info" position="1558,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+      <ePixmap name="key_menu" position="1690,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+  </screen>
+  <screen name="CoolMultiGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool Multi Guide" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <eLabel text="C  o  o  l    M  u  l  t  i    G  u  i  d  e" position="240,75" size="1680,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" />
+      <widget name="date" position="120,170" size="1680,40" font="SetrixHD; 28" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget source="Service" render="CoolPico" position="120,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="CoolPico" position="1130,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget name="timeline_text" position="0,173" size="1680,40" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="list" position="120,210" size="1680,576" scrollbarMode="showNever" transparent="1" />
+      <widget name="timeline0" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline1" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline2" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline3" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline4" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline5" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline_now" position="120,210" zPosition="2" scale="0" size="19,580" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <panel name="footer2_cooltvguide" />
+      <panel name="epg-nrgyb" />
+      <ePixmap name="key_info" position="1558,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+      <ePixmap name="key_menu" position="1690,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+  </screen>
+  <screen name="CoolNiceGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool Nice Guide" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <eLabel text="C  o  o  l    N  i  c  e    G  u  i  d  e" position="240,75" size="1680,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" />
+      <widget name="date" position="120,170" size="1680,40" font="SetrixHD; 28" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget source="Service" render="CoolPico" position="120,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="CoolPico" position="1090,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget name="timeline_text" position="0,173" size="1680,40" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="list" position="120,210" size="1680,560" scrollbarMode="showNever" transparent="1" />
+      <widget name="timeline0" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline1" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline2" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline3" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline4" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline5" position="0,210" zPosition="1" size="0,0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <widget name="timeline_now" position="120,210" zPosition="2" scale="0" size="19,560" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <panel name="footer2_cooltvguide" />
+      <panel name="epg-nrgyb" />
+      <ePixmap name="key_info" position="1558,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+      <ePixmap name="key_menu" position="1690,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+  </screen>
+  <screen name="CoolTVGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool TV Guide" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <eLabel text="C  o  o  l    T  V    G  u  i  d  e" position="240,75" size="1680,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" />
+      <widget name="date" position="120,170" size="1680,40" font="SetrixHD; 28" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget source="Service" render="CoolPico" position="120,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="CoolPico" position="980,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget name="timeline_text" position="0,173" size="1680,40" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="list" position="120,210" size="1680,480" scrollbarMode="showNever" transparent="1" />
+      <widget name="timeline0" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline1" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline2" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline3" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline4" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline5" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline_now" position="120,210" zPosition="2" scale="0" size="19,480" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <panel name="footer_cooltvguide" />
+      <panel name="epg-nrgyb" />
+      <ePixmap name="key_info" position="1558,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+      <ePixmap name="key_menu" position="1690,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+  </screen>
+  <screen name="CoolTinyGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool Tiny Guide" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <eLabel text="C  o  o  l    T  i  n  y    G  u  i  d  e" position="240,75" size="1680,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" transparent="1" />
+      <widget name="date" position="120,170" size="1680,40" font="SetrixHD; 28" halign="right" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget source="Service" render="CoolPico" position="120,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget source="Service" render="CoolPico" position="1080,95" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
+      <widget name="timeline_text" position="0,173" size="1680,40" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <widget name="list" position="120,210" size="1680,450" scrollbarMode="showNever" transparent="1" />
+      <widget name="timeline0" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline1" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline2" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline3" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline4" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline5" position="0,210" zPosition="1" size="0,0" pixmap="ts-MetrixFHD/timeline-now.png" alphatest="blend" />
+      <widget name="timeline_now" position="120,210" zPosition="2" scale="0" size="19,450" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/Cool3D/timeline-now.png" alphatest="blend" />
+      <panel name="footer_cooltvguide" />
+      <panel name="epg-nrgyb" />
+      <ePixmap name="key_info" position="1558,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_info.png" alphatest="blend" />
+      <ePixmap name="key_menu" position="1690,946" size="122,60" pixmap="ts-MetrixFHD/icons/key_menu.png" alphatest="blend" />
+  </screen>
+  <screen name="CoolTVGuideSetup" title="Cool EPG Setup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+      <panel name="screenpanel_default" />
+      <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+      <panel name="kc-nrgyb" />
+      <widget name="config" position="120,190" size="1200,720" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" />
+      <ePixmap alphatest="blend" pixmap="ts-MetrixFHD/menu/setup_selection.png" position="1365,382" size="384,384" transparent="1" zPosition="2" />
+  </screen>
+</skin>

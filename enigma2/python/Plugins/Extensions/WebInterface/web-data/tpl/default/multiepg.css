@@ -1,0 +1,138 @@
+@import url("/web-data/fonts/fonts.css");
+
+html, body {
+	background: #e8e8e8;
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	padding: 5px;
+}
+
+th {
+	font-size: 14px;
+}
+
+a, a:visited, a:active {
+	color: #485052;
+	text-decoration: none;
+}
+
+.mEpgCell {
+	margin: 0px;
+	padding: 0px;
+}
+
+.mEpgColEven {
+	border-right: 1px solid #ccc;
+	background: #FFF;
+}
+
+.mEpgColOdd {
+	border-right: 1px solid #ccc;
+	background: #f5f5f5;
+}
+
+.mEpgItem {
+	padding: 0px;
+	border-top: 1px solid #ccc;
+	display: block;
+	overflow: hidden;
+	margin-bottom: -1px;
+}
+
+a.mEpgItem:hover {
+	background: #e8e8e8;
+}
+
+}
+#wrap {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+
+#mEpgDetail {
+	position: fixed;
+	top: 0;
+	left: 2%;
+	width: 96%;
+	z-index: 9999;
+	background: #FFF;
+	color: #485052;
+	display: table-row;
+	border: 1px solid #000;
+	opacity: 0.95;
+}
+
+#mEpgDetail>table {
+	width: 100%;
+}
+
+#mEpgDetail * tr {
+	background-color: #DDDDDD;
+	width: 100%;
+}
+
+#mEpg {
+	height: 100%;
+	background: #FFF; border : 1px solid #DDD;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border: 1px solid #DDD;
+}
+
+#mEpg>table {
+	table-layout: fixed;
+	height: 98%"
+}
+
+#mEpg>table>thead, #mEpg>table>tbody {
+	display: block;
+}
+
+#mEpg * tr {
+	vertical-align: top
+}
+
+#mEpg * td {
+	width: 175px !important;
+	min-width: 175px;
+	max-width: 175px;
+}
+
+#mEpg thead th {
+	width: 175px !important;
+	min-width: 175px;
+	max-width: 175px;
+	border-right: 1px solid #ccc;
+	text-align: center;
+}
+
+.mEpgDate {
+	width: 150px;
+}
+
+.closeContainer {
+	width: 30px;
+}
+
+.close {
+	background: #F00;
+	color: #FFF;
+	display: block
+}
+
+a.close, a.close:active, a.close.visited {
+	color: #FFF;
+	text-decoration: none;
+}
+
+a.close:hover {
+	text-decoration: underline;
+}
+
+.time, .title {
+	color: #000;
+	font-weight: bold;
+}
